@@ -9,10 +9,13 @@ public class PlayerData : ScriptableObject
 {
    public int coin;
    public string idObjects;
+   public string[] idArray;
+   public GameObject[] grid;
 
    public void LoadData(PlayerData data)
    {
       coin = data.coin;
       idObjects = data.idObjects;
+      grid = data.grid;
    }
 }

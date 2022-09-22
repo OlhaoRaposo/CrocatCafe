@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,4 +15,5 @@ public class IObjectID :  MonoBehaviour
     public char objectRotation;
     [SerializeField]
     public string objectId;
+    
 }

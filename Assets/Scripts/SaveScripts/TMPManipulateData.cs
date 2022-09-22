@@ -6,8 +6,9 @@ using UnityEngine;
 
 public class TMPManipulateData : MonoBehaviour
 {
-    public PlayerData data;
-    public GameObject[] grid = new GameObject[2];
+    public GameObject[] grid;
+    public string[] idArray;
+    
     void Start()
     {
         System.Threading.Thread.Sleep(25);
@@ -22,7 +23,11 @@ public class TMPManipulateData : MonoBehaviour
             SaveData.data.idObjects = "";
             for (int i = 0; i < grid.Length; i++)
             {
-                SaveData.data.idObjects += grid[i].GetComponent<IObjectID>().objectId + ",";
+                SaveData.data.idObjects += grid[i].GetComponent<IObjectID>().objectId + "";
+                idArray[i] = grid[i].GetComponent<IObjectID>().objectId + "";
+                
+                SaveData.data.idArray = idArray;
+                SaveData.data.grid = grid;
             }
             SaveData.Save();
         }
