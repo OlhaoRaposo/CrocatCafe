@@ -40,8 +40,13 @@ public class DragableObject : MonoBehaviour
         }
     }
 
-    public void Rotate()
+    private void OnMouseUp() //Confirma a posição de um objeto (Serve para impedir 2 objetos no mesmo lugar)
     {
-        transform.rotation = Quaternion.Euler(0, 90, 0);
+        gameObject.transform.position = currentCell.transform.position;
+    }
+
+    public void Rotate() //Gira objeto
+    {
+        transform.Rotate(0, 90, 0);
     }
 }
