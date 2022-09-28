@@ -42,7 +42,14 @@ public class DragableObject : MonoBehaviour
 
     private void OnMouseUp() //Confirma a posição de um objeto (Serve para impedir 2 objetos no mesmo lugar)
     {
-        gameObject.transform.position = currentCell.transform.position;
+        if(currentCell != null)
+        {
+            transform.position = currentCell.transform.position; //Joga o objeto no último quadrado vazio pelo qual passou
+        }
+        else
+        {
+            Destroy(gameObject); //Se não conseguir jogar o objeto em lugar nenhum, ele só desiste e destrói o objeto
+        }
     }
 
     public void Rotate() //Gira objeto
