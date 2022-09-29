@@ -12,10 +12,13 @@ public class AimMove : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hitData)) {
             worlPosition = hitData.point;
         }
-        if (Input.GetMouseButtonDown(0))
-        {
-            GameObject gmbj = hitData.collider.gameObject;
-            gmbj.GetComponent<ObjectScript>().OpenUi();
+        if (Input.GetMouseButtonDown(0)) {
+            if (hitData.collider == null) {
+                return;
+            }else {
+                GameObject gmbj = hitData.collider.gameObject;
+                gmbj.GetComponent<ObjectScript>().ObjectInteract();
+            } 
         }
     }
 }

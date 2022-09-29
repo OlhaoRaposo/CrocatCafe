@@ -27,6 +27,13 @@ public class UiLoaderScript : MonoBehaviour
                 secondUiGmbj.SetActive(true);
             }
         }
+        //Apenas Abre uma ui
+        public void OpenUi()
+        {
+            firstUiGmbj.SetActive(true);
+        }
+        
+        
 
     //Abre uma Ui mantendo a primeira ativa e assim por diante.
     //Ui é atribuida ao botao.

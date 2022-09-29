@@ -1,39 +1,55 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
 [AddComponentMenu("Crocat Café/Oven Script",0)]
-public class OvenScript : ObjectScript
+public class OvenScript : MonoBehaviour
 {
-    [Header("OBJECTS REFERENCES")]
-    public Text breads, pasta;
+    [Header("OBJECTS REFERENCES")] 
+    public Text breads;
+    public Text pasta;
+    public UiLoaderScript uiLoader;
+    public GameObject armazen;
     [Header("OBJECT STATS")]
     [SerializeField] private int bakeTime = 3;
 
 
-    public override void Start()
+    public  void Start()
     {
-        base.Start();
         armazen = GameObject.Find("Armazen");
     }
-    public override void OpenUi()
+    public void OpenUi()
     {
-        Debug.Log("Open Oven Ui");
+        ReloadReferences();
+        uiLoader.OpenUi();
     }
     
     public void Bake()
     {
         if (armazen.GetComponent<Armazen>().massasAtual >= 1){
+            GameObject cat = GameObject.Find("Cat");
+            GameObject oven = GameObject.Find("Furnace(Clone)");
+            cat.GetComponent<NavMeshScript>().BakeDestin(oven);
             StartCoroutine(BakeBread());
         }
     }
+
+    public void ReloadReferences()
+    {
+        breads.text = "Breads:" + armazen.GetComponent<Armazen>().breads.ToString();
+        pasta.text = "Massas: " + armazen.GetComponent<Armazen>().massasAtual.ToString();
+    }
+    
+    
     private IEnumerator BakeBread()
     {
         yield return new WaitForSeconds(bakeTime);
 
         
-        armazen.GetComponent<Armazen>().massasAtual =- 1;
+        armazen.GetComponent<Armazen>().massasAtual -= 1;
         armazen.GetComponent<Armazen>().breads += 1;
+        ReloadReferences();
     }
 }

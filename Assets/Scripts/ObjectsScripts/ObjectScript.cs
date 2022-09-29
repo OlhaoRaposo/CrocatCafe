@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class ObjectScript :  IObjectID
 {
-    [Header("OBJECT STATS")]
-    public GameObject armazen;
-
-    public virtual void Start()
+    [Header("OBJECT IDENTIFTY")] 
+    public bool isOven;
+    private void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
     }
 
-    public virtual void OpenUi() { }
-    
+    public void ObjectInteract()
+    {
+        if (isOven)
+        {
+            GameObject gmbj;
+            gmbj = GameObject.Find("OvenManager");
+            gmbj.GetComponent<OvenScript>().OpenUi();
+        }
+    }
 }
