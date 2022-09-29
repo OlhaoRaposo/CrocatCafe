@@ -13,14 +13,15 @@ public class AimMove : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            if (hitData.collider == null)
-            {
+            if (hitData.collider == null) {
                 return;
             }
-            else
-            {
+            else {
                 GameObject gmbj = hitData.collider.gameObject;
-                gmbj.GetComponent<ObjectScript>().ObjectInteract();
+                if (gmbj.GetComponent<ObjectScript>() != null) {
+                    
+                    gmbj.GetComponent<ObjectScript>().ObjectInteract();
+                }
             }
         }
     }

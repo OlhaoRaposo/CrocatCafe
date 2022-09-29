@@ -11,17 +11,17 @@ public class OvenScript : MonoBehaviour
     public UiLoaderScript uiLoader;
     public GameObject armazen;
     [Header("OBJECT STATS")]
-    [SerializeField] private int bakeTime = 3;
+    [SerializeField] private int bakeTime = 25;
 
 
     public void Start()
     {
-        armazen = GameObject.Find("Armazen");
+        armazen = GameObject.Find("ArmazenManager");
     }
     public void OpenUi()
     {
-        ReloadReferences();
         uiLoader.OpenUi();
+        ReloadReferences();
     }
 
     public void Bake()
@@ -30,8 +30,10 @@ public class OvenScript : MonoBehaviour
         {
             GameObject cat = GameObject.Find("Cat");
             GameObject oven = GameObject.Find("Furnace(Clone)");
-            cat.GetComponent<NavMeshScript>().BakeDestin(oven);
+            cat.GetComponent<NavMeshScript>().BakeDestin(oven,bakeTime);
+            armazen.GetComponent<Armazen>().RemoveMassas(1);
             StartCoroutine(BakeBread());
+            ReloadReferences();
         }
     }
 
@@ -45,10 +47,8 @@ public class OvenScript : MonoBehaviour
     private IEnumerator BakeBread()
     {
         yield return new WaitForSeconds(bakeTime);
-
-
-        armazen.GetComponent<Armazen>().massasAtual -= 1;
-        armazen.GetComponent<Armazen>().breads += 1;
+        Debug.Log("Adicionou");
+        armazen.GetComponent<Armazen>().AdicionaPao(1);
         ReloadReferences();
     }
 }

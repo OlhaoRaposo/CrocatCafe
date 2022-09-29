@@ -26,10 +26,8 @@ public class Plant : MonoBehaviour
 
     public void Collect()
     {
-        
         GameObject gmbj = GameObject.Find("Armazen");
-        gmbj.GetComponent<Armazen>().AdicionaMaterial(3);
-
+        gmbj.GetComponent<Armazen>().AdicionaMassas(3);
     }
     
     

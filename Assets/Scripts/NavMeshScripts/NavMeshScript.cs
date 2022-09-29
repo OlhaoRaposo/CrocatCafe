@@ -9,40 +9,27 @@ public class NavMeshScript : MonoBehaviour
     public GameObject destino;
     public GameObject chillPlace;
     public NavMeshAgent navMesh;
-    public int bakeTime;
-
-  
-
-    void Update()
-    {
-        //Substituir por um Getcomponent no gatinho com o bakeDestin e o objeto onde ele vai andar
-        if (Input.GetKey(KeyCode.E)) {
-            BakeDestin(destino);
-        }
-    }
-    public void BakeDestin(GameObject obj)
+    public void BakeDestin(GameObject obj,int baketime)
     {
         navMesh.destination = obj.transform.position;
-        StartCoroutine(CheckDestination(obj));
+        StartCoroutine(CheckDestination(obj,baketime));
     }
 
-    IEnumerator AfterBakeDestin()
+    IEnumerator AfterBakeDestin(int baketime)
     {
-        yield return new WaitForSeconds(bakeTime);
+        yield return new WaitForSeconds(baketime);
         navMesh.destination = chillPlace.transform.position;
     }
 
-    IEnumerator CheckDestination(GameObject obj)
+    IEnumerator CheckDestination(GameObject obj,int baketime)
     {
         yield return new WaitForSeconds(1);
         if (transform.position.magnitude - obj.transform.position.magnitude >= -.3f)
         {
-            StartCoroutine(AfterBakeDestin());
-            StopCoroutine(CheckDestination(obj));
+            StartCoroutine(AfterBakeDestin(baketime));
+            StopCoroutine(CheckDestination(obj,baketime));
         }
         else
-            StartCoroutine(CheckDestination(obj));
-        Debug.Log(transform.position.magnitude - obj.transform.position.magnitude);
-        Debug.Log("Check");
+            StartCoroutine(CheckDestination(obj,baketime));
     }
 }

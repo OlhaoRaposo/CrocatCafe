@@ -9,11 +9,11 @@ public class Test : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            test.GetComponent<Armazen>().AdicionaMaterial(1);
+            //test.GetComponent<Armazen>().AdicionaMaterial(1);
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            test.GetComponent<Armazen>().RemoveMaterial(1);
+           // test.GetComponent<Armazen>().RemoveMaterial(1);
         }
     }
 }
