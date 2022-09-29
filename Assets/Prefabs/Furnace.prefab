@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5184595001038001000}
   - component: {fileID: 5868316756887375109}
+  - component: {fileID: 2844600571224716512}
   - component: {fileID: 1468178567184262143}
   m_Layer: 0
   m_Name: Furnace
@@ -52,6 +53,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+--- !u!114 &2844600571224716512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674716535130126500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 643253a44eef95542ad136224bc3c5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 0
+  objectNum: 0
+  objectRotation: 0
+  objectId: 
+  armazen: {fileID: 0}
+  bakeTime: 3
 --- !u!65 &1468178567184262143
 BoxCollider:
   m_ObjectHideFlags: 0

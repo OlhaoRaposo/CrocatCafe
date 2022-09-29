@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class ObjectScript :  IObjectID
 {
-    void Start()
+    [Header("OBJECT STATS")]
+    public GameObject armazen;
+
+    public virtual void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
     }
 
-    void Update()
-    {
-        
-    }
+    public virtual void OpenUi() { }
+    
 }

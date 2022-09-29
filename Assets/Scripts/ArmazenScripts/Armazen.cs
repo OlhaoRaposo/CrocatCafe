@@ -8,6 +8,7 @@ public class Armazen : MonoBehaviour
 {
    public int massasAtual;
    public int massasMax = 40;
+   public int breads;
    public Text itens;
    
    
@@ -15,7 +16,7 @@ public class Armazen : MonoBehaviour
    {
       if (massasAtual < massasMax) {
          massasAtual += quant;
-         itens.text = "Massas: " +massasAtual.ToString();
+         //itens.text = "Massas: " +massasAtual.ToString();
       }
    }
    public void RemoveMaterial(int quant)

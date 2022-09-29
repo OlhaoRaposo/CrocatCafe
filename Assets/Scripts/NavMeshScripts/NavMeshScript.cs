@@ -37,7 +37,7 @@ public class NavMeshScript : MonoBehaviour
     IEnumerator CheckDestination(GameObject obj)
     {
         yield return new WaitForSeconds(1);
-        if (transform.position.magnitude - obj.transform.position.magnitude >= .5f)
+        if (transform.position.magnitude - obj.transform.position.magnitude >= -.3f)
         {
             StartCoroutine(AfterBakeDestin());
             StopCoroutine(CheckDestination(obj));
