@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectScript :  IObjectID
@@ -13,11 +11,14 @@ public class ObjectScript :  IObjectID
 
     public void ObjectInteract()
     {
-        if (isOven)
+        if(EditMode.isEditing == false)
         {
-            GameObject gmbj;
-            gmbj = GameObject.Find("OvenManager");
-            gmbj.GetComponent<OvenScript>().OpenUi();
+            if (isOven)
+            {
+                GameObject gmbj;
+                gmbj = GameObject.Find("OvenManager");
+                gmbj.GetComponent<OvenScript>().OpenUi();
+            }
         }
     }
 }

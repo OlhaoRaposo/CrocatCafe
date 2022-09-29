@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AimMove : MonoBehaviour
@@ -9,16 +7,21 @@ public class AimMove : MonoBehaviour
     {
         screenPosition = Input.mousePosition;
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
-        if (Physics.Raycast(ray, out RaycastHit hitData)) {
+        if (Physics.Raycast(ray, out RaycastHit hitData))
+        {
             worlPosition = hitData.point;
         }
-        if (Input.GetMouseButtonDown(0)) {
-            if (hitData.collider == null) {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (hitData.collider == null)
+            {
                 return;
-            }else {
+            }
+            else
+            {
                 GameObject gmbj = hitData.collider.gameObject;
                 gmbj.GetComponent<ObjectScript>().ObjectInteract();
-            } 
+            }
         }
     }
 }
