@@ -11,9 +11,7 @@ public class NavMeshScript : MonoBehaviour
     public NavMeshAgent navMesh;
     public int bakeTime;
 
-     void Start()
-    {
-    }
+  
 
     void Update()
     {

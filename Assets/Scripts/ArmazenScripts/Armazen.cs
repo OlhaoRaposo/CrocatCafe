@@ -16,7 +16,7 @@ public class Armazen : MonoBehaviour
    {
       if (massasAtual < massasMax) {
          massasAtual += quant;
-         //itens.text = "Massas: " +massasAtual.ToString();
+         itens.text = "Massas: " +massasAtual.ToString();
       }
    }
    public void RemoveMaterial(int quant)
