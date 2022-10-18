@@ -17,6 +17,7 @@ public class OvenScript : MonoBehaviour
     public void Start()
     {
         armazen = GameObject.Find("ArmazenManager");
+        ReloadReferences();
     }
     public void OpenUi()
     {
@@ -39,7 +40,7 @@ public class OvenScript : MonoBehaviour
 
     public void ReloadReferences()
     {
-        breads.text = "Breads:" + armazen.GetComponent<Armazen>().breads.ToString();
+        breads.text = "Breads: " + armazen.GetComponent<Armazen>().breads.ToString();
         pasta.text = "Massas: " + armazen.GetComponent<Armazen>().massasAtual.ToString();
     }
 

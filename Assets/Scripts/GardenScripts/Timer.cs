@@ -3,7 +3,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField]private float timeAmmount, progress;
-    [SerializeField]private bool isReady;
+    public bool isReady;
     private enum TimerType {regularTimer, plantTimer, cookTimer}
     [SerializeField]private TimerType timer = TimerType.regularTimer;
     private float stageChangeTreshHold = 0.33f;

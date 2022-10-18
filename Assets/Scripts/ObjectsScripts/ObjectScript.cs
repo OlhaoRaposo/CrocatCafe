@@ -3,7 +3,7 @@ using UnityEngine;
 public class ObjectScript :  IObjectID
 {
     [Header("OBJECT IDENTIFTY")] 
-    public bool isOven;
+    public bool isOven, isPot;
     private void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
@@ -13,11 +13,15 @@ public class ObjectScript :  IObjectID
     {
         if(EditMode.isEditing == false)
         {
+            GameObject gmbj;
             if (isOven)
             {
-                GameObject gmbj;
                 gmbj = GameObject.Find("OvenManager");
                 gmbj.GetComponent<OvenScript>().OpenUi();
+            }
+            else if(isPot)
+            {
+                gameObject.GetComponent<PotScript>().PlantSeed();
             }
         }
     }

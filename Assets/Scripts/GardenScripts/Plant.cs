@@ -4,14 +4,12 @@ using UnityEngine;
 public class Plant : MonoBehaviour
 {
     [SerializeField]private GameObject[] stages;
+    public Timer myTimer;
     private int stage = 0;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Collect();
-        }
+        myTimer = gameObject.GetComponent<Timer>();
     }
 
     public void Grow()
@@ -23,12 +21,4 @@ public class Plant : MonoBehaviour
         stages[stage].SetActive(true);
         stage++;
     }
-
-    public void Collect()
-    {
-        GameObject gmbj = GameObject.Find("Armazen");
-        gmbj.GetComponent<Armazen>().AdicionaMassas(3);
-    }
-    
-    
 }

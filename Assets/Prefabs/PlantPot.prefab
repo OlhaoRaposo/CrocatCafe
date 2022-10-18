@@ -176,7 +176,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3576098478363889290}
   - component: {fileID: 2597385029155681351}
+  - component: {fileID: -1172534407895401279}
+  - component: {fileID: -1982612016982227186}
   - component: {fileID: 4877092326305974903}
+  - component: {fileID: -3092079621886396424}
   m_Layer: 0
   m_Name: PlantPot
   m_TagString: Furniture
@@ -217,6 +220,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.35, y: 0.3, z: 0.35}
   m_Center: {x: 0, y: 0.15, z: 0}
+--- !u!114 &-1172534407895401279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229271680042963424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 0
+  objectNum: 0
+  objectRotation: 0
+  objectId: 
+  isOven: 0
+  isPot: 1
+--- !u!114 &-1982612016982227186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229271680042963424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96300373e16c9544b8a97c4ef774577e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  armazen: {fileID: 0}
+  seed: {fileID: 4327036479797097646, guid: d43bd339daf49e94ea1036bdc3de51a7, type: 3}
+  isOccupied: 0
 --- !u!114 &4877092326305974903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +267,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+--- !u!208 &-3092079621886396424
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6229271680042963424}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7327624259595789223
 GameObject:
   m_ObjectHideFlags: 0
