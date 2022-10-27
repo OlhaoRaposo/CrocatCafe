@@ -218,8 +218,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.35, y: 0.3, z: 0.35}
-  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!114 &-1172534407895401279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,8 +250,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96300373e16c9544b8a97c4ef774577e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armazen: {fileID: 0}
-  seed: {fileID: 4327036479797097646, guid: d43bd339daf49e94ea1036bdc3de51a7, type: 3}
+  seed: {fileID: 145998993776212164, guid: c9ccfe2188658694b9d8babb8bc13289, type: 3}
+  mySeed: {fileID: 0}
   isOccupied: 0
 --- !u!114 &4877092326305974903
 MonoBehaviour:
@@ -277,11 +277,11 @@ NavMeshObstacle:
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_Extents: {x: 0.175, y: 0.15, z: 0.175}
   m_MoveThreshold: 0.1
   m_Carve: 0
   m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.15, z: 0}
   m_TimeToStationary: 0.5
 --- !u!1 &7327624259595789223
 GameObject:

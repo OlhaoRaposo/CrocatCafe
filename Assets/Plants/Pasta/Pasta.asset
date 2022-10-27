@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fb263c618948442a27f277e01c05ce, type: 3}
+  m_Name: Pasta
+  m_EditorClassIdentifier: 
+  myName: Pasta
+  loot: 3
+  stages:
+  - {fileID: 145998993776212164, guid: fb54fc4997913584a9d57901ffd70d0a, type: 3}
+  - {fileID: 145998993776212164, guid: 0df4b9a7f0074814d99ce34445b25ee9, type: 3}
+  - {fileID: 145998993776212164, guid: 85156f4f3450cec40a169dc5c5740c1e, type: 3}
+  growthTime: 30

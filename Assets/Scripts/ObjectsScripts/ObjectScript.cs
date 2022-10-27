@@ -21,7 +21,15 @@ public class ObjectScript :  IObjectID
             }
             else if(isPot)
             {
-                gameObject.GetComponent<PotScript>().PlantSeed();
+                if(gameObject.GetComponent<Pot>().isOccupied == false)
+                {
+                    gmbj = GameObject.Find("GardenManager");
+                    gmbj.GetComponent<GardenScript>().OpenUi(gameObject);
+                }
+                else
+                {
+                    gameObject.GetComponent<Pot>().InteractWithSeed();
+                }
             }
         }
     }
