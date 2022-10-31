@@ -16,74 +16,74 @@ public class Armazen : MonoBehaviour
    public int massasAtual;
    public int massasMax = lvl * 10;
    [Header("Massa Text")]
-   public Text massastxt;
+   public Text[] massastxt;
    
    [Header("Fruta Café")]
    public int frutaCafeAtual;
    public int frutaCafeMax = lvl * 10;
    [Header("Fruta Café Text")]
-   public Text frutasCafeText;
+   public Text[] frutasCafeText;
    
    [Header("Laranja")]
    public int laranjaAtual;
    public int laranjaMax = lvl * 10;
    [Header("Laranja Text")]
-   public Text laranjaText;
+   public Text[] laranjaText;
    
    [Header("Frango")]
    public int frangoAtual;
    public int frangoMax = lvl * 10;
    [Header("Frango Text")] 
-   public Text frangoText;
+   public Text[] frangoText;
    
    [Header("Acucar")]
    public int acucarAtual;
    public int acucarMax = lvl * 10;
    [Header("Acucar Text")] 
-   public Text acucarText;
+   public Text[] acucarText;
    
    [Header("Queijo")]
    public int queijoAtual;
    public int queijoMax = lvl * 10;
    [Header("Queijo Text")] 
-   public Text queijoText;
+   public Text[] queijoText;
    
    //Pratos
    [Header("Coxinha")]
    public int coxinhaAtual;
    public int coxinhaMax = lvl * 10;
    [Header("Coxinha Text")]
-   public Text coxinhaText;
+   public Text[] coxinhaText;
 
    [Header("Bolos")] 
    public int boloAtual;
    public int boloMax = lvl *10;
    [Header("Bolos Text")]
-   public Text bolosText;
+   public Text[] bolosText;
    
    [Header("Suco")] 
    public int sucosAtual;
    public int sucosMax = lvl * 10;
    [Header("Suco Text")]
-   public Text sucosText;
+   public Text[] sucosText;
    
    [Header("Café")] 
    public int cafeAtual;
    public int cafeMax = lvl * 10;
    [Header("Cafe Text")]
-   public Text cafeText;
+   public Text[] cafeText;
    
    [Header("Pao")]
    public int breads;
    public int maxBreads = lvl * 10;
    [Header("Pao Text")]
-   public Text breadstxt;
+   public Text[] breadstxt;
    
    [Header("Pao De queijo")]
    public int paoDeQueijoAtual;
    public int paoDeQueijoMax = lvl * 10;
    [Header("Pao De Queijo Text")]
-   public Text paoDeQueijoText ;
+   public Text[] paoDeQueijoText ;
 
    private void Start()
    {
@@ -300,19 +300,75 @@ public class Armazen : MonoBehaviour
    public void AtualizaTxt()
    {
       //Materiais
-      frutasCafeText.text ="Fruta Café: " + frutaCafeAtual;
-      massastxt.text ="Massas: " + massasAtual;
-      laranjaText.text = "Laranjas: " + laranjaAtual;
-      frangoText.text = "Frangos: " + frangoAtual;
-      acucarText.text = "Açucar: " + acucarAtual;
-      queijoText.text = "Queijo: " + queijoAtual;
+      AtualizaMateriais();
 
       //Pratos
-      breadstxt.text ="Paes: " + breads;
-      cafeText.text ="Cafe: " + cafeAtual;
-      coxinhaText.text ="Coxinha: " + coxinhaAtual;
-      paoDeQueijoText.text ="Paes De Queijo: " + paoDeQueijoAtual;
-      sucosText.text ="Sucos: " + sucosAtual;
-      bolosText.text  ="Bolos: " + boloAtual;
+      AtualizaPratos();
+   }
+   private void AtualizaPratos()
+   {
+      //Pratos
+      for (int i = 0; i < breadstxt.Length; i++)
+      {
+         breadstxt[i].text = "Paes: " + breads;
+      }
+
+      for (int i = 0; i < cafeText.Length; i++)
+      {
+         cafeText[i].text = "Cafe: " + cafeAtual;
+      }
+
+      for (int i = 0; i < coxinhaText.Length; i++)
+      {
+         coxinhaText[i].text = "Coxinha: " + coxinhaAtual;
+      }
+
+      for (int i = 0; i < paoDeQueijoText.Length; i++)
+      {
+         paoDeQueijoText[i].text = "Paes De Queijo: " + paoDeQueijoAtual;
+      }
+
+      for (int i = 0; i < sucosText.Length; i++)
+      {
+         sucosText[i].text = "Sucos: " + sucosAtual;
+      }
+
+      for (int i = 0; i < bolosText.Length; i++)
+      {
+         bolosText[i].text = "Bolos: " + boloAtual;
+      }
+   }
+   private void AtualizaMateriais()
+   {
+      //Materiais
+      for (int i = 0; i < frutasCafeText.Length; i++)
+      {
+         frutasCafeText[i].text = "Fruta Café: " + frutaCafeAtual;
+      }
+
+      for (int i = 0; i < massastxt.Length; i++)
+      {
+         massastxt[i].text = "Massas: " + massasAtual;
+      }
+
+      for (int i = 0; i < laranjaText.Length; i++)
+      {
+         laranjaText[i].text = "Laranjas: " + laranjaAtual;
+      }
+
+      for (int i = 0; i < frangoText.Length; i++)
+      {
+         frangoText[i].text = "Frangos: " + frangoAtual;
+      }
+
+      for (int i = 0; i < acucarText.Length; i++)
+      {
+         acucarText[i].text = "Açucar: " + acucarAtual;
+      }
+
+      for (int i = 0; i < queijoText.Length; i++)
+      {
+         queijoText[i].text = "Queijo: " + queijoAtual;
+      }
    }
 }
