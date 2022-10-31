@@ -84,10 +84,12 @@ public class Armazen : MonoBehaviour
    public int paoDeQueijoMax = lvl * 10;
    [Header("Pao De Queijo Text")]
    public Text paoDeQueijoText ;
+   public static Armazen instance;
 
    private void Start()
    {
       AtualizaTxt();
+      instance = this;
    }
 
    //Materiais
