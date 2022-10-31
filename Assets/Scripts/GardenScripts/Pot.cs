@@ -28,7 +28,34 @@ public class Pot : MonoBehaviour
             {
                 isOccupied = false;
                 
-                //Lógica de adicionar loot ao inventário
+                switch (myPlant.plantCode)
+                {
+                    case(1):
+                    {
+                        Armazen.instance.AdicionaMassas(3);
+                        break;
+                    }
+                    case(2):
+                    {
+                        Armazen.instance.AdicionaFrutaCafe(3);
+                        break;
+                    }
+                    case(3):
+                    {
+                        Armazen.instance.AdicionaLaranjas(3);
+                        break;
+                    }
+                    case(4):
+                    {
+                        Armazen.instance.AdicionaFrango(3);
+                        break;
+                    }
+                    case(5):
+                    {
+                        Armazen.instance.AdicionaAcucar(3);
+                        break;
+                    }
+                }
                 Destroy(mySeed);
                 mySeed = null;
             }

@@ -88,6 +88,7 @@ public class Armazen : MonoBehaviour
    private void Start()
    {
       AtualizaTxt();
+      instance = this;
    }
 
    //Materiais

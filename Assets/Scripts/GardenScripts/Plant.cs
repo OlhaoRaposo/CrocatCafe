@@ -8,6 +8,7 @@ public class Plant : MonoBehaviour
     [Header("OBJECT STATS")]
     public string myName;
     [SerializeField] private string loot;
+    public int plantCode;
     [SerializeField] private GameObject[] stages;
     [SerializeField] private float growthTime;
     public bool isReady;
@@ -19,6 +20,7 @@ public class Plant : MonoBehaviour
     {
         myName = data.myName;
         growthTime = data.growthTime;
+        plantCode = data.plantCode;
 
         int aux = 0;
         stages = new GameObject[data.stages.Length];
