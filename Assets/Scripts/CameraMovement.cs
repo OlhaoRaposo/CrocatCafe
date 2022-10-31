@@ -1,19 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] float speed = 20f;
-    [SerializeField] int borderThickness; //Largura em pixels da area onde o mouse move a camera
-    [SerializeField] Vector2 posLimit; //A posicao limite até onde a camera pode se mover
-    [SerializeField] float maxPosLimit_Y, minPosLimit_Y;
+    [SerializeField] private float speed = 20f;
+    [SerializeField] private int borderThickness; //Largura em pixels da area onde o mouse move a camera
+    [SerializeField] private Vector2 posLimit; //A posicao limite atï¿½ onde a camera pode se mover
+    [SerializeField] private float maxPosLimit_Y, minPosLimit_Y;
+    [SerializeField] private float scrollSpeed;
 
-    [SerializeField] float scrollSpeed;
-
-    enum IsAtYLimits {ISNOTATLIMIT_Y ,ISMAX_Y, ISMINIMUM_Y} //Enum que diz se a camera esta com o zoom minimo ou maximo
+    enum IsAtYLimits { ISNOTATLIMIT_Y, ISMAX_Y, ISMINIMUM_Y } //Enum que diz se a camera esta com o zoom minimo ou maximo
     IsAtYLimits isAtYLimits;
-    void Update()
+    private void Update()
     {
         Vector3 pos = transform.position;
         isAtYLimits = CheckCameraPos();
@@ -34,7 +31,7 @@ public class CameraMovement : MonoBehaviour
         {
             pos.x -= speed * Time.deltaTime;
         }
-        
+
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
         switch (isAtYLimits)
         {

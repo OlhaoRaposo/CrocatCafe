@@ -25,6 +25,7 @@ public class GridSystem : MonoBehaviour
                 GridCell cellData = currentCell.GetComponent<GridCell>(); //acessa os componentes da célula
                 currentCell.transform.SetParent(grid.transform); //seta o grid como filho do objeto de grid
                 cellData.tilePos = $"{i+1}x{j+1}"; //atribuí na célula a sua posição
+                //carregar dados do save na célula
             }
         }
     }
