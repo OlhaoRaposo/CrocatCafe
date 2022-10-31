@@ -3643,40 +3643,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   massasAtual: 3
   massasMax: 40
-  massastxt: {fileID: 3052965984479507693}
+  massastxt:
+  - {fileID: 0}
   frutaCafeAtual: 0
   frutaCafeMax: 40
-  frutasCafeText: {fileID: 3052965983758837639}
+  frutasCafeText:
+  - {fileID: 0}
   laranjaAtual: 0
   laranjaMax: 40
-  laranjaText: {fileID: 3052965985454389200}
+  laranjaText:
+  - {fileID: 0}
   frangoAtual: 0
   frangoMax: 0
-  frangoText: {fileID: 3052965983819255998}
+  frangoText:
+  - {fileID: 0}
   acucarAtual: 0
   acucarMax: 0
-  acucarText: {fileID: 3052965984563730442}
+  acucarText:
+  - {fileID: 0}
   queijoAtual: 0
   queijoMax: 0
-  queijoText: {fileID: 3052965984374353245}
+  queijoText:
+  - {fileID: 0}
   coxinhaAtual: 0
   coxinhaMax: 0
-  coxinhaText: {fileID: 3052965985111590409}
+  coxinhaText:
+  - {fileID: 0}
   boloAtual: 0
   boloMax: 0
-  bolosText: {fileID: 3052965984050038755}
+  bolosText:
+  - {fileID: 0}
   sucosAtual: 0
   sucosMax: 0
-  sucosText: {fileID: 3052965984106195774}
+  sucosText:
+  - {fileID: 0}
   cafeAtual: 0
   cafeMax: 0
-  cafeText: {fileID: 3052965984872953108}
+  cafeText:
+  - {fileID: 0}
   breads: 0
   maxBreads: 10
-  breadstxt: {fileID: 3052965984107439790}
+  breadstxt:
+  - {fileID: 0}
   paoDeQueijoAtual: 0
   paoDeQueijoMax: 0
-  paoDeQueijoText: {fileID: 3052965984299894075}
+  paoDeQueijoText:
+  - {fileID: 0}
 --- !u!114 &2437429151513472257
 MonoBehaviour:
   m_ObjectHideFlags: 0
