@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pasta
   m_EditorClassIdentifier: 
   myName: Pasta
-  loot: 3
+  loot: RawPasta
+  plantCode: 1
   stages:
   - {fileID: 145998993776212164, guid: fb54fc4997913584a9d57901ffd70d0a, type: 3}
   - {fileID: 145998993776212164, guid: 0df4b9a7f0074814d99ce34445b25ee9, type: 3}

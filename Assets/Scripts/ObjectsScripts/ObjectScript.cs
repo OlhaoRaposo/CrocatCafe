@@ -17,7 +17,7 @@ public class ObjectScript :  IObjectID
             if (isOven)
             {
                 gmbj = GameObject.Find("OvenManager");
-                gmbj.GetComponent<OvenScript>().OpenUi();
+                gmbj.GetComponent<OvenScript>().OpenUi(gameObject);
             }
             else if(isPot)
             {

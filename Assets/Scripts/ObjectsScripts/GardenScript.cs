@@ -10,10 +10,16 @@ public class GardenScript : MonoBehaviour
 
     [SerializeField] private GameObject myPanel;
     [SerializeField] private GameObject[] buttons;
+    public static GardenScript instance;
     private void Start()
     {
         availableAmmount = new int[plants.Length];
-        //Carregar quantidade de sementes disponíveis do inventário
+        for (int i = 0; i < availableAmmount.Length; i++)
+        {
+            availableAmmount[i] = 5;
+        }
+        instance = this;
+        //carregar sementes do inventário
     }
 
     public void OpenUi(GameObject pot)
@@ -46,8 +52,10 @@ public class GardenScript : MonoBehaviour
         myPanel.SetActive(true);
     }
 
-    public void Click(int i){
-        Debug.Log(i);
+    public void SetDestinationToPot(GameObject clickedPot, int timeSpent)
+    {
+        GameObject cat = GameObject.Find("Cat");
+        cat.GetComponent<NavMeshScript>().AddDestination(clickedPot, timeSpent);
     }
 
 
@@ -56,7 +64,7 @@ public class GardenScript : MonoBehaviour
         Pot potCode = currentPot.GetComponent<Pot>();
         potCode.seed = plants[plant];
         potCode.InteractWithSeed();
-
+        
         availableAmmount[plant]--;
 
         myPanel.SetActive(false);

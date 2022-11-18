@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -1179013284066194147}
   - component: {fileID: 1261590755611395744}
   - component: {fileID: 4890138897830012993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Table
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5d2017614fff040b3290aae85268cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  capacity: 0
 --- !u!114 &1261590755611395744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,6 +158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b4cba3ae76d7ff47b56a49f27fa5f8e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b4cba3ae76d7ff47b56a49f27fa5f8e, type: 3}

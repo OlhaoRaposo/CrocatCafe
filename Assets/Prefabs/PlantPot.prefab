@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5069750691231799205}
   - component: {fileID: 6042686180019021151}
   - component: {fileID: 3282821086119219913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3132353562722149946}
   - component: {fileID: 3651865755867702988}
   - component: {fileID: 1165971143808639706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: -1982612016982227186}
   - component: {fileID: 4877092326305974903}
   - component: {fileID: -3092079621886396424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlantPot
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96300373e16c9544b8a97c4ef774577e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seed: {fileID: 145998993776212164, guid: c9ccfe2188658694b9d8babb8bc13289, type: 3}
+  seed: {fileID: 0}
   mySeed: {fileID: 0}
   isOccupied: 0
 --- !u!114 &4877092326305974903
@@ -294,7 +294,7 @@ GameObject:
   - component: {fileID: 725056728573183304}
   - component: {fileID: 3374819930213624446}
   - component: {fileID: 7235603434164218364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 2462160024482847810}
   - component: {fileID: 8343684988967488598}
   - component: {fileID: 1563523324164496213}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +460,7 @@ GameObject:
   - component: {fileID: 7679418245348876054}
   - component: {fileID: 6540296073931558733}
   - component: {fileID: 7515760717803880061}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

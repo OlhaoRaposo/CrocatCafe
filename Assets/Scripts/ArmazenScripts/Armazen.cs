@@ -85,6 +85,8 @@ public class Armazen : MonoBehaviour
    [Header("Pao De Queijo Text")]
    public Text[] paoDeQueijoText ;
 
+   public static Armazen instance;
+
    private void Start()
    {
       AtualizaTxt();
@@ -163,6 +165,7 @@ public class Armazen : MonoBehaviour
    {
       if (acucarAtual + quant <= acucarMax)
       {
+         Debug.Log("adicionou");
          acucarAtual += quant;
       }
       AtualizaTxt();

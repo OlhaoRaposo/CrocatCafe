@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GridSystem : MonoBehaviour
 {
+    [SerializeField]private string myLayer;
     [SerializeField]private float sizeX, sizeZ;
     [SerializeField]private Vector3 gridHead;
     [SerializeField]private GameObject grid, gridCell;
@@ -24,6 +25,7 @@ public class GridSystem : MonoBehaviour
                 GameObject currentCell = Instantiate(gridCell, pos, transform.rotation); //instancia a célula de grid
                 GridCell cellData = currentCell.GetComponent<GridCell>(); //acessa os componentes da célula
                 currentCell.transform.SetParent(grid.transform); //seta o grid como filho do objeto de grid
+                currentCell.layer = LayerMask.NameToLayer(myLayer);
                 cellData.tilePos = $"{i+1}x{j+1}"; //atribuí na célula a sua posição
                 //carregar dados do save na célula
             }

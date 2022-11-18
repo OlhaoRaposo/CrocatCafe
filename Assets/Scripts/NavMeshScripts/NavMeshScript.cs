@@ -1,35 +1,55 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NavMeshScript : MonoBehaviour
 {
-    public GameObject destino;
+    public DestinationList destinationList = new DestinationList();
     public GameObject chillPlace;
     public NavMeshAgent navMesh;
-    public void BakeDestin(GameObject obj,int baketime)
+    private bool isDoingTask = false;
+
+    public void Start()
     {
-        navMesh.destination = obj.transform.position;
-        StartCoroutine(CheckDestination(obj,baketime));
+        destinationList.InitList();
     }
 
-    IEnumerator AfterBakeDestin(int baketime)
+    public void AddDestination(GameObject destinationObject, int waitTime)
     {
-        yield return new WaitForSeconds(baketime);
-        navMesh.destination = chillPlace.transform.position;
-    }
-
-    IEnumerator CheckDestination(GameObject obj,int baketime)
-    {
-        yield return new WaitForSeconds(1);
-        if (transform.position.magnitude - obj.transform.position.magnitude >= -.3f)
+        destinationList.AddDestination(destinationObject, waitTime);
+        if(isDoingTask == false)
         {
-            StartCoroutine(AfterBakeDestin(baketime));
-            StopCoroutine(CheckDestination(obj,baketime));
+            StartCoroutine(DestinationCheck(waitTime));
+        }
+    }
+
+    public void CycleDestination()
+    {
+        isDoingTask = false;
+        destinationList.RemoveDestination();
+        if(destinationList.head.nextDestination != null)
+        {
+            StartCoroutine(DestinationCheck(destinationList.head.nextDestination.waitTime));
         }
         else
-            StartCoroutine(CheckDestination(obj,baketime));
+        {
+            navMesh.destination = chillPlace.transform.position;
+        }
+    }
+
+    IEnumerator DestinationCheck(int waitTime)
+    {
+        isDoingTask = true;
+        yield return new WaitForSeconds(1);
+        if(Vector3.Distance(transform.position, destinationList.head.nextDestination.destinationObject.transform.position) <= 1)
+        {
+            yield return new WaitForSeconds(waitTime);
+            CycleDestination();
+        }
+        else
+        {
+            navMesh.destination = destinationList.head.nextDestination.destinationObject.transform.position;
+            StartCoroutine(DestinationCheck(waitTime));
+        }
     }
 }

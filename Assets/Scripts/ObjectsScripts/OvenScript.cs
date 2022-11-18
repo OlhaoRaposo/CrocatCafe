@@ -6,10 +6,8 @@ using UnityEngine.UI;
 public class OvenScript : MonoBehaviour
 {
     [Header("OBJECTS REFERENCES")]
-    public Text breads;
-    public Text pasta;
     public UiLoaderScript uiLoader;
-    public GameObject armazen;
+    public GameObject armazen, currentOven;
     [Header("OBJECT STATS")]
     [SerializeField] private int bakeTime = 25;
     public void Start()
@@ -17,8 +15,9 @@ public class OvenScript : MonoBehaviour
         armazen = GameObject.Find("ArmazenManager");
         ReloadReferences();
     }
-    public void OpenUi()
+    public void OpenUi(GameObject oven)
     {
+        currentOven = oven;
         uiLoader.OpenUi();
     }
     public void MakeBread()
@@ -82,8 +81,7 @@ public class OvenScript : MonoBehaviour
     private void SetDestinationToFurnace()
     {
         GameObject cat = GameObject.Find("Cat");
-        GameObject oven = GameObject.Find("Furnace(Clone)");
-        cat.GetComponent<NavMeshScript>().BakeDestin(oven, bakeTime);
+        cat.GetComponent<NavMeshScript>().AddDestination(currentOven, bakeTime);
     }
     public void ReloadReferences()
     {
@@ -92,36 +90,78 @@ public class OvenScript : MonoBehaviour
 
     private IEnumerator BakeCheeseBread()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaPaoDeQueijo(1);
         ReloadReferences();
     }
     private IEnumerator BakeCake()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaBolos(1);
         ReloadReferences();
     }
     private IEnumerator BakeCoxinha()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaCoxinha(1);
         ReloadReferences();
     }
     private IEnumerator BakeJuice()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaSucos(1);
         ReloadReferences();
     }
     private IEnumerator BakeCoffe()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaCafé(1);
         ReloadReferences();
     }
     private IEnumerator BakeBread()
     {
+        GameObject cat = GameObject.Find("Cat");
+        GameObject thisOven = currentOven;
+        while(Vector3.Distance(thisOven.transform.position, cat.transform.position) >= 1)
+        {
+            yield return new WaitForSeconds(1);
+        }
+        
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaPao(1);
         ReloadReferences();

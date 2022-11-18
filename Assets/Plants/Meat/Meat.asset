@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Meat
   m_EditorClassIdentifier: 
   myName: Meat
-  loot: 
+  loot: RawMeat
+  plantCode: 4
   stages:
   - {fileID: 145998993776212164, guid: e3b87603023b51448afd995fa7493300, type: 3}
   - {fileID: 145998993776212164, guid: 06e41efb58e0ddd46b0e57f4bceae847, type: 3}
   - {fileID: 145998993776212164, guid: 22280dba4b2c10f4d888e1ab36d428b5, type: 3}
-  growthTime: 60
+  growthTime: 90

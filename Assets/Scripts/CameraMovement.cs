@@ -15,19 +15,19 @@ public class CameraMovement : MonoBehaviour
         Vector3 pos = transform.position;
         isAtYLimits = CheckCameraPos();
 
-        if (Input.mousePosition.y >= Screen.height - borderThickness)
+        if (Input.GetKey(KeyCode.W))
         {
             pos.z += speed * Time.deltaTime;
         }
-        if (Input.mousePosition.y <= borderThickness)
+        if (Input.GetKey(KeyCode.S))
         {
             pos.z -= speed * Time.deltaTime;
         }
-        if (Input.mousePosition.x >= Screen.width - borderThickness)
+        if (Input.GetKey(KeyCode.D))
         {
             pos.x += speed * Time.deltaTime;
         }
-        if (Input.mousePosition.x <= borderThickness)
+        if (Input.GetKey(KeyCode.A))
         {
             pos.x -= speed * Time.deltaTime;
         }

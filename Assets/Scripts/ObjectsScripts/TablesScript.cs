@@ -12,17 +12,19 @@ public class TablesScript : MonoBehaviour
     public void AddTable()
     {
         tablesAmmount++;
-        CustomerSpawner.instance.maxCustomersAmmount += 2;
+        CustomerScript.instance.maxCustomersAmmount += 2;
     }
     
     public void DeleteTable()
     {
         tablesAmmount--;
-        CustomerSpawner.instance.maxCustomersAmmount -= 2;
-        if(CustomerSpawner.instance.customersAmmount > CustomerSpawner.instance.maxCustomersAmmount)
+        CustomerScript.instance.maxCustomersAmmount -= 2;
+        if(CustomerScript.instance.customersAmmount > CustomerScript.instance.maxCustomersAmmount)
         {
-            CustomerSpawner.instance.DeleteCustomer();
-            CustomerSpawner.instance.DeleteCustomer();
+            CustomerScript.instance.DeleteCustomer();
+            CustomerScript.instance.DeleteCustomer();
+            CustomerScript.instance.RemoveRequest();
+            CustomerScript.instance.RemoveRequest();
         }
     }
 }

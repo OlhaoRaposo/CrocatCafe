@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5680158420309325006}
   - component: {fileID: 5868316756887375109}
   - component: {fileID: 5413899047007108448}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Furnace
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -163,6 +163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cooker
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bec115c6f61b5864e8a99092800400b3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bec115c6f61b5864e8a99092800400b3, type: 3}
