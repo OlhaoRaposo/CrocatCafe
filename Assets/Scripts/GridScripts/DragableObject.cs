@@ -2,8 +2,14 @@ using UnityEngine;
 
 public class DragableObject : MonoBehaviour
 {
-    [SerializeField] private GridCell currentCell = null, previousCell = null;
+    public GridCell currentCell = null, previousCell = null;
     private int myRotation;
+
+    private void Start()
+    {
+        EditMode.selectedObject = gameObject;
+    }
+
     private GridCell CheckForCell() //Método que retorna a célula
     {
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); //Cria um raio a partir da posição do mouse do player
@@ -19,7 +25,7 @@ public class DragableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        EditMode.SelectedObject = gameObject;
+        EditMode.selectedObject = gameObject;
     }
 
     private void OnMouseDrag() //é chamado quando movo o mouse
@@ -47,16 +53,6 @@ public class DragableObject : MonoBehaviour
                         currentCell.isOccupied = true;
                     }
                 }
-            }
-            else
-            {
-                /*Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(mouseRay, out RaycastHit raycastHit) == true)
-                {
-                    Vector3 pos = raycastHit.point;
-                    pos.y = 0;
-                    transform.position = pos;
-                } */
             }
         }
     }
