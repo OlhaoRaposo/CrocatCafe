@@ -3,15 +3,18 @@ using UnityEngine.UI;
 
 public class CustomerScript : MonoBehaviour
 {
-    public int customersAmmount, maxCustomersAmmount;
-    public GameObject[] customers;
-    public Text menuText;
-    public string[] orders;
     [SerializeField]private GameObject clientFrame;
     [SerializeField]private float spawnRate;
+    public int customersAmmount, maxCustomersAmmount;
+    public GameObject[] customers;
+    public GameObject pointA;
+    public GameObject pointB;
+    public Text menuText;
+    public string[] orders;
+    
     public static CustomerScript instance;
     private void Start()
-    {
+    { 
         instance = this;
         InvokeRepeating("SummonCustomer", 10.0f, spawnRate);
     }
@@ -33,7 +36,16 @@ public class CustomerScript : MonoBehaviour
         {
             customers[i] = temp[i];
         }
-        customers[customers.Length - 1] = Instantiate(clientFrame, transform.position, transform.rotation);
+
+        Vector3 add = new Vector3(0, 0, Random.Range(-3,3));
+        int index = Random.Range(0, 2);
+        if (index == 0)
+        {
+            customers[customers.Length - 1] = Instantiate(clientFrame, pointA.transform.position + add, transform.rotation);
+        }else
+            customers[customers.Length - 1] = Instantiate(clientFrame, pointB.transform.position + add, transform.rotation);
+
+
     }
 
     public void DeleteCustomer()

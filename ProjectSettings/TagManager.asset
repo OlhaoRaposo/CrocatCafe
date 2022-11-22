@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Furniture
+  - ShowCase
+  - Exit
   layers:
   - Default
   - TransparentFX
