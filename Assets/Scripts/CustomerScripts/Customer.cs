@@ -27,7 +27,8 @@ public class Customer : MonoBehaviour
     void Start()
     {
         ChooseOrder();
-        patience = Random.Range(35, 60);
+        //patience = Random.Range(35, 60);
+        patience = 5;
     }
     private void ChooseOrder()
     {
@@ -159,5 +160,8 @@ public class Customer : MonoBehaviour
     {
        orderSpawn.GetComponent<OrderSpawner>().RemovePlate(order);
     }
-    
+
+    private void OnDestroy()
+    {
+    }
 }

@@ -54,6 +54,7 @@ public class OrderSpawner : MonoBehaviour
                 AttIcon(plate.transform.parent.gameObject);
                 AddCash(plate);
                 Destroy(plate.gameObject);
+                return;
             }
         }
     }
@@ -64,9 +65,9 @@ public class OrderSpawner : MonoBehaviour
         {
             if(slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate != null)
             {
+                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate;
                 slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.position = slot.transform.position;
                 slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.parent = slot.transform.parent;
-                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate;
                 return;
             }
         }
