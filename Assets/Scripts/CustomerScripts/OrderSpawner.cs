@@ -50,7 +50,7 @@ public class OrderSpawner : MonoBehaviour
             if (plate == plateToRemove)
             {
                 plate.GetComponent<plateData>().previousPlate.gameObject.GetComponent<plateData>().nextPlate = plate.GetComponent<plateData>().nextPlate;
-                plate.GetComponent<plateData>().gameObject.GetComponent<plateData>().previousPlate = plate.GetComponent<plateData>().previousPlate;
+                plate.GetComponent<plateData>().nextPlate.GetComponent<plateData>().previousPlate = plate.GetComponent<plateData>().previousPlate;
                 AttIcon(plate.transform.parent.gameObject);
                 AddCash(plate);
                 Destroy(plate.gameObject);
@@ -61,15 +61,16 @@ public class OrderSpawner : MonoBehaviour
 
     private void AttIcon(GameObject slotGmbj)
     {
-        for (GameObject slot = slotGmbj ;slot.GetComponent<SlotScript>().previousSlot != slot; slot = slot.GetComponent<SlotScript>().nextSlot)
+        for (GameObject slot = slotGmbj ;slot.GetComponent<SlotScript>().previousSlot != slotGmbj; slot = slot.GetComponent<SlotScript>().nextSlot)
         {
             if(slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate != null)
             {
-                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate;
                 slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.position = slot.transform.position;
-                slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.parent = slot.transform.parent;
-                return;
-            }
+                slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.parent = slot.transform;
+                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate;
+            }else
+                Debug.Log("A");
+            
         }
     }
     private  void AddCash(GameObject plate)

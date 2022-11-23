@@ -48,8 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e555ab7f5e505fb409cce00f0f7a12ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PossibleOrders: 00000000010000000200000003000000
   currentOrder: 0
+  patience: 0
+  PossibleOrders: 000000000100000002000000030000000400000005000000
+  hasAskedOrder: 0
   order: {fileID: 0}
   orderSpawn: {fileID: 0}
   showCase: []

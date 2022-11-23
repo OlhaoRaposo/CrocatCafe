@@ -7,11 +7,14 @@ using Random = UnityEngine.Random;
 public class Customer : MonoBehaviour
 {
     [SerializeField]
+    private int currentOrder;
+    [SerializeField]
+    private int patience;
+    [SerializeField]
     private int[] PossibleOrders;
     [SerializeField]
-    private int currentOrder;
+    private bool hasAskedOrder = false;
     private NavMeshAgent navMesh;
-    private int patience;
     public GameObject order;
     public GameObject orderSpawn;
     public GameObject[] showCase;
@@ -22,14 +25,17 @@ public class Customer : MonoBehaviour
     {
         orderSpawn = GameObject.Find("OrderSpawn");
         navMesh = this.gameObject.GetComponent<NavMeshAgent>();
-        armazen = GameObject.Find("ArmazenManager");
+        
     }
+
     void Start()
     {
         ChooseOrder();
         //patience = Random.Range(35, 60);
-        patience = 5;
+        patience = Random.Range(20,30);
     }
+    
+
     private void ChooseOrder()
     {
         //Escolhe O pedido
@@ -48,12 +54,13 @@ public class Customer : MonoBehaviour
     IEnumerator CheckDistanceToShowCase(GameObject showCase)
     {
         //Checa caso o cliente chege ao exibitor
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Vector3 distance;
         distance = transform.position - showCase.transform.position;
-        Debug.Log("Distance to ShowCase" + distance.magnitude);
-        if (distance.magnitude <= 1.4f)
+        //Debug.Log("Distance to ShowCase" + distance.magnitude);
+        if (distance.magnitude <= 1.6f)
         {
+            armazen = GameObject.Find("ArmazenManager");
             Debug.Log("Chegay");
             //Chegou ao exibitor
             switch (currentOrder)
@@ -66,8 +73,10 @@ public class Customer : MonoBehaviour
                         StartCoroutine(GoToExit(5));
                         Debug.Log("serve");
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
                         Debug.Log("Nao tem");
                     }
                     break;
@@ -78,8 +87,11 @@ public class Customer : MonoBehaviour
                         armazen.GetComponent<Armazen>().RemoveCafé(1);
                         StartCoroutine(GoToExit(5));                    
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
+                        Debug.Log("Nao tem");
                     }
                     break;
                 case 2:
@@ -89,8 +101,11 @@ public class Customer : MonoBehaviour
                         armazen.GetComponent<Armazen>().RemoveSucos(1);
                         StartCoroutine(GoToExit(5));                    
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
+                        Debug.Log("Nao tem");
                     }
                     break;
                 case 3:
@@ -100,8 +115,11 @@ public class Customer : MonoBehaviour
                         armazen.GetComponent<Armazen>().RemoveCoxinha(1);
                         StartCoroutine(GoToExit(5));                    
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
+                        Debug.Log("Nao tem");
                     }             
                     break;
                 case 4:
@@ -111,8 +129,11 @@ public class Customer : MonoBehaviour
                         armazen.GetComponent<Armazen>().RemoveBolos(1);
                         StartCoroutine(GoToExit(5));                    
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
+                        Debug.Log("Nao tem");
                     }
                     break;
                 case 5:
@@ -122,13 +143,16 @@ public class Customer : MonoBehaviour
                         armazen.GetComponent<Armazen>().RemovePaoDeQueijo(1);
                         StartCoroutine(GoToExit(5));                    
                     }else {
-                        AskOrder();
-                        AngryExit();
+                        if (hasAskedOrder != true) {
+                            AskOrder();
+                            AngryExit();
+                        }
+                        Debug.Log("Nao tem");
                     }
                     break;
             }
-        }else
-            StartCoroutine(CheckDistanceToShowCase(showCase)); 
+        }
+        StartCoroutine(CheckDistanceToShowCase(showCase)); 
     }
 
     private void OnTriggerEnter(Collider col)
@@ -154,6 +178,7 @@ public class Customer : MonoBehaviour
     }
     private void AskOrder()
     {
+        hasAskedOrder = true;
         orderSpawn.GetComponent<OrderSpawner>().AddPlate(currentOrder,this.gameObject);
     }
     public void Serve()
