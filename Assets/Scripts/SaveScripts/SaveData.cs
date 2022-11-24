@@ -6,34 +6,36 @@ using UnityEngine;
 
 public class SaveData
 {
-    private static string dirPath = Application.persistentDataPath + "/data";
+    public static string shopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/data";
     public static PlayerData data;
 
     public static void SetData(PlayerData dt)
     {
         data = dt;
     }
-    public static void Save()
+    public static void SaveShopData()
     {
-        if (!Directory.Exists(dirPath))
+        if (!Directory.Exists(shopPath))
         {
-            Directory.CreateDirectory(dirPath);
+            Directory.CreateDirectory(shopPath);
         }
         string json = "";
         json += JsonUtility.ToJson(data, true);
-        File.WriteAllText(dirPath + "/data.json" , json);
+        File.WriteAllText(shopPath + "/data.json" , json);
     }
-    
-    public static void Load()
+    public static void LoadShopData()
     {
-        if (!File.Exists(dirPath + "/data.json"))
+        if (!File.Exists(shopPath + "/data.json"))
         {
-            Save();
+            SaveShopData();
         }
-        string json = File.ReadAllText(dirPath + "/data.json");
+        string json = File.ReadAllText(shopPath + "/data.json");
         PlayerData pdata = ScriptableObject.CreateInstance<PlayerData>();
         JsonUtility.FromJsonOverwrite(json,pdata);
         data = pdata;
     }
 
+    
+    
+    
 }

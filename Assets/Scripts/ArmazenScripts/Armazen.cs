@@ -7,9 +7,56 @@ using UnityEngine.UI;
 
 public class Armazen : MonoBehaviour
 {
-    [Header("Lvl")]
-    [SerializeField]
-    public static int lvl = 1;
+   [Header("Lvl")] 
+   [SerializeField]
+   public static int lvl = 1;
+
+   public int money;
+   public Text[] moneyText;
+   
+   //Materiais
+   [Header("Massas")]
+   public int massasAtual;
+   public int massasMax = lvl * 10;
+   [Header("Massa Text")]
+   public Text[] massastxt;
+   
+   [Header("Fruta Café")]
+   public int frutaCafeAtual;
+   public int frutaCafeMax = lvl * 10;
+   [Header("Fruta Café Text")]
+   public Text[] frutasCafeText;
+   
+   [Header("Laranja")]
+   public int laranjaAtual;
+   public int laranjaMax = lvl * 10;
+   [Header("Laranja Text")]
+   public Text[] laranjaText;
+   
+   [Header("Frango")]
+   public int frangoAtual;
+   public int frangoMax = lvl * 10;
+   [Header("Frango Text")] 
+   public Text[] frangoText;
+   
+   [Header("Acucar")]
+   public int acucarAtual;
+   public int acucarMax = lvl * 10;
+   [Header("Acucar Text")] 
+   public Text[] acucarText;
+   
+   [Header("Queijo")]
+   public int queijoAtual;
+   public int queijoMax = lvl * 10;
+   [Header("Queijo Text")] 
+   public Text[] queijoText;
+   
+   //Pratos
+   [Header("Coxinha")]
+   public int coxinhaAtual;
+   public int coxinhaMax = lvl * 10;
+   [Header("Coxinha Text")]
+   public Text[] coxinhaText;
 
     //Materiais
     [Header("Massas")]
@@ -42,11 +89,28 @@ public class Armazen : MonoBehaviour
     [Header("Acucar Text")]
     public Text[] acucarText;
 
-    [Header("Leite")]
-    public int leiteAtual;
-    public int leiteMax = lvl * 10;
-    [Header("Leite Text")]
-    public Text[] leiteText;
+      //Pratos
+      AtualizaPratos();
+      
+      AtualizaDinheiro();
+   }
+
+   private void AtualizaDinheiro()
+   {
+
+      for (int i = 0; i < moneyText.Length; i++)
+      {
+         moneyText[i].text = money.ToString();
+      }
+   }
+   
+   private void AtualizaPratos()
+   {
+      //Pratos
+      for (int i = 0; i < breadstxt.Length; i++)
+      {
+         breadstxt[i].text = "Paes: " + breads;
+      }
 
     [Header("Queijo")]
     public int queijoAtual;

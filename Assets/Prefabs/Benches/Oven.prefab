@@ -61,10 +61,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
+  objectType: 70
+  objectNum: 1
+  objectRotation: 78
+  objectId: F1N
+  objectValue: 150
   isOven: 1
   isPot: 0
 --- !u!114 &5868316756887375109

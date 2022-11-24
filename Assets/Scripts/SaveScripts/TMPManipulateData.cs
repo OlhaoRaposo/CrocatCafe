@@ -12,7 +12,7 @@ public class TMPManipulateData : MonoBehaviour
     void Start()
     {
         System.Threading.Thread.Sleep(25);
-        SaveData.Load();
+        SaveData.LoadShopData();
         grid = GameObject.FindGameObjectsWithTag("Object");
     }
 
@@ -29,7 +29,7 @@ public class TMPManipulateData : MonoBehaviour
                 SaveData.data.idArray = idArray;
                 SaveData.data.grid = grid;
             }
-            SaveData.Save();
+            SaveData.SaveShopData();
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
