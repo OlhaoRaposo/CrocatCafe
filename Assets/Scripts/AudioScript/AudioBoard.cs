@@ -13,9 +13,45 @@ public class AudioBoard : MonoBehaviour
     {
         foreach (AudioSource audio in audios)
         {
-            if(audioName == audio.name)
+            if(audioName == audio.clip.name)
             {
                 audio.Play();
+                return;
+            }
+        }
+    }
+
+    public void StopAudio(string audioName)
+    {
+        foreach (AudioSource audio in audios)
+        {
+            if(audioName == audio.clip.name)
+            {
+                audio.Stop();
+                return;
+            }
+        }
+    }
+
+    public void ResumeAudio(string audioName)
+    {
+        foreach (AudioSource audio in audios)
+        {
+            if(audioName == audio.clip.name)
+            {
+                audio.UnPause();
+                return;
+            }
+        }
+    }
+
+    public void PauseAudio(string audioName)
+    {
+        foreach (AudioSource audio in audios)
+        {
+            if(audioName == audio.clip.name)
+            {
+                audio.Pause();
                 return;
             }
         }
