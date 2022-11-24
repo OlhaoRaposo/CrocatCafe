@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class EditMode : MonoBehaviour
 {
-    public static GameObject SelectedObject;
+    public static GameObject selectedObject;
     public static bool isEditing = false;
 
     private void Update()
@@ -14,15 +14,16 @@ public class EditMode : MonoBehaviour
     public void ToggleEdit(bool toggle)
     {
         isEditing = toggle;
+        RemoveUnusedObjects();
     }
 
     public void RotateInput()
     {
         if(Input.GetMouseButtonDown(1) && isEditing)
         {
-            if(SelectedObject != null)
+            if(selectedObject != null)
             {
-                SelectedObject.GetComponent<DragableObject>().Rotate();
+                selectedObject.GetComponent<DragableObject>().Rotate();
             }
         }
     }
@@ -31,9 +32,26 @@ public class EditMode : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Backspace) && isEditing)
         {
-            if(SelectedObject != null)
+            if(selectedObject != null)
             {
-                SelectedObject.GetComponent<DragableObject>().Remove();
+                selectedObject.GetComponent<DragableObject>().Remove();
+            }
+        }
+    }
+
+    private void RemoveUnusedObjects()
+    {
+        if(isEditing == false)
+        {
+            GameObject[] unusedObjects = GameObject.FindGameObjectsWithTag("Furniture");
+
+            foreach (GameObject unusedObject in unusedObjects)
+            {
+                if(unusedObject.GetComponent<DragableObject>().currentCell == null)
+                {
+                    selectedObject = unusedObject;
+                    selectedObject.GetComponent<DragableObject>().Remove();
+                }
             }
         }
     }

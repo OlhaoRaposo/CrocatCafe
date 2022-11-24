@@ -59,6 +59,8 @@ sysinfo.txt
 crashlytics-build.properties
 
 
+.vscode/
+
 UserSettings/EditorUserSettings.asset
 
 .vscode/settings.json

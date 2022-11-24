@@ -3,7 +3,7 @@ using UnityEngine;
 public class ObjectScript :  IObjectID
 {
     [Header("OBJECT IDENTIFTY")] 
-    public bool isOven, isPot;
+    public bool isOven, isPot, isFurnace, isBarrel, isKneader, isJuicer;
     private void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
@@ -18,6 +18,26 @@ public class ObjectScript :  IObjectID
             {
                 gmbj = GameObject.Find("OvenManager");
                 gmbj.GetComponent<OvenScript>().OpenUi(gameObject);
+            }
+            else if(isFurnace)
+            {
+                gmbj = GameObject.Find("FurnaceManager");
+                gmbj.GetComponent<FurnaceScript>().OpenUi(gameObject);
+            }
+            else if(isBarrel)
+            {
+                gmbj = GameObject.Find("BarrelManager");
+                gmbj.GetComponent<BarrelScript>().OpenUi(gameObject);
+            }
+            else if(isKneader)
+            {
+                gmbj = GameObject.Find("KneaderManager");
+                gmbj.GetComponent<KneaderScript>().OpenUi(gameObject);
+            }
+            else if(isJuicer)
+            {
+                gmbj = GameObject.Find("JuicerManager");
+                gmbj.GetComponent<JuicerScript>().OpenUi(gameObject);
             }
             else if(isPot)
             {

@@ -76,9 +76,17 @@ public class Pot : MonoBehaviour
                                 Armazen.instance.AdicionaAcucar(3);
                                 break;
                             }
+                        case (6):
+                            {
+                                Armazen.instance.AdicionaLeite(3);
+                                break;
+                            }
                     }
                     Destroy(mySeed);
                     mySeed = null;
+                    
+                    string audio = $"Collect_0{Random.Range(0, 6)}";
+                    AudioBoard.instance.PlayAudio(audio);
                 }
             }
         }
