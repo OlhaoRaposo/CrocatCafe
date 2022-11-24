@@ -15,6 +15,7 @@ public class IObjectID :  MonoBehaviour
     public char objectRotation;
     [SerializeField]
     public string objectId;
-    
-    
+    [SerializeField] 
+    public int objectValue;
+
 }

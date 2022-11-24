@@ -13,7 +13,7 @@ public class UiLoaderScript : MonoBehaviour
         
     //Private Vars
         private bool firstIsOpen = false;
-        private bool secondIsOpen = false;
+        //private bool secondIsOpen = false;
 
     //Abre a segunda ui fechando a primeira e vice versa.
         public void OpenUiAndCloseFirst() {
