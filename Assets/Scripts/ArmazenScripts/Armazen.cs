@@ -11,6 +11,9 @@ public class Armazen : MonoBehaviour
     [SerializeField]
     public static int lvl = 1;
 
+    public int money;
+    public Text[] moneyText;
+
     //Materiais
     [Header("Massas")]
     public int massasAtual;
@@ -398,16 +401,23 @@ public class Armazen : MonoBehaviour
         }
         AtualizaTxt();
     }
-
-
     //AtualizaTxt
     public void AtualizaTxt()
     {
         //Materiais
         AtualizaMateriais();
-
+        //Dinheiro
+        AtualizaDinheiro();
         //Pratos
         AtualizaPratos();
+    }
+    private void AtualizaDinheiro()
+    {
+        for (int i = 0; i < moneyText.Length; i++)
+        {
+            moneyText[i].text = money.ToString();
+        }
+        
     }
     private void AtualizaPratos()
     {
