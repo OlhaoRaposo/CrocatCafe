@@ -61,16 +61,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
+  objectType: 66
+  objectNum: 4
+  objectRotation: 48
+  objectId: B40
+  objectValue: 1
   isOven: 0
   isPot: 0
   isFurnace: 0
   isBarrel: 0
   isKneader: 0
   isJuicer: 1
+  isShowcase: 0
 --- !u!114 &5868316756887375109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+  objectSize: {x: 1, y: 1}
 --- !u!208 &5413899047007108448
 NavMeshObstacle:
   m_ObjectHideFlags: 0

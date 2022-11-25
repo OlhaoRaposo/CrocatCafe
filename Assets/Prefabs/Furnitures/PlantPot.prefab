@@ -232,12 +232,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
+  objectType: 71
+  objectNum: 1
+  objectRotation: 48
+  objectId: G10
+  objectValue: 1
   isOven: 0
   isPot: 1
+  isFurnace: 0
+  isBarrel: 0
+  isKneader: 0
+  isJuicer: 0
+  isShowcase: 0
 --- !u!114 &-1982612016982227186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +259,7 @@ MonoBehaviour:
   seed: {fileID: 0}
   mySeed: {fileID: 0}
   isOccupied: 0
+  myPlant: {fileID: 0}
 --- !u!114 &4877092326305974903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,6 +274,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+  objectSize: {x: 1, y: 1}
 --- !u!208 &-3092079621886396424
 NavMeshObstacle:
   m_ObjectHideFlags: 0

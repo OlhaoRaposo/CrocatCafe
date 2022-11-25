@@ -56,6 +56,20 @@ public class EditMode : MonoBehaviour
                     }
                 }
             }
+
+            GameObject[] unusedShowcases = GameObject.FindGameObjectsWithTag("ShowCase");
+
+            foreach (GameObject unusedShowcase in unusedShowcases)
+            {
+                if (unusedShowcase.GetComponent<DragableObject>() != null)
+                {
+                    if(unusedShowcase.GetComponent<DragableObject>().currentCell == null)
+                    {
+                        selectedObject = unusedShowcase;
+                        selectedObject.GetComponent<DragableObject>().Remove();
+                    }
+                }
+            }
         }
     }
 }

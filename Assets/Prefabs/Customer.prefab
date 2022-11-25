@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentOrder: 0
   patience: 0
-  PossibleOrders: 000000000000000000000000000000000000000000000000
+  PossibleOrders: 000000000100000002000000030000000400000005000000
   hasAskedOrder: 0
   order: {fileID: 0}
   orderSpawn: {fileID: 0}

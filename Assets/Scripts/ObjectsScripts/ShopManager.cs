@@ -28,6 +28,7 @@ public class ShopManager : MonoBehaviour
               {
                   armazen.GetComponent<Armazen>().money -= objects[i].GetComponent<ObjectScript>().objectValue;
                   Instantiate(objects[i], transform.position, quaternion.identity);
+                  armazen.GetComponent<Armazen>().AtualizaTxt();
               }
           }
       }

@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2261524796288345778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1519537, y: 0, z: 0.39089882}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -48,17 +48,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
-  objectValue: 0
+  objectType: 66
+  objectNum: 3
+  objectRotation: 48
+  objectId: B30
+  objectValue: 1
   isOven: 0
   isPot: 0
   isFurnace: 0
   isBarrel: 0
-  isKneader: 0
+  isKneader: 1
   isJuicer: 0
+  isShowcase: 0
 --- !u!114 &6606769104970956530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +74,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+  objectSize: {x: 1, y: 1}
 --- !u!208 &2888656016310635806
 NavMeshObstacle:
   m_ObjectHideFlags: 0
