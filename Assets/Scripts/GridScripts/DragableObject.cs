@@ -4,6 +4,7 @@ public class DragableObject : MonoBehaviour
 {
     public GridCell currentCell = null, previousCell = null;
     private int myRotation;
+    public Vector2 objectSize = new Vector2(1, 1);
 
     private void Start()
     {
@@ -47,21 +48,44 @@ public class DragableObject : MonoBehaviour
 
                     if (currentCell.isOccupied == false) //Checa se a célula já está ocupada
                     {
-                        transform.position = MouseRaycast.MousePos(); //snap
-                        currentCell.rotationValue = myRotation; //Coloca o valor de rotação na célula
-                        currentCell.currentObject = gameObject; //ocupa a célula nova
-                        currentCell.isOccupied = true;
+                        SnapObject();
                     }
                 }
             }
         }
     }
 
+    private void SnapObject()
+    {
+
+        transform.position = CalcSnap(); //snap
+        currentCell.rotationValue = myRotation; //Coloca o valor de rotação na célula
+        currentCell.currentObject = gameObject; //ocupa a célula nova
+        currentCell.isOccupied = true;
+    }
+
+    private Vector3 CalcSnap()
+    {
+        Vector3 snapPos;
+        snapPos = MouseRaycast.MousePos();
+
+        float offsetX = 0, offsetZ = 0;
+        offsetX = (objectSize.x - 1) / 2;
+        offsetZ = (objectSize.y - 1) / 2;
+
+        snapPos.x += offsetX;
+        snapPos.z += offsetZ;
+        return snapPos;
+    }
+
     public void Rotate() //Gira objeto
     {
         if (currentCell != null)
         {
+            float x = objectSize.x, z = objectSize.y;
+            objectSize.x = z; objectSize.y = x;
             transform.Rotate(0, 90, 0);
+
             if (myRotation < 3)
             {
                 myRotation++;
@@ -70,6 +94,7 @@ public class DragableObject : MonoBehaviour
             {
                 myRotation = 0;
             }
+
             currentCell.rotationValue = myRotation;
         }
     }

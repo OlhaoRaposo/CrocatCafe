@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
@@ -46,10 +47,15 @@ public class Customer : MonoBehaviour
     private void SetDestinationToExhibitor()
     {
         //Leva o Cliente ate o exibitor
+        
         showCase = GameObject.FindGameObjectsWithTag("ShowCase");
         int showCaseIndex = Random.Range(0, showCase.Length);
-        navMesh.SetDestination(showCase[showCaseIndex].transform.position);
-        StartCoroutine(CheckDistanceToShowCase(showCase[showCaseIndex]));
+        if (showCase.Length != 0)
+        {
+            navMesh.SetDestination(showCase[showCaseIndex].transform.position);
+            StartCoroutine(CheckDistanceToShowCase(showCase[showCaseIndex]));
+        }else
+            Destroy(gameObject);
     }
     IEnumerator CheckDistanceToShowCase(GameObject showCase)
     {
