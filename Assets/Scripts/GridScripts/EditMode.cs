@@ -47,10 +47,13 @@ public class EditMode : MonoBehaviour
 
             foreach (GameObject unusedObject in unusedObjects)
             {
-                if(unusedObject.GetComponent<DragableObject>().currentCell == null)
+                if (unusedObject.GetComponent<DragableObject>() != null)
                 {
-                    selectedObject = unusedObject;
-                    selectedObject.GetComponent<DragableObject>().Remove();
+                    if(unusedObject.GetComponent<DragableObject>().currentCell == null)
+                    {
+                        selectedObject = unusedObject;
+                        selectedObject.GetComponent<DragableObject>().Remove();
+                    }
                 }
             }
         }
