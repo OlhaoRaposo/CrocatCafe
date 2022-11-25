@@ -118,5 +118,11 @@ public class FurnaceScript : MonoBehaviour
         yield return new WaitForSeconds(bakeTime);
         armazen.GetComponent<Armazen>().AdicionaPao(1);
         ReloadReferences();
+
+        if (TutorialController.instance.tutorialProgress < 8)
+        {
+            TutorialController.instance.AdvanceTutorial();
+            TutorialController.instance.OpenTutorialWindow();
+        }
     }
 }
