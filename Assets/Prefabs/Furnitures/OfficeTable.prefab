@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 6337942200867511549}
   - component: {fileID: 5694060395432178649}
   - component: {fileID: 3456529056038052458}
-  - component: {fileID: 718422525401671590}
   - component: {fileID: 7986509082425793968}
   - component: {fileID: 9120679743983626244}
   m_Layer: 10
@@ -143,6 +142,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 0
+  isShowcase: 0
 --- !u!114 &3456529056038052458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,23 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
---- !u!114 &718422525401671590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5468129127914528771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a29b9000eb5bab49b09219d8008ab34, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
-  objectValue: 0
+  objectSize: {x: 1, y: 1}
 --- !u!65 &7986509082425793968
 BoxCollider:
   m_ObjectHideFlags: 0
