@@ -48,6 +48,7 @@ MonoBehaviour:
   myName: CoffeFruit
   loot: 
   plantCode: 0
+  plantValue: 3
   stages: []
   growthTime: 0
   isReady: 0

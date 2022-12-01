@@ -9,6 +9,7 @@ public class Plant : MonoBehaviour
     public string myName;
     [SerializeField] private string loot;
     public int plantCode;
+    public int plantValue;
     [SerializeField] private GameObject[] stages;
     [SerializeField] private float growthTime;
     public bool isReady;

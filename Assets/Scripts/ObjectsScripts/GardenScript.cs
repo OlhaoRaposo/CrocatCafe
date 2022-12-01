@@ -52,13 +52,21 @@ public class GardenScript : MonoBehaviour
         myPanel.SetActive(true);
     }
 
+    public void BuySeed(int seedId)
+    {
+        GameObject armazen = GameObject.Find("ArmazenManager");
+        if (armazen.GetComponent<Armazen>().money >= plants[seedId].GetComponent<Plant>().plantValue) {
+            armazen.GetComponent<Armazen>().money -= plants[seedId].GetComponent<Plant>().plantValue;
+            availableAmmount[seedId] += 1;
+            armazen.GetComponent<Armazen>().AtualizaTxt();
+        }
+    }
+
     public void SetDestinationToPot(GameObject clickedPot, int timeSpent)
     {
         GameObject cat = GameObject.Find("Cat");
         cat.GetComponent<NavMeshScript>().AddDestination(clickedPot, timeSpent);
     }
-
-
     public void SummonPlant(int plant)
     {
         Pot potCode = currentPot.GetComponent<Pot>();

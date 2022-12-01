@@ -33,7 +33,6 @@ public class OrderSpawner : MonoBehaviour
                     
                     //Liga o consumidor com o prato em que ele pediu
                     customer.GetComponent<Customer>().order = plate.gameObject;      
-                    Debug.Log("Instanciou");
                     return;
                 }else
                     Console.WriteLine("EstaCheio");
@@ -51,27 +50,27 @@ public class OrderSpawner : MonoBehaviour
             {
                 plate.GetComponent<plateData>().previousPlate.gameObject.GetComponent<plateData>().nextPlate = plate.GetComponent<plateData>().nextPlate;
                 plate.GetComponent<plateData>().nextPlate.GetComponent<plateData>().previousPlate = plate.GetComponent<plateData>().previousPlate;
-                AttIcon(plate.transform.parent.gameObject);
+                AttIcon(plate.transform.parent.gameObject,plate);
                 AddCash(plate);
-                Destroy(plate.gameObject);
                 return;
             }
         }
     }
 
-    private void AttIcon(GameObject slotGmbj)
+    private void AttIcon(GameObject slotGmbj,GameObject plate)
     {
-        for (GameObject slot = slotGmbj ;slot.GetComponent<SlotScript>().previousSlot != slotGmbj; slot = slot.GetComponent<SlotScript>().nextSlot)
+        for (GameObject slot = slotGmbj;slot.GetComponent<SlotScript>().nextSlot != slotGmbj; slot = slot.GetComponent<SlotScript>().nextSlot.gameObject)
         {
-            if(slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate != null)
+            Debug.Log(slot.name +"\n"+slot.name +"\n"+ slot.GetComponent<SlotScript>().previousSlot.name +"\n"+ slot.GetComponent<SlotScript>().nextSlot.name);
+            if (slot.GetComponent<SlotScript>().nextSlot.gameObject.GetComponent<SlotScript>().alocadPlate != null)
             {
-                slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.position = slot.transform.position;
-                slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate.transform.parent = slot.transform;
-                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.GetComponent<SlotScript>().alocadPlate;
-            }else
-                Debug.Log("A");
-            
+                slot.GetComponent<SlotScript>().nextSlot.gameObject.GetComponent<SlotScript>().alocadPlate.transform.position = slot.transform.position;
+                slot.GetComponent<SlotScript>().nextSlot.gameObject.GetComponent<SlotScript>().alocadPlate.transform.parent = slot.transform;
+                slot.GetComponent<SlotScript>().alocadPlate = slot.GetComponent<SlotScript>().nextSlot.gameObject.GetComponent<SlotScript>().alocadPlate;
+            }
+            Destroy(plate);
         }
+       
     }
     private  void AddCash(GameObject plate)
     {

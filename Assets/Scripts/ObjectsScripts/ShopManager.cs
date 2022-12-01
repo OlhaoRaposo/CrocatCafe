@@ -16,7 +16,6 @@ public class ShopManager : MonoBehaviour
    private void Awake()
    {
        armazen = GameObject.Find("ArmazenManager");
-       NextPage(0);
    }
    public void BuyObject(string code)
    {

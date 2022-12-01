@@ -48,6 +48,7 @@ MonoBehaviour:
   myName: Milk
   loot: 
   plantCode: 0
+  plantValue: 4
   stages: []
   growthTime: 0
   isReady: 0

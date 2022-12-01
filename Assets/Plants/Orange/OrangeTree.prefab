@@ -48,6 +48,7 @@ MonoBehaviour:
   myName: Orange
   loot: 
   plantCode: 0
+  plantValue: 2
   stages: []
   growthTime: 0
   isReady: 0

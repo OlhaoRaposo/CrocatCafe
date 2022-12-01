@@ -47,6 +47,8 @@ MonoBehaviour:
   data: {fileID: 11400000, guid: 003153952a1a95a4b89265a969e68c96, type: 2}
   myName: Meat
   loot: 
+  plantCode: 0
+  plantValue: 5
   stages: []
   growthTime: 0
   isReady: 0

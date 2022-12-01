@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plateName: Bolo
   plateDurability: 6
-  platePrice: 10
+  platePrice: 12
   plateCookTime: 7
   nextPlate: {fileID: 0}
   previousPlate: {fileID: 0}

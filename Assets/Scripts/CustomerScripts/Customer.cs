@@ -67,7 +67,6 @@ public class Customer : MonoBehaviour
         if (distance.magnitude <= 1.6f)
         {
             armazen = GameObject.Find("ArmazenManager");
-            Debug.Log("Chegay");
             //Chegou ao exibitor
             switch (currentOrder)
             {
@@ -77,13 +76,11 @@ public class Customer : MonoBehaviour
                         Serve();
                         armazen.GetComponent<Armazen>().RemovePao(1);
                         StartCoroutine(GoToExit(5));
-                        Debug.Log("serve");
                     }else {
                         if (hasAskedOrder != true) {
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }
                     break;
                 case 1:
@@ -97,7 +94,6 @@ public class Customer : MonoBehaviour
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }
                     break;
                 case 2:
@@ -111,7 +107,6 @@ public class Customer : MonoBehaviour
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }
                     break;
                 case 3:
@@ -125,7 +120,6 @@ public class Customer : MonoBehaviour
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }             
                     break;
                 case 4:
@@ -139,7 +133,6 @@ public class Customer : MonoBehaviour
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }
                     break;
                 case 5:
@@ -153,7 +146,6 @@ public class Customer : MonoBehaviour
                             AskOrder();
                             AngryExit();
                         }
-                        Debug.Log("Nao tem");
                     }
                     break;
             }
