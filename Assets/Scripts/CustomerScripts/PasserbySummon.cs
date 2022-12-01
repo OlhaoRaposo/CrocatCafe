@@ -10,7 +10,6 @@ public class PasserbySummon : MonoBehaviour
     {
         StartCoroutine(SummonPaserby());
     }
-
     IEnumerator SummonPaserby()
     {
         yield return new WaitForSeconds(1);

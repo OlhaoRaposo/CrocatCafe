@@ -119,21 +119,18 @@ public class Armazen : MonoBehaviour
         AtualizaTxt();
         instance = this;
     }
-
     //Materiais
     //Massas
     public void AdicionaMassas(int quant)
     {
-        if (massasAtual < massasMax)
-        {
+        if (massasAtual < massasMax) {
             massasAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveMassas(int quant)
     {
-        if (massasAtual - quant >= 0)
-        {
+        if (massasAtual - quant >= 0) {
             massasAtual -= quant;
         }
         AtualizaTxt();
@@ -141,16 +138,14 @@ public class Armazen : MonoBehaviour
     //Café fruta
     public void AdicionaFrutaCafe(int quant)
     {
-        if (frutaCafeAtual < frutaCafeMax)
-        {
+        if (frutaCafeAtual < frutaCafeMax) {
             frutaCafeAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveFrutaCafe(int quant)
     {
-        if (frutaCafeAtual - quant > 0)
-        {
+        if (frutaCafeAtual - quant > 0) {
             frutaCafeAtual -= quant;
         }
         AtualizaTxt();
@@ -158,16 +153,14 @@ public class Armazen : MonoBehaviour
     //Laranja
     public void AdicionaLaranjas(int quant)
     {
-        if (laranjaAtual + quant <= laranjaMax)
-        {
+        if (laranjaAtual + quant <= laranjaMax) {
             laranjaAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveLaranjas(int quant)
     {
-        if (laranjaAtual - quant >= 0)
-        {
+        if (laranjaAtual - quant >= 0) {
             laranjaAtual -= quant;
         }
         AtualizaTxt();
@@ -175,16 +168,14 @@ public class Armazen : MonoBehaviour
     //Frango
     public void AdicionaFrango(int quant)
     {
-        if (frangoAtual + quant <= frangoMax)
-        {
+        if (frangoAtual + quant <= frangoMax) {
             frangoAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveFrango(int quant)
     {
-        if (frangoAtual - quant >= 0)
-        {
+        if (frangoAtual - quant >= 0) {
             frangoAtual -= quant;
         }
         AtualizaTxt();
@@ -192,17 +183,14 @@ public class Armazen : MonoBehaviour
     //Açucar
     public void AdicionaAcucar(int quant)
     {
-        if (acucarAtual + quant <= acucarMax)
-        {
-            Debug.Log("adicionou");
+        if (acucarAtual + quant <= acucarMax) {
             acucarAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveAcucar(int quant)
     {
-        if (acucarAtual - quant >= 0)
-        {
+        if (acucarAtual - quant >= 0) {
             acucarAtual -= quant;
         }
         AtualizaTxt();
@@ -211,16 +199,14 @@ public class Armazen : MonoBehaviour
     //Leite
     public void AdicionaLeite(int quant)
     {
-        if (leiteAtual + quant <= leiteMax)
-        {
+        if (leiteAtual + quant <= leiteMax) {
             leiteAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveLeite(int quant)
     {
-        if (leiteAtual - quant >= 0)
-        {
+        if (leiteAtual - quant >= 0) {
             leiteAtual -= quant;
         }
         AtualizaTxt();
@@ -229,16 +215,14 @@ public class Armazen : MonoBehaviour
     //Queijo
     public void AdicionaQueijo(int quant)
     {
-        if (queijoAtual + quant <= queijoMax)
-        {
+        if (queijoAtual + quant <= queijoMax) {
             queijoAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveQueijo(int quant)
     {
-        if (queijoAtual - quant >= 0)
-        {
+        if (queijoAtual - quant >= 0) {
             queijoAtual -= quant;
         }
         AtualizaTxt();
@@ -247,16 +231,14 @@ public class Armazen : MonoBehaviour
     //Massa de Coxinha
     public void AdicionaMassaCoxinha(int quant)
     {
-        if (massaCoxinhaAtual + quant <= massaCoxinhaMax)
-        {
+        if (massaCoxinhaAtual + quant <= massaCoxinhaMax) {
             massaCoxinhaAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveMassaCoxinha(int quant)
     {
-        if (massaCoxinhaAtual - quant >= 0)
-        {
+        if (massaCoxinhaAtual - quant >= 0){
             massaCoxinhaAtual -= quant;
         }
         AtualizaTxt();
@@ -265,16 +247,14 @@ public class Armazen : MonoBehaviour
     //Massa de Bolo
     public void AdicionaMassaBolo(int quant)
     {
-        if (massaBoloAtual + quant <= massaBoloMax)
-        {
+        if (massaBoloAtual + quant <= massaBoloMax) {
             massaBoloAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveMassaBolo(int quant)
     {
-        if (massaBoloAtual - quant >= 0)
-        {
+        if (massaBoloAtual - quant >= 0) {
             massaBoloAtual -= quant;
         }
         AtualizaTxt();
@@ -283,16 +263,14 @@ public class Armazen : MonoBehaviour
     //Bola de Queijo
     public void AdicionaBolaQueijo(int quant)
     {
-        if (bolaQueijoAtual + quant <= bolaQueijoMax)
-        {
+        if (bolaQueijoAtual + quant <= bolaQueijoMax) {
             bolaQueijoAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveBolaQueijo(int quant)
     {
-        if (bolaQueijoAtual - quant >= 0)
-        {
+        if (bolaQueijoAtual - quant >= 0) {
             bolaQueijoAtual -= quant;
         }
         AtualizaTxt();
@@ -302,16 +280,14 @@ public class Armazen : MonoBehaviour
     //Pao
     public void AdicionaPao(int quant)
     {
-        if (breads < maxBreads)
-        {
+        if (breads < maxBreads) {
             breads += quant;
         }
         AtualizaTxt();
     }
     public void RemovePao(int quant)
     {
-        if (breads - quant >= 0)
-        {
+        if (breads - quant >= 0) {
             breads -= quant;
         }
         AtualizaTxt();
@@ -319,16 +295,14 @@ public class Armazen : MonoBehaviour
     //Coxinha
     public void AdicionaCoxinha(int quant)
     {
-        if (coxinhaAtual + quant < coxinhaMax)
-        {
+        if (coxinhaAtual + quant < coxinhaMax) {
             coxinhaAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveCoxinha(int quant)
     {
-        if (coxinhaAtual - quant >= 0)
-        {
+        if (coxinhaAtual - quant >= 0) {
             coxinhaAtual -= quant;
         }
         AtualizaTxt();
@@ -336,16 +310,14 @@ public class Armazen : MonoBehaviour
     //Café
     public void AdicionaCafé(int quant)
     {
-        if (cafeAtual < cafeMax)
-        {
+        if (cafeAtual < cafeMax) {
             cafeAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveCafé(int quant)
     {
-        if (cafeAtual - quant >= 0)
-        {
+        if (cafeAtual - quant >= 0) {
             cafeAtual -= quant;
         }
         AtualizaTxt();
@@ -353,16 +325,14 @@ public class Armazen : MonoBehaviour
     //Pao de queijo
     public void AdicionaPaoDeQueijo(int quant)
     {
-        if (paoDeQueijoAtual + quant < paoDeQueijoMax)
-        {
+        if (paoDeQueijoAtual + quant < paoDeQueijoMax) {
             paoDeQueijoAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemovePaoDeQueijo(int quant)
     {
-        if (paoDeQueijoAtual - quant >= 0)
-        {
+        if (paoDeQueijoAtual - quant >= 0) {
             paoDeQueijoAtual -= quant;
         }
         AtualizaTxt();
@@ -370,16 +340,14 @@ public class Armazen : MonoBehaviour
     //Suco
     public void AdicionaSucos(int quant)
     {
-        if (sucosAtual + quant < sucosMax)
-        {
+        if (sucosAtual + quant < sucosMax) {
             sucosAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveSucos(int quant)
     {
-        if (sucosAtual - quant >= 0)
-        {
+        if (sucosAtual - quant >= 0) {
             sucosAtual -= quant;
         }
         AtualizaTxt();
@@ -387,16 +355,14 @@ public class Armazen : MonoBehaviour
     //Bolos
     public void AdicionaBolos(int quant)
     {
-        if (boloAtual + quant <= boloMax)
-        {
+        if (boloAtual + quant <= boloMax) {
             boloAtual += quant;
         }
         AtualizaTxt();
     }
     public void RemoveBolos(int quant)
     {
-        if (boloAtual - quant >= 0)
-        {
+        if (boloAtual - quant >= 0) {
             boloAtual -= quant;
         }
         AtualizaTxt();
@@ -415,41 +381,35 @@ public class Armazen : MonoBehaviour
     {
         for (int i = 0; i < moneyText.Length; i++)
         {
-            moneyText[i].text = money.ToString();
+            moneyText[i].text = "X" + money;
         }
-        
     }
     private void AtualizaPratos()
     {
         //Pratos
         for (int i = 0; i < breadstxt.Length; i++)
         {
-            breadstxt[i].text = "Paes: " + breads;
+            breadstxt[i].text = "X " + breads;
         }
-
         for (int i = 0; i < cafeText.Length; i++)
         {
-            cafeText[i].text = "Cafe: " + cafeAtual;
+            cafeText[i].text = "X " + cafeAtual;
         }
-
         for (int i = 0; i < coxinhaText.Length; i++)
         {
-            coxinhaText[i].text = "Coxinha: " + coxinhaAtual;
+            coxinhaText[i].text = "X " + coxinhaAtual;
         }
-
         for (int i = 0; i < paoDeQueijoText.Length; i++)
         {
-            paoDeQueijoText[i].text = "Paes De Queijo: " + paoDeQueijoAtual;
+            paoDeQueijoText[i].text = "X " + paoDeQueijoAtual;
         }
-
         for (int i = 0; i < sucosText.Length; i++)
         {
-            sucosText[i].text = "Sucos: " + sucosAtual;
+            sucosText[i].text = "X " + sucosAtual;
         }
-
         for (int i = 0; i < bolosText.Length; i++)
         {
-            bolosText[i].text = "Bolos: " + boloAtual;
+            bolosText[i].text = "X " + boloAtual;
         }
     }
     private void AtualizaMateriais()
@@ -457,52 +417,43 @@ public class Armazen : MonoBehaviour
         //Materiais
         for (int i = 0; i < frutasCafeText.Length; i++)
         {
-            frutasCafeText[i].text = "Fruta Café: " + frutaCafeAtual;
+            frutasCafeText[i].text = "X " + frutaCafeAtual;
         }
-
         for (int i = 0; i < massastxt.Length; i++)
         {
-            massastxt[i].text = "Massas: " + massasAtual;
+            massastxt[i].text = "X " + massasAtual;
         }
-
         for (int i = 0; i < laranjaText.Length; i++)
         {
-            laranjaText[i].text = "Laranjas: " + laranjaAtual;
+            laranjaText[i].text = "X " + laranjaAtual;
         }
-
         for (int i = 0; i < frangoText.Length; i++)
         {
-            frangoText[i].text = "Frangos: " + frangoAtual;
+            frangoText[i].text = "X " + frangoAtual;
         }
-
         for (int i = 0; i < acucarText.Length; i++)
         {
-            acucarText[i].text = "Açucar: " + acucarAtual;
+            acucarText[i].text = "X " + acucarAtual;
         }
-
         for (int i = 0; i < leiteText.Length; i++)
         {
-            leiteText[i].text = "Leite: " + leiteAtual;
+            leiteText[i].text = "X " + leiteAtual;
         }
-
         for (int i = 0; i < queijoText.Length; i++)
         {
-            queijoText[i].text = "Queijo: " + queijoAtual;
+            queijoText[i].text = "X " + queijoAtual;
         }
-
         for (int i = 0; i < massaCoxinhaText.Length; i++)
         {
-            massaCoxinhaText[i].text = "Massa de coxinha: " + massaCoxinhaAtual;
+            massaCoxinhaText[i].text = "X " + massaCoxinhaAtual;
         }
-
         for (int i = 0; i < massaBoloText.Length; i++)
         {
-            massaBoloText[i].text = "Massa de bolo: " + massaBoloAtual;
+            massaBoloText[i].text = "X " + massaBoloAtual;
         }
-
         for (int i = 0; i < bolaQueijoText.Length; i++)
         {
-            bolaQueijoText[i].text = "Bola de queijo: " + bolaQueijoAtual;
+            bolaQueijoText[i].text = "X " + bolaQueijoAtual;
         }
     }
 }

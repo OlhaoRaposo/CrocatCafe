@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6606769104970956530}
   - component: {fileID: 2888656016310635806}
   - component: {fileID: 3917452328316733492}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: CounterTop
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 2629538950991533458}
   - component: {fileID: 1428243799987477047}
   - component: {fileID: 3762426960147951357}
-  m_Layer: 10
+  m_Layer: 7
   m_Name: CountertopObj
   m_TagString: Untagged
   m_Icon: {fileID: 0}

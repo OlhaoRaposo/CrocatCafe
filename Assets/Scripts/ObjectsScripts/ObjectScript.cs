@@ -80,4 +80,9 @@ public class ObjectScript : IObjectID
             }
         }
     }
+    private void OnDestroy()
+    {
+        GameObject.Find("ArmazenManager").GetComponent<Armazen>().money += objectValue;
+        GameObject.Find("ArmazenManager").GetComponent<Armazen>().AtualizaTxt();
+    }
 }
