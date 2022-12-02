@@ -376,6 +376,8 @@ public class Armazen : MonoBehaviour
         AtualizaDinheiro();
         //Pratos
         AtualizaPratos();
+        //Barulho da UI
+        AudioBoard.instance.PlayAudio("SFX_UI_Shop");
     }
     private void AtualizaDinheiro()
     {

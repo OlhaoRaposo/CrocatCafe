@@ -92,8 +92,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4831780280164645425}
-  - component: {fileID: 6700716774838216718}
-  - component: {fileID: 5348713085960814883}
   - component: {fileID: 4013337302279657507}
   m_Layer: 9
   m_Name: Barrel
@@ -118,45 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6700716774838216718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7176377568574127985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectType: 0
-  objectNum: 0
-  objectRotation: 0
-  objectId: 
-  objectValue: 0
-  isOven: 0
-  isPot: 0
-  isFurnace: 0
-  isBarrel: 0
-  isKneader: 0
-  isJuicer: 0
---- !u!208 &5348713085960814883
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7176377568574127985}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!65 &4013337302279657507
 BoxCollider:
   m_ObjectHideFlags: 0

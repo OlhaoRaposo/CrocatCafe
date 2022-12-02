@@ -3,7 +3,12 @@ guid: 33a7680c2e6efbe4b82487586abac264
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CaixaPlantio
+    second: {fileID: 2100000, guid: 83d21db041d2c624d81b7617b1b6ac4c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
