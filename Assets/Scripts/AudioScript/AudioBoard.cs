@@ -6,6 +6,7 @@ public class AudioBoard : MonoBehaviour
 
     private void Start()
     {
+        audios = GameObject.FindObjectsOfType<AudioSource>();
         instance = this;
     }
 

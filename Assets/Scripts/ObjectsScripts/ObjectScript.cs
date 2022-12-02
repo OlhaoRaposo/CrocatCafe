@@ -82,7 +82,11 @@ public class ObjectScript : IObjectID
     }
     private void OnDestroy()
     {
-        GameObject.Find("ArmazenManager").GetComponent<Armazen>().money += objectValue;
-        GameObject.Find("ArmazenManager").GetComponent<Armazen>().AtualizaTxt();
+        GameObject armazen = GameObject.Find("ArmazenManager");
+        if (armazen != null)
+        {
+            GameObject.Find("ArmazenManager").GetComponent<Armazen>().money += objectValue;
+            GameObject.Find("ArmazenManager").GetComponent<Armazen>().AtualizaTxt();
+        }
     }
 }

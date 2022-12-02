@@ -29,10 +29,10 @@ public class GardenScript : MonoBehaviour
         for (int i = 0; i < buttons.Length; i++)//Limpa Tudo
         {
             Button currentButton = buttons[i].GetComponent<Button>();
-            Text currentText = buttons[i].GetComponentInChildren<Text>();
+            //Text currentText = buttons[i].GetComponentInChildren<Text>();
 
             currentButton.onClick.RemoveAllListeners();
-            currentText.text = "Vazio";
+            //currentText.text = "Vazio";
         }
 
         for (int i = 0; i < plants.Length; i++)//Registra tudo disponível
@@ -43,8 +43,8 @@ public class GardenScript : MonoBehaviour
                 Button currentButton = buttons[aux].GetComponent<Button>();
                 currentButton.onClick.AddListener(() => SummonPlant(value));
 
-                Text currentText = buttons[aux].GetComponentInChildren<Text>();
-                currentText.text = $"{plants[i].GetComponent<Plant>().myName}: {availableAmmount[i]}";
+                //Text currentText = buttons[aux].GetComponentInChildren<Text>();
+                //currentText.text = $"{plants[i].GetComponent<Plant>().myName}: {availableAmmount[i]}";
 
                 aux++;
             }

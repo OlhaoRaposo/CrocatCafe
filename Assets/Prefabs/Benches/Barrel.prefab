@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1623284632173910330}
   - component: {fileID: 18252531235139607}
   - component: {fileID: 9063660969248172311}
-  m_Layer: 9
+  m_Layer: 7
   m_Name: Barrel
   m_TagString: Furniture
   m_Icon: {fileID: 0}

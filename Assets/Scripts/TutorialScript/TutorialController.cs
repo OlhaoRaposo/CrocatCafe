@@ -70,7 +70,10 @@ public class TutorialController : MonoBehaviour
                         return;
                     }
             }
-            AdvanceTutorial();
+            if (hasCompletedTutorial == false)
+            {
+                AdvanceTutorial();
+            }
         }
     }
 
