@@ -76,5 +76,7 @@ public class GardenScript : MonoBehaviour
         availableAmmount[plant]--;
 
         myPanel.SetActive(false);
+
+        AudioBoard.instance.PlayAudio("SFX_UI_Shop");
     }
 }
