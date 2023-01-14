@@ -1828,7 +1828,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Seeds
+  m_Text: Sementes
 --- !u!222 &48431845
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14309,7 +14309,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &285124990
 MonoBehaviour:
@@ -14331,7 +14331,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -14359,7 +14359,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -25002,7 +25002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bread
+  m_text: Pao
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -36908,7 +36908,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851594488
 MonoBehaviour:
@@ -36930,7 +36930,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -38569,7 +38569,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909169436
 MonoBehaviour:
@@ -38591,7 +38591,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -38619,7 +38619,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -38873,7 +38873,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &916837160
 MonoBehaviour:
@@ -38895,7 +38895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -38923,7 +38923,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -40186,7 +40186,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &946019529
 MonoBehaviour:
@@ -40208,7 +40208,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -42293,7 +42293,7 @@ GameObject:
   - component: {fileID: 1001555487}
   - component: {fileID: 1001555486}
   m_Layer: 0
-  m_Name: cheeseFrame
+  m_Name: breadFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42724,7 +42724,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1011058671
 MonoBehaviour:
@@ -42746,7 +42746,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -42774,7 +42774,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -44922,7 +44922,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: garden
+  m_text: Jardim
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -50109,7 +50109,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Furniture
+  m_Text: Construir
 --- !u!222 &1194883238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55509,7 +55509,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1349347111
 MonoBehaviour:
@@ -55531,7 +55531,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -59507,7 +59507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451057785
 MonoBehaviour:
@@ -59529,7 +59529,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -61973,7 +61973,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Seeds
+  m_Text: Sementes
 --- !u!222 &1516779507
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -63077,7 +63077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Furniture
+  m_Text: Construir
 --- !u!222 &1544944096
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70059,7 +70059,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1695765441
 MonoBehaviour:
@@ -70081,7 +70081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -71557,7 +71557,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716934250
 MonoBehaviour:
@@ -71579,7 +71579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -71607,7 +71607,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -72549,7 +72549,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743757480
 MonoBehaviour:
@@ -72571,7 +72571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -73361,7 +73361,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768923062
 MonoBehaviour:
@@ -73383,7 +73383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -73411,7 +73411,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -74580,7 +74580,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1796867685
 MonoBehaviour:
@@ -74602,7 +74602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -74630,7 +74630,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -80727,7 +80727,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1967257589
 MonoBehaviour:
@@ -80749,7 +80749,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -80777,7 +80777,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -84127,7 +84127,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bake
+  m_text: Assar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -86135,7 +86135,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000041127, y: 0.000016332}
-  m_SizeDelta: {x: 130.45, y: 31.996}
+  m_SizeDelta: {x: 90, y: 31.996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125838241
 MonoBehaviour:
@@ -86157,7 +86157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BUY
+  m_text: Comprar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -86185,7 +86185,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30.7
+  m_fontSize: 20.5
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -88704,7 +88704,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bread
+  m_text: Pao
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -88969,7 +88969,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: exit game
+  m_text: Fechar Jogo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -88997,7 +88997,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.7
+  m_fontSize: 43.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -91089,7 +91089,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: cake
+  m_text: Bolo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -91225,7 +91225,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: knead
+  m_text: Assar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -92237,7 +92237,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 105, y: -15}
+  m_AnchoredPosition: {x: 105, y: -24}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383338661976692400
@@ -92476,7 +92476,7 @@ GameObject:
   - component: {fileID: 1383338662005122997}
   - component: {fileID: 1383338662005122996}
   m_Layer: 5
-  m_Name: juiceBtn
+  m_Name: FogaoBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93691,7 +93691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: grandpa`s book
+  m_text: Receitas do vovo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0935ee9428f15f546a756dd22a0901a4, type: 2}
   m_sharedMaterial: {fileID: 9033342057370433119, guid: 0935ee9428f15f546a756dd22a0901a4,
@@ -93719,12 +93719,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.65
+  m_fontSize: 30
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 30
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -95341,7 +95341,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: knead
+  m_text: Assar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -96599,7 +96599,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -96967,7 +96967,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: music
+  m_text: Musica
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -97567,7 +97567,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: furnace
+  m_text: Forno
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -98266,7 +98266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAVE
+  m_text: Salvar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -98294,7 +98294,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.6
+  m_fontSize: 42.55
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -98450,7 +98450,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: kneader
+  m_text: Sovadeira
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -98478,7 +98478,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 71
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -98963,7 +98963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sweet dough
+  m_text: Massa de bolo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -98991,7 +98991,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 23.1
+  m_fontSize: 20.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -99886,7 +99886,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: oven
+  m_text: Fogao
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -100107,7 +100107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: make
+  m_text: Ferver
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -100928,7 +100928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: knead
+  m_text: Sovar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -101350,7 +101350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sfx
+  m_text: Efeitos sonoros
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -101378,7 +101378,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.25
+  m_fontSize: 43.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -102111,8 +102111,8 @@ RectTransform:
   m_Father: {fileID: 1383338662459940571}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.54545456, y: 0}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: -4, y: 0}
   m_SizeDelta: {x: 24.6936, y: 4.6936}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -102316,7 +102316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sounds
+  m_text: Volume
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -102569,7 +102569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: cheese
+  m_text: Queijo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -102597,7 +102597,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.85
+  m_fontSize: 26.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -102815,7 +102815,7 @@ GameObject:
   - component: {fileID: 1383338662619331158}
   - component: {fileID: 1383338662619331159}
   m_Layer: 5
-  m_Name: juiceTxt
+  m_Name: sucoTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103114,7 +103114,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 103, y: -35}
+  m_AnchoredPosition: {x: 103, y: -24}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1383338662633215771
@@ -104151,7 +104151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: coxinha dough
+  m_text: Massa de coxinha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -104335,7 +104335,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: juice
+  m_text: Suco
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -105125,7 +105125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "pao de queijo \ndough"
+  m_text: Massa de pao de queijo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -105153,7 +105153,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.15
+  m_fontSize: 21.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -105313,7 +105313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: config
+  m_text: Opcoes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -105341,7 +105341,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.15
+  m_fontSize: 52.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -105403,7 +105403,7 @@ GameObject:
   - component: {fileID: 1383338662750134189}
   - component: {fileID: 1383338662750134188}
   m_Layer: 5
-  m_Name: Text (TMP) (3)
+  m_Name: OpcoesTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105707,7 +105707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: juicer
+  m_text: Espremedor
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -105735,7 +105735,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 55.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -105771,7 +105771,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.05556484, w: 0}
+  m_margin: {x: 30.675537, y: 0, z: 32.37278, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -106596,7 +106596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: main menu
+  m_text: Menu Principal
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -106624,7 +106624,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 53.5
+  m_fontSize: 36.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -107244,7 +107244,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: knead
+  m_text: Sovar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -108915,7 +108915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: EDIT
+  m_text: Editar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -108943,11 +108943,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.6
+  m_fontSize: 45.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 17
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -109424,7 +109424,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: master
+  m_text: Geral
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -110130,7 +110130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: cake
+  m_text: Bolo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -111313,7 +111313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: coffee
+  m_text: Cafe
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -111848,7 +111848,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -112139,7 +112139,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: barrel
+  m_text: Barril
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -112275,7 +112275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: return
+  m_text: Voltar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -112365,7 +112365,7 @@ GameObject:
   - component: {fileID: 1383338663251927625}
   - component: {fileID: 1383338663251927624}
   m_Layer: 5
-  m_Name: Text (TMP) (2)
+  m_Name: VoltarTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113868,8 +113868,8 @@ RectTransform:
   m_Father: {fileID: 1383338663262541893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.54545456, y: 0}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: -4, y: 0}
   m_SizeDelta: {x: 24.6936, y: 4.6936}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -114313,7 +114313,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ferment
+  m_text: Fermentar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -114341,7 +114341,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.85
+  m_fontSize: 39.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -114631,7 +114631,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: knead
+  m_text: Sovar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -115000,8 +115000,8 @@ RectTransform:
   m_Father: {fileID: 1383338663013360225}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.54545456, y: 0}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: -4, y: 0}
   m_SizeDelta: {x: 24.6936, y: 4.6936}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -115901,7 +115901,7 @@ GameObject:
   - component: {fileID: 1383338663583872482}
   - component: {fileID: 1383338663583872484}
   m_Layer: 5
-  m_Name: BreadTxt
+  m_Name: "P\xE3oTxt"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116568,7 +116568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: storage
+  m_text: Armazem
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -116738,7 +116738,7 @@ GameObject:
   - component: {fileID: 1383338663635353339}
   - component: {fileID: 1383338663635353336}
   m_Layer: 5
-  m_Name: juiceTxt
+  m_Name: sucoTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116840,7 +116840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: sweet dough
+  m_text: Massa de bolo
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -117245,7 +117245,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.54545456, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -117441,7 +117441,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: juice
+  m_text: Espremer
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -118602,7 +118602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: bake
+  m_text: Assar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -119911,7 +119911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: shop
+  m_text: Lojinha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1b4d4213122e87408bfceb7ddd198d1, type: 2}
   m_sharedMaterial: {fileID: -6736301844756727366, guid: b1b4d4213122e87408bfceb7ddd198d1,
@@ -120024,7 +120024,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 21, y: 309}
+  m_AnchoredPosition: {x: 16.9, y: 312.3}
   m_SizeDelta: {x: 386.9051, y: 126.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3386314390362386754
