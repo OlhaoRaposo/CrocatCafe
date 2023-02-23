@@ -2,8 +2,16 @@ using UnityEngine;
 
 public class EditMode : MonoBehaviour
 {
-    public static GameObject selectedObject;
-    public static bool isEditing = false;
+    public GameObject selectedObject;
+    public GameObject[] gridList;
+    public bool isEditing = false;
+
+    public static EditMode instance;
+
+    private void Start()
+    {
+        instance = this;
+    }
 
     private void Update()
     {
@@ -19,9 +27,9 @@ public class EditMode : MonoBehaviour
 
     public void RotateInput()
     {
-        if(Input.GetMouseButtonDown(1) && isEditing)
+        if ((Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Z)) && isEditing)
         {
-            if(selectedObject != null)
+            if (selectedObject != null)
             {
                 selectedObject.GetComponent<DragableObject>().Rotate();
             }
@@ -30,18 +38,33 @@ public class EditMode : MonoBehaviour
 
     public void DeleteInput()
     {
-        if(Input.GetKeyDown(KeyCode.Backspace) && isEditing)
+        if ((Input.GetKeyDown(KeyCode.Backspace) || Input.GetKeyDown(KeyCode.X)) && isEditing)
         {
-            if(selectedObject != null)
+            if (selectedObject != null)
             {
                 selectedObject.GetComponent<DragableObject>().Remove();
             }
         }
     }
 
+    public void UpdateLayers()
+    {
+        for (int i = 0; i < gridList.Length; i++)
+        {
+            if (selectedObject.layer != gridList[i].layer)
+            {
+                gridList[i].SetActive(false);
+            }
+            else
+            {
+                GodCamera.instance.SetDestinyPos(gridList[i]);
+            }
+        }
+    }
+
     private void RemoveUnusedObjects()
     {
-        if(isEditing == false)
+        if (isEditing == false)
         {
             GameObject[] unusedObjects = GameObject.FindGameObjectsWithTag("Furniture");
 
@@ -49,7 +72,7 @@ public class EditMode : MonoBehaviour
             {
                 if (unusedObject.GetComponent<DragableObject>() != null)
                 {
-                    if(unusedObject.GetComponent<DragableObject>().currentCell == null)
+                    if (unusedObject.GetComponent<DragableObject>().currentCell == null)
                     {
                         selectedObject = unusedObject;
                         selectedObject.GetComponent<DragableObject>().Remove();
@@ -63,7 +86,7 @@ public class EditMode : MonoBehaviour
             {
                 if (unusedShowcase.GetComponent<DragableObject>() != null)
                 {
-                    if(unusedShowcase.GetComponent<DragableObject>().currentCell == null)
+                    if (unusedShowcase.GetComponent<DragableObject>().currentCell == null)
                     {
                         selectedObject = unusedShowcase;
                         selectedObject.GetComponent<DragableObject>().Remove();

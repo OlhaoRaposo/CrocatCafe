@@ -8,7 +8,8 @@ public class DragableObject : MonoBehaviour
 
     private void Start()
     {
-        EditMode.selectedObject = gameObject;
+        EditMode.instance.selectedObject = gameObject;
+        EditMode.instance.UpdateLayers();
     }
 
     private GridCell CheckForCell() //Método que retorna a célula
@@ -26,13 +27,18 @@ public class DragableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        EditMode.selectedObject = gameObject;
+        if (EditMode.instance.isEditing)
+        {
+            EditMode.instance.selectedObject = gameObject;
+            EditMode.instance.UpdateLayers();
+        }
     }
 
     private void OnMouseDrag() //é chamado quando movo o mouse
     {
-        if (EditMode.isEditing) //Está no edit mode?
+        if (EditMode.instance.isEditing) //Está no edit mode?
         {
+            EditMode.instance.UpdateLayers();
             if (CheckForCell() != null) //checa a existência de uma célula
             {
                 if (gameObject.layer == CheckForCell().gameObject.layer) //Só da snap se a layer for a mesma do objeto.

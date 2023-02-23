@@ -36,7 +36,7 @@ public class ObjectScript : IObjectID
 
     public void ObjectInteract()
     {
-        if (EditMode.isEditing == false)
+        if (EditMode.instance.isEditing == false)
         {
             GameObject gmbj;
             if (isOven)
