@@ -76,11 +76,29 @@ public class DragableObject : MonoBehaviour
         snapPos = MouseRaycast.MousePos();
 
         float offsetX = 0, offsetZ = 0;
-        offsetX = (objectSize.x - 1) / 2;
-        offsetZ = (objectSize.y - 1) / 2;
+        offsetX = (objectSize.x / 2) - 0.5f;
+        offsetZ = (objectSize.y / 2) - 0.5f;
 
-        snapPos.x += offsetX;
-        snapPos.z += offsetZ;
+        if(offsetX != 0 || offsetZ !=0)
+        {
+            GridSystem myGrid = CheckForCell().gameObject.transform.parent.gameObject.transform.parent.GetComponent<GridSystem>();
+            if((float)CheckForCell().tilePos.x + offsetX < myGrid.sizeX)
+            {
+                snapPos.x += offsetX;
+            }
+            else
+            {
+                snapPos = transform.position;
+            }
+            if((float)CheckForCell().tilePos.y + offsetZ < myGrid.sizeZ)
+            {
+                snapPos.z += offsetZ;
+            }
+            else
+            {
+                snapPos = transform.position;
+            }  
+        }
         return snapPos;
     }
 

@@ -3,7 +3,7 @@ using UnityEngine;
 public class GridSystem : MonoBehaviour
 {
     [SerializeField]private string myLayer;
-    [SerializeField]private float sizeX, sizeZ;
+    public float sizeX, sizeZ;
     [SerializeField]private Vector3 gridHead;
     [SerializeField]private GameObject grid, gridCell;
     public static GridCell currentSelectedCell;
