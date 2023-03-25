@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1687267984928377784}
   - component: {fileID: 5095923704715797793}
   - component: {fileID: 7653781361426112813}
+  - component: {fileID: 9221192360790843082}
   m_Layer: 7
   m_Name: Furnace
   m_TagString: Furniture
@@ -89,6 +90,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 0
+  isRefrigerator: 0
   isShowcase: 0
 --- !u!114 &7653781361426112813
 MonoBehaviour:
@@ -105,6 +107,29 @@ MonoBehaviour:
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
   objectSize: {x: 1, y: 1}
+--- !u!114 &9221192360790843082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654931296722951350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816d397118ddcb458b8504d0c9e38cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedRecipes:
+  - {fileID: 11400000, guid: f85728a27cc86e24abab05a1e4809a92, type: 2}
+  - {fileID: 11400000, guid: c57ce57c9085a80429e0eedb7c7f1555, type: 2}
+  - {fileID: 11400000, guid: 24e80db056202cf4e91e609308f55f75, type: 2}
+  - {fileID: 11400000, guid: 244936887b0bf1146bcbb1697974f06f, type: 2}
+  - {fileID: 11400000, guid: 256ef8887ef794b40bfa2c5c4918ba7d, type: 2}
+  - {fileID: 11400000, guid: bf3e6591886545f4f868ce1df1d69d55, type: 2}
+  - {fileID: 11400000, guid: 15934de1f7669a54b8bae19cb6056d3e, type: 2}
+  - {fileID: 11400000, guid: 1452e01cadc395e42b7731a22193b69a, type: 2}
+  - {fileID: 11400000, guid: f7fa8b55e925259468899d75d5862f72, type: 2}
+  managerName: FurnaceManager
 --- !u!1 &6792861126826103080
 GameObject:
   m_ObjectHideFlags: 0

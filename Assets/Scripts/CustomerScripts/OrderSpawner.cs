@@ -74,6 +74,7 @@ public class OrderSpawner : MonoBehaviour
     }
     private  void AddCash(GameObject plate)
     {
-        GameObject.Find("ArmazenManager").GetComponent<Armazen>().money += plate.GetComponent<plateData>().platePrice;
+        ArmazenManager.instance.money += plate.GetComponent<plateData>().platePrice;
+        ArmazenManager.instance.UpdateMoneyText();
     }
 }

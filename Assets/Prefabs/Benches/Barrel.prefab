@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 682088852279216901}
-  - component: {fileID: 4227039406767103575}
-  - component: {fileID: 1623284632173910330}
-  - component: {fileID: 18252531235139607}
   - component: {fileID: 9063660969248172311}
+  - component: {fileID: 18252531235139607}
+  - component: {fileID: 1623284632173910330}
+  - component: {fileID: 4227039406767103575}
+  - component: {fileID: -917994072184220220}
   m_Layer: 7
   m_Name: Barrel
   m_TagString: Furniture
@@ -36,21 +37,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4227039406767103575
-MonoBehaviour:
+--- !u!65 &9063660969248172311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3021132233451310661}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0062075, z: 1}
+  m_Center: {x: 0, y: 0.49970996, z: 0}
+--- !u!208 &18252531235139607
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3021132233451310661}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f110f897af6ce1d489b37faae4b5d10c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCell: {fileID: 0}
-  previousCell: {fileID: 0}
-  objectSize: {x: 1, y: 1}
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &1623284632173910330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,36 +89,38 @@ MonoBehaviour:
   isBarrel: 1
   isKneader: 0
   isJuicer: 0
+  isRefrigerator: 0
   isShowcase: 0
---- !u!208 &18252531235139607
-NavMeshObstacle:
+--- !u!114 &4227039406767103575
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3021132233451310661}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
-  m_TimeToStationary: 0.5
---- !u!65 &9063660969248172311
-BoxCollider:
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f110f897af6ce1d489b37faae4b5d10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCell: {fileID: 0}
+  previousCell: {fileID: 0}
+  objectSize: {x: 1, y: 1}
+--- !u!114 &-917994072184220220
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3021132233451310661}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.0062075, z: 1}
-  m_Center: {x: 0, y: 0.49970996, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816d397118ddcb458b8504d0c9e38cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedRecipes:
+  - {fileID: 11400000, guid: ae364cfcd7753ae42bcdde27ab24df3a, type: 2}
+  managerName: BarrelManager
 --- !u!1 &6451800681957958493
 GameObject:
   m_ObjectHideFlags: 0

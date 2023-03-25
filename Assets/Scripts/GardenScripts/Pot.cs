@@ -48,40 +48,7 @@ public class Pot : MonoBehaviour
                         yield return new WaitForSeconds(1);
                     }
                     isOccupied = false;
-
-                    switch (myPlant.plantCode)
-                    {
-                        case (1):
-                            {
-                                Armazen.instance.AdicionaMassas(3);
-                                break;
-                            }
-                        case (2):
-                            {
-                                Armazen.instance.AdicionaFrutaCafe(3);
-                                break;
-                            }
-                        case (3):
-                            {
-                                Armazen.instance.AdicionaLaranjas(3);
-                                break;
-                            }
-                        case (4):
-                            {
-                                Armazen.instance.AdicionaFrango(3);
-                                break;
-                            }
-                        case (5):
-                            {
-                                Armazen.instance.AdicionaAcucar(3);
-                                break;
-                            }
-                        case (6):
-                            {
-                                Armazen.instance.AdicionaLeite(3);
-                                break;
-                            }
-                    }
+                    ArmazenManager.instance.AddIngredient(myPlant.data.loot.ingredientName, myPlant.data.lootAmmount);
                     Destroy(mySeed);
                     mySeed = null;
 

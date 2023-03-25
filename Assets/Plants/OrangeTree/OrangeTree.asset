@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fb263c618948442a27f277e01c05ce, type: 3}
+  m_Name: OrangeTree
+  m_EditorClassIdentifier: 
+  myName: OrangeTree
+  loot: {fileID: 11400000, guid: 0b1424508d6c76248a04bc3d5db30e66, type: 2}
+  plantCode: 8
+  lootAmmount: 3
+  price: 3
+  stages:
+  - {fileID: 145998993776212164, guid: 1f7677067ba0b43418012efbee3aae20, type: 3}
+  - {fileID: 145998993776212164, guid: 87ec5465dde5705478f4037936c25a67, type: 3}
+  - {fileID: 145998993776212164, guid: 5f8daeb71669b434e9e89eedd45292a2, type: 3}
+  growthTime: 60

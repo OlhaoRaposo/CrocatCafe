@@ -12,49 +12,50 @@ public class Customer : MonoBehaviour
     [SerializeField]
     private int patience;
     [SerializeField]
-    private int[] PossibleOrders;
+    private FoodData[] PossibleOrders;
     [SerializeField]
     private bool hasAskedOrder = false;
     private NavMeshAgent navMesh;
     public GameObject order;
     public GameObject orderSpawn;
     public GameObject[] showCase;
-    public GameObject armazen; 
+    public GameObject armazen;
 
 
     private void Awake()
     {
         orderSpawn = GameObject.Find("OrderSpawn");
         navMesh = this.gameObject.GetComponent<NavMeshAgent>();
-        
+
     }
 
     void Start()
     {
         ChooseOrder();
         //patience = Random.Range(35, 60);
-        patience = Random.Range(20,30);
+        patience = Random.Range(20, 30);
     }
-    
+
 
     private void ChooseOrder()
     {
         //Escolhe O pedido
-        currentOrder = PossibleOrders[Random.Range(0, PossibleOrders.Length - 1)];
+        currentOrder = Random.Range(0, PossibleOrders.Length - 1);
         //Chama o void para ir em direção ao exibitor
         SetDestinationToExhibitor();
     }
     private void SetDestinationToExhibitor()
     {
         //Leva o Cliente ate o exibitor
-        
+
         showCase = GameObject.FindGameObjectsWithTag("ShowCase");
         int showCaseIndex = Random.Range(0, showCase.Length);
         if (showCase.Length != 0)
         {
             navMesh.SetDestination(showCase[showCaseIndex].transform.position);
             StartCoroutine(CheckDistanceToShowCase(showCase[showCaseIndex]));
-        }else
+        }
+        else
             Destroy(gameObject);
     }
     IEnumerator CheckDistanceToShowCase(GameObject showCase)
@@ -68,89 +69,122 @@ public class Customer : MonoBehaviour
         {
             armazen = GameObject.Find("ArmazenManager");
             //Chegou ao exibitor
-            switch (currentOrder)
+            if (ArmazenManager.instance.FoodAmmount(PossibleOrders[currentOrder].foodName) > 0)
             {
-                case 0:
-                    if (armazen.GetComponent<Armazen>().breads > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemovePao(1);
-                        StartCoroutine(GoToExit(5));
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }
-                    break;
-                case 1:
-                    if (armazen.GetComponent<Armazen>().cafeAtual > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemoveCafé(1);
-                        StartCoroutine(GoToExit(5));                    
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }
-                    break;
-                case 2:
-                    if (armazen.GetComponent<Armazen>().sucosAtual > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemoveSucos(1);
-                        StartCoroutine(GoToExit(5));                    
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }
-                    break;
-                case 3:
-                    if (armazen.GetComponent<Armazen>().coxinhaAtual > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemoveCoxinha(1);
-                        StartCoroutine(GoToExit(5));                    
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }             
-                    break;
-                case 4:
-                    if (armazen.GetComponent<Armazen>().boloAtual > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemoveBolos(1);
-                        StartCoroutine(GoToExit(5));                    
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }
-                    break;
-                case 5:
-                    if (armazen.GetComponent<Armazen>().paoDeQueijoAtual > 0)
-                    {
-                        Serve();
-                        armazen.GetComponent<Armazen>().RemovePaoDeQueijo(1);
-                        StartCoroutine(GoToExit(5));                    
-                    }else {
-                        if (hasAskedOrder != true) {
-                            AskOrder();
-                            AngryExit();
-                        }
-                    }
-                    break;
+                Serve();
+                ArmazenManager.instance.RemoveFood(PossibleOrders[currentOrder].foodName, 1);
+                StartCoroutine(GoToExit(5));
             }
+            else
+            {
+                if (hasAskedOrder != true)
+                {
+                    AskOrder();
+                    AngryExit();
+                }
+            }
+
+            // switch (currentOrder)
+            // {
+            //     case 0:
+            //         if (armazen.GetComponent<Armazen>().breads > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemovePao(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            //     case 1:
+            //         if (armazen.GetComponent<Armazen>().cafeAtual > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemoveCafé(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            //     case 2:
+            //         if (armazen.GetComponent<Armazen>().sucosAtual > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemoveSucos(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            //     case 3:
+            //         if (armazen.GetComponent<Armazen>().coxinhaAtual > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemoveCoxinha(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            //     case 4:
+            //         if (armazen.GetComponent<Armazen>().boloAtual > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemoveBolos(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            //     case 5:
+            //         if (armazen.GetComponent<Armazen>().paoDeQueijoAtual > 0)
+            //         {
+            //             Serve();
+            //             armazen.GetComponent<Armazen>().RemovePaoDeQueijo(1);
+            //             StartCoroutine(GoToExit(5));
+            //         }
+            //         else
+            //         {
+            //             if (hasAskedOrder != true)
+            //             {
+            //                 AskOrder();
+            //                 AngryExit();
+            //             }
+            //         }
+            //         break;
+            // }
         }
-        StartCoroutine(CheckDistanceToShowCase(showCase)); 
+        StartCoroutine(CheckDistanceToShowCase(showCase));
     }
 
     private void OnTriggerEnter(Collider col)
@@ -163,7 +197,7 @@ public class Customer : MonoBehaviour
     }
     private void AngryExit()
     {
-        StartCoroutine(GoToExit(patience));     
+        StartCoroutine(GoToExit(patience));
     }
 
     IEnumerator GoToExit(int timer)
@@ -171,17 +205,17 @@ public class Customer : MonoBehaviour
         yield return new WaitForSeconds(timer);
         GameObject[] exit;
         exit = GameObject.FindGameObjectsWithTag("Exit");
-        navMesh.SetDestination(exit[Random.Range(0,exit.Length)].transform.position);
+        navMesh.SetDestination(exit[Random.Range(0, exit.Length)].transform.position);
         orderSpawn.GetComponent<OrderSpawner>().RemovePlate(order);
     }
     private void AskOrder()
     {
         hasAskedOrder = true;
-        orderSpawn.GetComponent<OrderSpawner>().AddPlate(currentOrder,this.gameObject);
+        orderSpawn.GetComponent<OrderSpawner>().AddPlate(currentOrder, this.gameObject);
     }
     public void Serve()
     {
-       orderSpawn.GetComponent<OrderSpawner>().RemovePlate(order);
+        orderSpawn.GetComponent<OrderSpawner>().RemovePlate(order);
     }
 
     private void OnDestroy()

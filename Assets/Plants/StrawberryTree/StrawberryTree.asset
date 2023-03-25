@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fb263c618948442a27f277e01c05ce, type: 3}
+  m_Name: StrawberryTree
+  m_EditorClassIdentifier: 
+  myName: StrawberryTree
+  loot: {fileID: 11400000, guid: 5926e27ced393f44aa0d0787289547d8, type: 2}
+  plantCode: 10
+  lootAmmount: 3
+  price: 3
+  stages:
+  - {fileID: 145998993776212164, guid: f3cc20a13a679ee438563a8531416834, type: 3}
+  - {fileID: 145998993776212164, guid: 63ee7895dcc4c8049a48c7cc232671a0, type: 3}
+  - {fileID: 145998993776212164, guid: 81b097f771f05bb43ae70542ae1950a5, type: 3}
+  growthTime: 30

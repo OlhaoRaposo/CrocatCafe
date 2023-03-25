@@ -4987,10 +4987,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3984241136810602352}
-  - component: {fileID: 1947132642924746575}
-  - component: {fileID: 3171653569887691714}
   - component: {fileID: 7918525487481290789}
   - component: {fileID: 8976273771172385487}
+  - component: {fileID: 1947132642924746575}
+  - component: {fileID: 3171653569887691714}
+  - component: {fileID: -6221597213605343558}
   m_Layer: 7
   m_Name: Cooker
   m_TagString: Furniture
@@ -5016,45 +5017,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1947132642924746575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6407397722580316908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectType: 66
-  objectNum: 2
-  objectRotation: 48
-  objectId: B20
-  objectValue: 1
-  isOven: 1
-  isPot: 0
-  isFurnace: 0
-  isBarrel: 0
-  isKneader: 0
-  isJuicer: 0
-  isShowcase: 0
---- !u!114 &3171653569887691714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6407397722580316908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f110f897af6ce1d489b37faae4b5d10c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentCell: {fileID: 0}
-  previousCell: {fileID: 0}
-  objectSize: {x: 1, y: 1}
 --- !u!65 &7918525487481290789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5084,3 +5046,68 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.5, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &1947132642924746575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407397722580316908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130d4f0a1fa01004fa5f42ed4f7018db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectType: 66
+  objectNum: 2
+  objectRotation: 48
+  objectId: B20
+  objectValue: 1
+  isOven: 1
+  isPot: 0
+  isFurnace: 0
+  isBarrel: 0
+  isKneader: 0
+  isJuicer: 0
+  isRefrigerator: 0
+  isShowcase: 0
+--- !u!114 &3171653569887691714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407397722580316908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f110f897af6ce1d489b37faae4b5d10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentCell: {fileID: 0}
+  previousCell: {fileID: 0}
+  objectSize: {x: 1, y: 1}
+--- !u!114 &-6221597213605343558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6407397722580316908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816d397118ddcb458b8504d0c9e38cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedRecipes:
+  - {fileID: 11400000, guid: 9c3116b83f2c2864ab21665b0fde92f4, type: 2}
+  - {fileID: 11400000, guid: a9244fe08d833d54787e21c46739322a, type: 2}
+  - {fileID: 11400000, guid: f1f678c1da57b3a4e8d56b5c6aa90c27, type: 2}
+  - {fileID: 11400000, guid: eef5c3b904486cc4e83322a7a683df17, type: 2}
+  - {fileID: 11400000, guid: 676d00dba212ad544abc0d717a748e49, type: 2}
+  - {fileID: 11400000, guid: d4599c458f01a7048aed3dae8eaf211d, type: 2}
+  - {fileID: 11400000, guid: 217753e097a1c5049acd5c8491c0b2fa, type: 2}
+  - {fileID: 11400000, guid: aeb0c8e19539ba14383fcde291a25a31, type: 2}
+  - {fileID: 11400000, guid: 119e21ef911599949870992f493ead6c, type: 2}
+  selectedRecipe: 0
+  managerName: OvenManager
+  myObject: {fileID: 0}

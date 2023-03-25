@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6018940869516121011}
+  - component: {fileID: 3917452328316733492}
+  - component: {fileID: 2888656016310635806}
   - component: {fileID: 5195406934933618707}
   - component: {fileID: 6606769104970956530}
-  - component: {fileID: 2888656016310635806}
-  - component: {fileID: 3917452328316733492}
+  - component: {fileID: 4719707607948481211}
   m_Layer: 7
   m_Name: CounterTop
   m_TagString: Furniture
@@ -38,6 +39,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3917452328316733492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261524796288345778}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!208 &2888656016310635806
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261524796288345778}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &5195406934933618707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +91,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 1
   isJuicer: 0
+  isRefrigerator: 0
   isShowcase: 0
 --- !u!114 &6606769104970956530
 MonoBehaviour:
@@ -77,35 +108,34 @@ MonoBehaviour:
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
   objectSize: {x: 1, y: 1}
---- !u!208 &2888656016310635806
-NavMeshObstacle:
+--- !u!114 &4719707607948481211
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2261524796288345778}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
-  m_TimeToStationary: 0.5
---- !u!65 &3917452328316733492
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2261524796288345778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816d397118ddcb458b8504d0c9e38cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedRecipes:
+  - {fileID: 11400000, guid: 6deae154311b7564d9a1473a01172416, type: 2}
+  - {fileID: 11400000, guid: 128d321499e30ba47942413c28b1c696, type: 2}
+  - {fileID: 11400000, guid: bf30fc6ab3edc7f4385c16942de4bfe9, type: 2}
+  - {fileID: 11400000, guid: 21c33df36a3cb764ebc98b740b524aec, type: 2}
+  - {fileID: 11400000, guid: 289a62d473f445f4ebf0febf069d2693, type: 2}
+  - {fileID: 11400000, guid: 2f4fbaed3886784499180afd1d5d9184, type: 2}
+  - {fileID: 11400000, guid: f0473c96cb14af5429608e2525816f0c, type: 2}
+  - {fileID: 11400000, guid: fc9fe9f39a652b04db43269ee4d962d9, type: 2}
+  - {fileID: 11400000, guid: d42968d7e61852e4ab49f836a2de498b, type: 2}
+  - {fileID: 11400000, guid: 4fd688cfd0e236e42837c47b80632c57, type: 2}
+  - {fileID: 11400000, guid: 6eb04e890d1cd3e4686135064b1b423d, type: 2}
+  - {fileID: 11400000, guid: 76dfbaa55c78cae4aa4055560e4204ff, type: 2}
+  - {fileID: 11400000, guid: 320a3321bf821d94181d2654fe6c7c5e, type: 2}
+  - {fileID: 11400000, guid: 65c09f4956557cc489b2501d5103e1da, type: 2}
+  managerName: KneaderManager
 --- !u!1 &3401958326678261544
 GameObject:
   m_ObjectHideFlags: 0

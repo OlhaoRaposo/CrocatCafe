@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fb263c618948442a27f277e01c05ce, type: 3}
+  m_Name: AppleTree
+  m_EditorClassIdentifier: 
+  myName: AppleTree
+  loot: {fileID: 11400000, guid: bf2e1e905c1c58b4dbd0d1894fc485a7, type: 2}
+  plantCode: 7
+  lootAmmount: 3
+  price: 3
+  stages:
+  - {fileID: 145998993776212164, guid: 61890559c9500cf4e8b8c24aade3a9aa, type: 3}
+  - {fileID: 145998993776212164, guid: 6ba78ca0f159f6a4eb5d8f72fd14152d, type: 3}
+  - {fileID: 145998993776212164, guid: c281ed1731192e948aef35a9695eb44a, type: 3}
+  growthTime: 90

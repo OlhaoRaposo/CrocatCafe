@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6206c9dc25cfa1419a780c46d7c1176, type: 3}
+  m_Name: RTorrata
+  m_EditorClassIdentifier: 
+  product: torrata
+  productionTime: 15
+  outputAmmount: 3
+  requiredIngredients:
+  - {fileID: 11400000, guid: 1ad41c82d4ea1b34c85d6651c3b588b7, type: 2}
+  - {fileID: 11400000, guid: d4a68ff7f9e819d44a39ae12910778ce, type: 2}
+  - {fileID: 11400000, guid: 256f47209c4d5e34197ad07f924627bc, type: 2}
+  - {fileID: 11400000, guid: c21095008f69c604a846305d6fe5bb31, type: 2}
+  requiredAmmount: 01000000010000000100000001000000

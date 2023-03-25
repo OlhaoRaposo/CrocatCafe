@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26fb263c618948442a27f277e01c05ce, type: 3}
+  m_Name: LemonTree
+  m_EditorClassIdentifier: 
+  myName: LemonTree
+  loot: {fileID: 11400000, guid: bb4a30a4979b2904b8ecd13ddd5ff030, type: 2}
+  plantCode: 9
+  lootAmmount: 3
+  price: 3
+  stages:
+  - {fileID: 145998993776212164, guid: 61cf13b66a877ef459610c256d567b2d, type: 3}
+  - {fileID: 145998993776212164, guid: dc2ea782f8b5bbf4884ecb169ace4429, type: 3}
+  - {fileID: 145998993776212164, guid: a95d6d546eb14c447bcdb14294f4724a, type: 3}
+  growthTime: 30

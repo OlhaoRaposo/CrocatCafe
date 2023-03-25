@@ -3,15 +3,10 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
-    [SerializeField] private PlantData data;
+    public PlantData data;
 
     [Header("OBJECT STATS")]
-    public string myName;
-    [SerializeField] private string loot;
-    public int plantCode;
-    public int plantValue;
     [SerializeField] private GameObject[] stages;
-    [SerializeField] private float growthTime;
     public bool isReady;
 
     private int stage = 0;
@@ -19,10 +14,6 @@ public class Plant : MonoBehaviour
 
     private void Start()
     {
-        myName = data.myName;
-        growthTime = data.growthTime;
-        plantCode = data.plantCode;
-
         int aux = 0;
         stages = new GameObject[data.stages.Length];
         foreach (GameObject stage in data.stages)
@@ -31,8 +22,6 @@ public class Plant : MonoBehaviour
             stages[aux].transform.SetParent(gameObject.transform);
             aux++;
         }
-
-        loot = data.loot;
         Invoke("Grow", 0);
     }
 
@@ -50,7 +39,7 @@ public class Plant : MonoBehaviour
     {
         if (progress < 1.0f)
         {
-            progress += 1 / growthTime;
+            progress += 1 / data.growthTime;
             if (progress >= stageChangeTreshHold)
             {
                 stageChangeTreshHold += 0.33f;

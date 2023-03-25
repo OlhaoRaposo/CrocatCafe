@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5184595001038001000}
   - component: {fileID: 1468178567184262143}
+  - component: {fileID: 5413899047007108448}
   - component: {fileID: 5680158420309325006}
   - component: {fileID: 5868316756887375109}
-  - component: {fileID: 5413899047007108448}
+  - component: {fileID: 4007152790332618818}
   m_Layer: 7
   m_Name: Juicer
   m_TagString: Furniture
@@ -52,6 +53,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!208 &5413899047007108448
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674716535130126500}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!114 &5680158420309325006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,6 +92,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 1
+  isRefrigerator: 0
   isShowcase: 0
 --- !u!114 &5868316756887375109
 MonoBehaviour:
@@ -91,22 +109,29 @@ MonoBehaviour:
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
   objectSize: {x: 1, y: 1}
---- !u!208 &5413899047007108448
-NavMeshObstacle:
+--- !u!114 &4007152790332618818
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674716535130126500}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0.5, z: 0}
-  m_TimeToStationary: 0.5
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2816d397118ddcb458b8504d0c9e38cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acceptedRecipes:
+  - {fileID: 11400000, guid: 5e37d2c1c6334f248acd287821be2e46, type: 2}
+  - {fileID: 11400000, guid: 1035856af8e5f9746bd4232186731c94, type: 2}
+  - {fileID: 11400000, guid: 3340b867f5b90f345a3580f0bc877e96, type: 2}
+  - {fileID: 11400000, guid: 0723cf8da3e16fc49865c2c252d2ee0a, type: 2}
+  - {fileID: 11400000, guid: 7a2ba755e8588f3409da255f48ccfcce, type: 2}
+  - {fileID: 11400000, guid: 24cd70c98fea70341b31a6344d710570, type: 2}
+  - {fileID: 11400000, guid: 03e4b9382dba8334b852631eab092457, type: 2}
+  selectedRecipe: 0
+  managerName: JuicerManager
+  myObject: {fileID: 0}
 --- !u!1 &6370117160470460456
 GameObject:
   m_ObjectHideFlags: 0
