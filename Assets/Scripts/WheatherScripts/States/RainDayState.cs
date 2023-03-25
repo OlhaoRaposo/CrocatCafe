@@ -9,6 +9,7 @@ public class RainDayState : StateFSM
         WheatherManagerFSM wheatherManager){
         this.wheatherManager = wheatherManager;
     }
+    private GameObject particle;
     
     public void Enter()
     {

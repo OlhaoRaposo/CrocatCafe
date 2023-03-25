@@ -1,22 +1,32 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class WheatherManagerFSM : MonoBehaviour
 {
+    public Notebook note;
     StateFSM state;
     [Header("MonthSystem")]
     [SerializeField] public MonthStats[] monthStats;
     [SerializeField] public months atualMonthState;
+
+    [Header("DaypercentTrigger")] 
+    [SerializeField]
+    public Events atualEvent;
+    public int[] dayTrigger;
+    [SerializeField]
+    public MonthStats atualWheather;
     public enum months
     {
         isRainMonth, isHotMonth, isFlowerMonth, isColdMonth
     }
+
+    private void Start()
+    {
+        DayTriggerRnd();
+    }
+
     void Update()
     {
         state?.Update();
@@ -47,14 +57,12 @@ public class WheatherManagerFSM : MonoBehaviour
                  atualMonthState = months.isColdMonth;
                  break;
          }
-         Debug.Log(monthType);
          GetSetWheather();
      }
      
      //Le a lista de meses pra pegar o mes atual
      public void GetSetWheather()
-     {
-         MonthStats atualWheather = new MonthStats();
+     { 
         foreach (MonthStats monthType in monthStats)
         {
             if (atualMonthState == months.isColdMonth){
@@ -77,30 +85,40 @@ public class WheatherManagerFSM : MonoBehaviour
                 }
             }
         }
-        SetWheather(atualWheather);
-        Debug.Log("Atual: " + atualWheather.monthName);
+        SetWheather();
      }
      
     //Escolhe a probabilidade do dia dependendo do mes
-     private void SetWheather(MonthStats atualWheather)
+     private void SetWheather()
      {
-         int dayWheather;
-         dayWheather = Random.Range(0, 101);
+         DayTriggerRnd();
+         int eventPercent = 0;
+         eventPercent = dayTrigger[0];
          //PrincipalEvent
-         if (Enumerable.Range(atualWheather.principalEvent.minTrigger,atualWheather.principalEvent.maxTrigger).Contains(dayWheather))
+         foreach (Events getEvent in atualWheather.events)
          {
-             TurnOnEvent(atualWheather.principalEvent.EventName);
-         }else {
-             //SideEvents
-             foreach (Events getEvent in atualWheather.events)
+             if (Enumerable.Range(getEvent.minTrigger, getEvent.maxTrigger).Contains(eventPercent))
              {
-                 if (Enumerable.Range(getEvent.minTrigger, getEvent.maxTrigger).Contains(dayWheather))
-                 {
+                     atualEvent = getEvent;
+                     Debug.Log(atualEvent.EventName);
                      TurnOnEvent(getEvent.EventName);
-                 }
              }
          }
-         
+     }
+     private void DayTriggerRnd()
+     {
+         int newDaytrigger;
+         for (int j = 0; j < dayTrigger.Length; j++)
+         {
+             if (dayTrigger[j] > 100)
+             {
+                 dayTrigger[j] = Random.Range(0, 101);
+             }
+         }
+         newDaytrigger = Random.Range(0, 101);
+         dayTrigger[0] = dayTrigger[1];
+         dayTrigger[1] = newDaytrigger;
+         note.SendMessage("ShowWheather");
      }
      
      //Seta o stateMachine pro dia certo
@@ -122,6 +140,7 @@ public class WheatherManagerFSM : MonoBehaviour
                  break;
          }
      }
+     
 }
 //Classes Dos Meses
 [Serializable]
@@ -130,9 +149,7 @@ public class MonthStats
     [Header("Name")]
     public string monthName;
 
-    [Header("PrincipalEvent")] 
-    public Events principalEvent;
-    [Header("SideEvents")] 
+    [Header("Events")] 
     public Events[] events;
 }
 [Serializable]

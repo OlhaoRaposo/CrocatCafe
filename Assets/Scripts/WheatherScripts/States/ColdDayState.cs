@@ -9,6 +9,7 @@ public class ColdDayState : StateFSM
         WheatherManagerFSM wheatherManager){
         this.wheatherManager = wheatherManager;
     }
+    private GameObject particle;
     public void Enter()
     {
         Debug.Log("Enter ColdDay");

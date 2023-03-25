@@ -89,6 +89,7 @@ public class DayTimerManager : MonoBehaviour
    }
    public void NextDay()
    {
+      preDayText.text = "";
       SetDay();
       preDayObject.SetActive(false);
       preDay = false;
@@ -111,9 +112,9 @@ public class DayTimerManager : MonoBehaviour
          monthType++;
       }
       //Faz O Dia e o Mes rodar
-      if (day > 21)
+      if (day > 19)
       {
-         day = 1;
+         day = 0;
          if (month > 4)
          {
             year++;
