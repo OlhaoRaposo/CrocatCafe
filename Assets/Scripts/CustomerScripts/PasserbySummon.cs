@@ -6,8 +6,11 @@ using UnityEngine;
 public class PasserbySummon : MonoBehaviour
 {
     public GameObject passerby;
+    GameObject manager;
+
     void Start()
     {
+        
         StartCoroutine(SummonPaserby());
     }
     IEnumerator SummonPaserby()
