@@ -163,5 +163,5 @@ public class Events
     [Range(0,100)]
     public int maxTrigger;
     [Header("Particle")]
-    public ParticleSystem dayParticles;
+    public GameObject dayParticles;
 }
