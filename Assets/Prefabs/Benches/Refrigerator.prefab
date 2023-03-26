@@ -125,6 +125,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f7ea815993b92ed439ede9612cffaaf5, type: 2}
   - {fileID: 11400000, guid: 84498e0b53938fd47a12c090f50950e9, type: 2}
   - {fileID: 11400000, guid: e069516d29352c847ab6101d47afc32e, type: 2}
+  - {fileID: 11400000, guid: 34c6d91e3967e1c408f462650acfcf30, type: 2}
+  - {fileID: 11400000, guid: 603429bbe5b95734b9e911728535e2e7, type: 2}
+  - {fileID: 11400000, guid: 909df7ff32e9ce945991663caf2473cf, type: 2}
   - {fileID: 11400000, guid: ba3b75bcddaa34f42988e977b769f497, type: 2}
   selectedRecipe: 0
   managerName: RefrigeratorManager

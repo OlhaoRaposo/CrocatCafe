@@ -34,6 +34,7 @@ public class Bench : MonoBehaviour
         {
             if (ArmazenManager.instance.IngredientAmmount(recipe.requiredIngredients[i].ingredientName) < recipe.requiredAmmount[i])
             {
+                AudioBoard.instance.PlayAudio("SFX_UI_Exit");
                 return;
             }
         }

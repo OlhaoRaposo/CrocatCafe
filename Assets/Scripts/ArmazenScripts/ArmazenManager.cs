@@ -28,7 +28,6 @@ public class ArmazenManager : MonoBehaviour
             {
                 ingredientAmmount[i] += ammount;
                 UpdateIngredientText(i);
-                return;
             }
         }
 
@@ -55,7 +54,6 @@ public class ArmazenManager : MonoBehaviour
                     ingredientAmmount[i] -= ammount;
                     UpdateIngredientText(i);
                 }
-                return;
             }
         }
 
@@ -91,7 +89,6 @@ public class ArmazenManager : MonoBehaviour
             {
                 foodAmmount[i] += ammount;
                 UpdateFoodText(i);
-                return;
             }
         }
 
@@ -118,7 +115,6 @@ public class ArmazenManager : MonoBehaviour
                     foodAmmount[i] -= ammount;
                     UpdateFoodText(i);
                 }
-                return;
             }
         }
 
