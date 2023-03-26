@@ -44,12 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355d27a79dad713469e3b75f27045aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: ac068997e2732ff44b38710e2f908eea, type: 2}
-  myName: 
-  loot: {fileID: 0}
-  plantCode: 0
-  lootAmmount: 0
-  price: 0
-  growthTime: 0
+  data: {fileID: 11400000, guid: 7f2fe9812dc995840aa07009eafc4944, type: 2}
   stages: []
   isReady: 0

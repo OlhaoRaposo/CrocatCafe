@@ -49,11 +49,6 @@ public class Plant : MonoBehaviour
         }
         else
         {
-            if (TutorialController.instance.tutorialProgress < 4)
-            {
-                TutorialController.instance.AdvanceTutorial();
-                TutorialController.instance.OpenTutorialWindow();
-            }
             isReady = true;
             return;
         }

@@ -54,12 +54,6 @@ public class Pot : MonoBehaviour
 
                     string audio = $"Collect_0{Random.Range(0, 6)}";
                     AudioBoard.instance.PlayAudio(audio);
-
-                    if (TutorialController.instance.tutorialProgress < 5)
-                    {
-                        TutorialController.instance.AdvanceTutorial();
-                        TutorialController.instance.OpenTutorialWindow();
-                    }
                 }
             }
         }

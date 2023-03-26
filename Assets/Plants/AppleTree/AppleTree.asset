@@ -18,7 +18,7 @@ MonoBehaviour:
   lootAmmount: 3
   price: 3
   stages:
-  - {fileID: 145998993776212164, guid: 61890559c9500cf4e8b8c24aade3a9aa, type: 3}
-  - {fileID: 145998993776212164, guid: 6ba78ca0f159f6a4eb5d8f72fd14152d, type: 3}
-  - {fileID: 145998993776212164, guid: c281ed1731192e948aef35a9695eb44a, type: 3}
+  - {fileID: 145998993776212164, guid: 077897d6e0d25a24089db9151c5d28b5, type: 3}
+  - {fileID: 145998993776212164, guid: 9c40fdc86e96ba743b2c1c9ad05e784a, type: 3}
+  - {fileID: 145998993776212164, guid: dd6ed34665722ad469139cd0981fa4e7, type: 3}
   growthTime: 90

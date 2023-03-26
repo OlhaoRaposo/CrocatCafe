@@ -7,31 +7,6 @@ public class ObjectScript : IObjectID
     private void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
-
-        if (isPot)
-        {
-            if (TutorialController.instance.tutorialProgress < 3)
-            {
-                TutorialController.instance.AdvanceTutorial();
-                TutorialController.instance.OpenTutorialWindow();
-            }
-        }
-        else if (isFurnace)
-        {
-            if (TutorialController.instance.tutorialProgress < 6)
-            {
-                TutorialController.instance.AdvanceTutorial();
-                TutorialController.instance.OpenTutorialWindow();
-            }
-        }
-        else if (isShowcase)
-        {
-            if (TutorialController.instance.tutorialProgress < 10)
-            {
-                TutorialController.instance.AdvanceTutorial();
-                TutorialController.instance.OpenTutorialWindow();
-            }
-        }
     }
 
     public void ObjectInteract()

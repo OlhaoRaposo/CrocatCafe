@@ -63,6 +63,7 @@ public class ShopManager : MonoBehaviour
             ArmazenManager.instance.UpdateMoneyText();
             AudioBoard.instance.PlayAudio("SFX_UI_Shop");
             garden.availableAmmount[seedId] += 1;
+            garden.SetSeedText(seedId);
         }
     }
     public void NextPage(int page)
