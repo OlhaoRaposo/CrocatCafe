@@ -102,13 +102,11 @@ public class TimeControler : MonoBehaviour
 
     private void NightTime(bool light)
     {
-        Debug.Log("Night");
         foreach (GameObject post in sunLight.post)
         {
             GameObject lightObj;
             lightObj = post.transform.GetChild(0).gameObject;
             lightObj.SetActive(light);
-            Debug.Log(lightObj.name);
             isNight = light;
         }
         

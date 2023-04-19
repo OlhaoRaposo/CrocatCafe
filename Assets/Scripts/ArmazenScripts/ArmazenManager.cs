@@ -9,7 +9,7 @@ public class ArmazenManager : MonoBehaviour
     [SerializeField] private IngredientData[] allIngredients;
     [SerializeField] private FoodData[] allFoods;
 
-    [SerializeField] private int[] ingredientAmmount, foodAmmount;
+    [SerializeField] public int[] ingredientAmmount, foodAmmount;
     [SerializeField]private Text[] ingredientText, foodText;
 
     private void Start()
