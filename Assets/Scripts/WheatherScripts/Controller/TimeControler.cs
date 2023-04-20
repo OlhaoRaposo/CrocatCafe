@@ -29,7 +29,7 @@ public class TimeControler : MonoBehaviour
     [SerializeField]
     private ArmazenManager armazen;
     
-    private DateTime currentTime;
+    public DateTime currentTime;
     private TimeSpan CalculateTimeDiference(TimeSpan fromTime, TimeSpan toTime)
     {
         TimeSpan difference = toTime - fromTime;
@@ -56,6 +56,9 @@ public class TimeControler : MonoBehaviour
             UpdateLightSettings();
         }
     }
+
+    
+    
     private void RotateSun()
     {
         float sunLightRotation;

@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 using System.IO;
+using Random = UnityEngine.Random;
 
 class SceneData
 {
     public ObjectsData[] furniterObjects;
-    public ArmazenData armazenData;
     public TimeData time;
-
+    public ArmazenData armazenData;
 }
 public class SaveGame : MonoBehaviour
 { 
@@ -22,6 +22,17 @@ public class SaveGame : MonoBehaviour
 
     public void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            for (int i = 0; i < ArmazenManager.instance.ingredientAmmount.Length; i++)
+            {
+                ArmazenManager.instance.ingredientAmmount[i] = Random.Range(0, 10);
+            }
+            for (int i = 0; i < ArmazenManager.instance.foodAmmount.Length; i++)
+            {
+                ArmazenManager.instance.foodAmmount[i] = Random.Range(0, 10);
+            }
+        }
         if (Input.GetKeyDown(KeyCode.S)) {
             Save();
         }
@@ -39,8 +50,9 @@ public class SaveGame : MonoBehaviour
         {
             data.furniterObjects[i] = new ObjectAdapter(furnitures[i]);
         }
-        data.armazenData = new ArmazenAdapter(ArmazenManager.instance.GetComponent<ArmazenManager>());
         data.time = new TimeAdapter(timeControler);
+        data.armazenData = new ArmazenAdapter(ArmazenManager.instance.GetComponent<ArmazenManager>());
+        
         string s = JsonUtility.ToJson(data,true);
         Debug.Log(s);
         File.WriteAllText(dirPath,s);
@@ -49,31 +61,49 @@ public class SaveGame : MonoBehaviour
     private void Load()
     {
         GridSystem[] gridManagers = FindObjectsOfType<GridSystem>();
-        foreach (GridSystem grid in gridManagers)
-        {
-            grid.GridToggle(true);
-        }
+        ToggleGrid(gridManagers,true);
+        CleanScene();
         
-        ObjectScript[] objects = FindObjectsOfType<ObjectScript>();
-        foreach (ObjectScript furniture in objects)
-        {
-            Destroy(furniture.gameObject);
-        }
         string s = File.ReadAllText(dirPath);
         SceneData data = JsonUtility.FromJson<SceneData>(s);
         
-        ArmazenManager.instance.money = data.armazenData.moneydata;
-        Debug.Log(data.armazenData.moneydata);
+        AttachArmazenVar(data.armazenData);
+        timeControler.currentTime = DateTime.Now.Date + TimeSpan.FromHours(data.time.hour) + TimeSpan.FromMinutes(data.time.min);
         
         for (int i = 0; i < data.furniterObjects.Length; i++)
         {
             SaveFactory.CreateObject(data.furniterObjects[i]);
         }
+        ToggleGrid(gridManagers,false);
+    }
 
+    private void AttachArmazenVar(ArmazenData data)
+    {
+        ArmazenManager.instance.SetMoney(data.moneydata);
+        for (int i = 0; i < data.ingredientAmmount.Length; i++)
+        {
+            ArmazenManager.instance.ingredientAmmount[i] = data.ingredientAmmount[i];
+        }
+        for (int i = 0; i < data.foodAmmount.Length; i++)
+        {
+            ArmazenManager.instance.foodAmmount[i] = data.foodAmmount[i];
+        }
+        
+    }
 
+    private void CleanScene()
+    {
+        ObjectScript[] objects = FindObjectsOfType<ObjectScript>();
+        foreach (ObjectScript furniture in objects)
+        {
+            Destroy(furniture.gameObject);
+        }
+    }
+    private void ToggleGrid(GridSystem[] gridManagers,bool toggle)
+    {
         foreach (GridSystem grid in gridManagers)
         {
-            grid.GridToggle(false);
+            grid.GridToggle(toggle);
         }
     }
 }

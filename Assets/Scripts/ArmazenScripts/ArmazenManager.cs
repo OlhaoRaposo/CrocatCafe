@@ -146,6 +146,11 @@ public class ArmazenManager : MonoBehaviour
     {
         moneyText.text = $"x{money}";
     }
+    public void SetMoney(int money)
+    {
+        this.money = money;
+        UpdateMoneyText();
+    }
 
     private void UpdateIngredientText(int index)
     {

@@ -9,5 +9,7 @@ public class TimeAdapter : TimeData
     day = timer.dateSave.day;
     month = timer.dateSave.month;
     year = timer.dateSave.year;
+    hour = timer.currentTime.Hour;
+    min = timer.currentTime.Minute;
   }
 }
