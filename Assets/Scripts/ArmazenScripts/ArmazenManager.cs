@@ -9,7 +9,7 @@ public class ArmazenManager : MonoBehaviour
     [SerializeField] private IngredientData[] allIngredients;
     [SerializeField] private FoodData[] allFoods;
 
-    [SerializeField] private int[] ingredientAmmount, foodAmmount;
+    [SerializeField] public int[] ingredientAmmount, foodAmmount;
     [SerializeField]private Text[] ingredientText, foodText;
 
     private void Start()
@@ -145,6 +145,11 @@ public class ArmazenManager : MonoBehaviour
     public void UpdateMoneyText()
     {
         moneyText.text = $"x{money}";
+    }
+    public void SetMoney(int money)
+    {
+        this.money = money;
+        UpdateMoneyText();
     }
 
     private void UpdateIngredientText(int index)
