@@ -38,6 +38,7 @@ public class ShopManager : MonoBehaviour
                                     ArmazenManager.instance.money -= objects[i].GetComponent<ObjectScript>().objectValue;
                                     ArmazenManager.instance.UpdateMoneyText();
                                     AudioBoard.instance.PlayAudio("SFX_UI_Shop");
+                                    EditMode.instance.ToggleCanvas(false);
 
                                     cell.isOccupied = true;
                                     cell.currentObject = currentObject;

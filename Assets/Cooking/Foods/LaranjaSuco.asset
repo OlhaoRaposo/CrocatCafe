@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: LaranjaSuco
   m_EditorClassIdentifier: 
   foodName: suco de laranja
+  icon: {fileID: 21300000, guid: 45100c4a93e50bb4cb3a247619cadfd8, type: 3}

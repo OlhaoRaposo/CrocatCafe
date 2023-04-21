@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "Ch\xE1Gato"
   m_EditorClassIdentifier: 
   foodName: "ch\xE1 de erva de gato"
+  icon: {fileID: 21300000, guid: e8ec3035034d84048847f4700bf96c4a, type: 3}

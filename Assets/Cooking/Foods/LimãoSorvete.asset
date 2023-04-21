@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "Lim\xE3oSorvete"
   m_EditorClassIdentifier: 
   foodName: "sorvete de lim\xE3o"
+  icon: {fileID: 21300000, guid: 6a2121ac45bfe7141a8d4193c6ddf6a1, type: 3}

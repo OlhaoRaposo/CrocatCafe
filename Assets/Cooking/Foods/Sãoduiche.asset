@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "S\xE3oduiche"
   m_EditorClassIdentifier: 
   foodName: "s\xE3oduiche"
+  icon: {fileID: 21300000, guid: efe3eabdc0a80994688895a50ee5b64f, type: 3}

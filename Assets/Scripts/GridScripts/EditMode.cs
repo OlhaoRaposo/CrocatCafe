@@ -5,6 +5,7 @@ public class EditMode : MonoBehaviour
     public GameObject selectedObject;
     public GameObject[] gridList;
     public bool isEditing = false;
+    public bool isOnCanvas = false;
 
     public static EditMode instance;
 
@@ -23,6 +24,11 @@ public class EditMode : MonoBehaviour
     {
         isEditing = toggle;
         RemoveUnusedObjects();
+    }
+
+    public void ToggleCanvas(bool toggle)
+    {
+        isOnCanvas = toggle;
     }
 
     public void RotateInput()

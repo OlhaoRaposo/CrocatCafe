@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: MorangoVitamina
   m_EditorClassIdentifier: 
   foodName: vitamina de morango
+  icon: {fileID: 21300000, guid: e80a7e44484043d4d9fdfd28303b2ff1, type: 3}

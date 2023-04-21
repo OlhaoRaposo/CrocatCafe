@@ -55,6 +55,7 @@ public class GardenScript : MonoBehaviour
             AudioBoard.instance.PlayAudio("SFX_UI_Exit");
         }
         myPanel.SetActive(false);
+        EditMode.instance.ToggleCanvas(false);
     }
 
     public void SetSeedText(int index)

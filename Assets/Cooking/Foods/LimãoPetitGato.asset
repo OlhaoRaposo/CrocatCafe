@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "Lim\xE3oPetitGato"
   m_EditorClassIdentifier: 
   foodName: "petit gato de lim\xE3o"
+  icon: {fileID: 21300000, guid: 8923913774917f44095db934e63ca1af, type: 3}

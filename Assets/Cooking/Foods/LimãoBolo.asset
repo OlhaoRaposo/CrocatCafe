@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: "Lim\xE3oBolo"
   m_EditorClassIdentifier: 
   foodName: "bolo de lim\xE3o"
+  icon: {fileID: 21300000, guid: ea0ce4425ec17f345b815c7e65986b4f, type: 3}

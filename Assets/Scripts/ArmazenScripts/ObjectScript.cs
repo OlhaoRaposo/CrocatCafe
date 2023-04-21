@@ -11,7 +11,7 @@ public class ObjectScript : IObjectID
 
     public void ObjectInteract()
     {
-        if (EditMode.instance.isEditing == false)
+        if (EditMode.instance.isEditing == false && EditMode.instance.isOnCanvas == false)
         {
             GameObject gmbj;
             if (isPot)
@@ -20,6 +20,7 @@ public class ObjectScript : IObjectID
                 {
                     gmbj = GameObject.Find("GardenManager");
                     gmbj.GetComponent<GardenScript>().OpenUi(gameObject);
+                    EditMode.instance.ToggleCanvas(true);
                 }
                 else
                 {
@@ -29,6 +30,7 @@ public class ObjectScript : IObjectID
             else
             {
                 gameObject.GetComponent<Bench>().OpenUI();
+                EditMode.instance.ToggleCanvas(true);
             }
         }
     }

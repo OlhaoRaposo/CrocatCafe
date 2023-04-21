@@ -83,106 +83,6 @@ public class Customer : MonoBehaviour
                     AngryExit();
                 }
             }
-
-            // switch (currentOrder)
-            // {
-            //     case 0:
-            //         if (armazen.GetComponent<Armazen>().breads > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemovePao(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            //     case 1:
-            //         if (armazen.GetComponent<Armazen>().cafeAtual > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemoveCafé(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            //     case 2:
-            //         if (armazen.GetComponent<Armazen>().sucosAtual > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemoveSucos(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            //     case 3:
-            //         if (armazen.GetComponent<Armazen>().coxinhaAtual > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemoveCoxinha(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            //     case 4:
-            //         if (armazen.GetComponent<Armazen>().boloAtual > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemoveBolos(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            //     case 5:
-            //         if (armazen.GetComponent<Armazen>().paoDeQueijoAtual > 0)
-            //         {
-            //             Serve();
-            //             armazen.GetComponent<Armazen>().RemovePaoDeQueijo(1);
-            //             StartCoroutine(GoToExit(5));
-            //         }
-            //         else
-            //         {
-            //             if (hasAskedOrder != true)
-            //             {
-            //                 AskOrder();
-            //                 AngryExit();
-            //             }
-            //         }
-            //         break;
-            // }
         }
         StartCoroutine(CheckDistanceToShowCase(showCase));
     }
@@ -211,7 +111,7 @@ public class Customer : MonoBehaviour
     private void AskOrder()
     {
         hasAskedOrder = true;
-        orderSpawn.GetComponent<OrderSpawner>().AddPlate(currentOrder, this.gameObject);
+        orderSpawn.GetComponent<OrderSpawner>().AddPlate(PossibleOrders[currentOrder], this.gameObject);
     }
     public void Serve()
     {

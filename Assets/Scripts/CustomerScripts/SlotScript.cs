@@ -6,5 +6,5 @@ public class SlotScript : MonoBehaviour
 {
     public GameObject nextSlot;
     public GameObject previousSlot;
-    public GameObject alocadPlate;
+    public GameObject alocatedPlate;
 }

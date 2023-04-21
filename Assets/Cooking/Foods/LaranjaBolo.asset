@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: LaranjaBolo
   m_EditorClassIdentifier: 
   foodName: bolo de laranja
+  icon: {fileID: 21300000, guid: ea0ce4425ec17f345b815c7e65986b4f, type: 3}

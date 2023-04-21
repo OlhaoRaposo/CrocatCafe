@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PatinhaQueijo
   m_EditorClassIdentifier: 
   foodName: patinha de queijo
+  icon: {fileID: 21300000, guid: 71aed1cd17b383a48a03abd75b96bb5d, type: 3}
