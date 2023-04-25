@@ -9,7 +9,10 @@ public class DragableObject : MonoBehaviour
     private void Start()
     {
         EditMode.instance.selectedObject = gameObject;
-        EditMode.instance.UpdateLayers();
+        if(EditMode.instance.isEditing)
+        {
+            EditMode.instance.UpdateLayers();
+        }
     }
 
     private GridCell CheckForCell() //Método que retorna a célula

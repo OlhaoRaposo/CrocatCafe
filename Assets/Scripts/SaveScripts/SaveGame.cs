@@ -10,13 +10,16 @@ class SceneData
     public ArmazenData armazenData;
 }
 public class SaveGame : MonoBehaviour
-{ 
-    private  string dirPath;
+{
+    private string dirPath;
     [SerializeField]
     private SaveFactory SaveFactory;
     [SerializeField]
     private TimeControler timeControler;
-    private void Awake() {
+    public static SaveGame instance;
+    private void Awake()
+    {
+        instance = this;
         dirPath = Application.dataPath + "/save.txt";
     }
 
@@ -33,15 +36,20 @@ public class SaveGame : MonoBehaviour
                 ArmazenManager.instance.foodAmmount[i] = Random.Range(0, 10);
             }
         }
-        if (Input.GetKeyDown(KeyCode.S)) {
-            Save();
-        }
-        if (Input.GetKeyDown(KeyCode.L)) {
-            Load();
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                Save();
+            }
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                Load();
+            }
         }
     }
 
-    private void Save()
+    public void Save()
     {
         SceneData data = new SceneData();
         ObjectScript[] furnitures = FindObjectsOfType<ObjectScript>();
@@ -52,29 +60,32 @@ public class SaveGame : MonoBehaviour
         }
         data.time = new TimeAdapter(timeControler);
         data.armazenData = new ArmazenAdapter(ArmazenManager.instance.GetComponent<ArmazenManager>());
-        
-        string s = JsonUtility.ToJson(data,true);
+
+        string s = JsonUtility.ToJson(data, true);
         Debug.Log(s);
-        File.WriteAllText(dirPath,s);
+        File.WriteAllText(dirPath, s);
     }
 
-    private void Load()
+    public void Load()
     {
-        GridSystem[] gridManagers = FindObjectsOfType<GridSystem>();
-        ToggleGrid(gridManagers,true);
-        CleanScene();
-        
-        string s = File.ReadAllText(dirPath);
-        SceneData data = JsonUtility.FromJson<SceneData>(s);
-        
-        AttachArmazenVar(data.armazenData);
-        timeControler.currentTime = DateTime.Now.Date + TimeSpan.FromHours(data.time.hour) + TimeSpan.FromMinutes(data.time.min);
-        
-        for (int i = 0; i < data.furniterObjects.Length; i++)
+        if (File.Exists(dirPath))
         {
-            SaveFactory.CreateObject(data.furniterObjects[i]);
+            GridSystem[] gridManagers = FindObjectsOfType<GridSystem>();
+            ToggleGrid(gridManagers, true);
+            CleanScene();
+
+            string s = File.ReadAllText(dirPath);
+            SceneData data = JsonUtility.FromJson<SceneData>(s);
+
+            AttachArmazenVar(data.armazenData);
+            timeControler.currentTime = DateTime.Now.Date + TimeSpan.FromHours(data.time.hour) + TimeSpan.FromMinutes(data.time.min);
+
+            for (int i = 0; i < data.furniterObjects.Length; i++)
+            {
+                SaveFactory.CreateObject(data.furniterObjects[i]);
+            }
+            ToggleGrid(gridManagers, false);
         }
-        ToggleGrid(gridManagers,false);
     }
 
     private void AttachArmazenVar(ArmazenData data)
@@ -88,7 +99,7 @@ public class SaveGame : MonoBehaviour
         {
             ArmazenManager.instance.foodAmmount[i] = data.foodAmmount[i];
         }
-        
+
     }
 
     private void CleanScene()
@@ -99,7 +110,7 @@ public class SaveGame : MonoBehaviour
             Destroy(furniture.gameObject);
         }
     }
-    private void ToggleGrid(GridSystem[] gridManagers,bool toggle)
+    private void ToggleGrid(GridSystem[] gridManagers, bool toggle)
     {
         foreach (GridSystem grid in gridManagers)
         {

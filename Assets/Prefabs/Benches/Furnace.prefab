@@ -129,7 +129,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 15934de1f7669a54b8bae19cb6056d3e, type: 2}
   - {fileID: 11400000, guid: 1452e01cadc395e42b7731a22193b69a, type: 2}
   - {fileID: 11400000, guid: f7fa8b55e925259468899d75d5862f72, type: 2}
+  selectedRecipe: 0
   managerName: FurnaceManager
+  myObject: {fileID: 0}
+  myTimer: {fileID: 0}
 --- !u!1 &6792861126826103080
 GameObject:
   m_ObjectHideFlags: 0

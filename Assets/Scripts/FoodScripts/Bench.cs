@@ -6,7 +6,7 @@ public class Bench : MonoBehaviour
     public RecipeData[] acceptedRecipes;
     public int selectedRecipe;
     public string managerName;
-    public GameObject myObject;
+    public GameObject myObject, myTimer;
     private UiLoaderScript uiLoader;
 
     public void Start()
@@ -47,6 +47,7 @@ public class Bench : MonoBehaviour
         StartCoroutine(CookProcess(recipe, recipe.productionTime));
         AudioBoard.instance.PlayAudio("SFX_UI_Shop");
         uiLoader.CloseTab(uiLoader.firstUiGmbj);
+        EditMode.instance.isOnCanvas = false;
     }
 
 
@@ -62,6 +63,8 @@ public class Bench : MonoBehaviour
         }
 
         //Aguardar o tempo de cozimento
+        GameObject summonedTimer = Instantiate(myTimer, myObject.transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+        summonedTimer.GetComponent<ProgressBar>().StartLoading(time);
         yield return new WaitForSeconds(time);
 
         //Adicionar o produto no final

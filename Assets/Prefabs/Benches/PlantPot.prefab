@@ -156,6 +156,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 0
+  isRefrigerator: 0
   isShowcase: 0
 --- !u!114 &-1982612016982227186
 MonoBehaviour:
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seed: {fileID: 0}
   mySeed: {fileID: 0}
+  myTimer: {fileID: 1204867275255381970, guid: 43681ead88bf12e4a97d513e93dbc991, type: 3}
   isOccupied: 0
   myPlant: {fileID: 0}
 --- !u!114 &4877092326305974903

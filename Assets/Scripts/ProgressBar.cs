@@ -6,11 +6,6 @@ public class ProgressBar : MonoBehaviour
     public Slider progressBar;
     [SerializeField] private float loadTime;
 
-    void Start()
-    {
-        StartLoading(10);
-    }
-
     public void FixedUpdate()
     {
         transform.rotation = Camera.main.transform.rotation;
@@ -26,7 +21,7 @@ public class ProgressBar : MonoBehaviour
     {
         if (progressBar.value < 1.0f)
         {
-            progressBar.value += 1 / loadTime / 2;
+            progressBar.value += 1 / loadTime;
         }
         else
         {

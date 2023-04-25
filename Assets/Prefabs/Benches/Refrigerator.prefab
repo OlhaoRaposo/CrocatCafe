@@ -132,6 +132,7 @@ MonoBehaviour:
   selectedRecipe: 0
   managerName: RefrigeratorManager
   myObject: {fileID: 0}
+  myTimer: {fileID: 0}
 --- !u!1 &6134433973175075058
 GameObject:
   m_ObjectHideFlags: 0

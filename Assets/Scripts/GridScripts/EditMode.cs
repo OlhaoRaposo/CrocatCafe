@@ -12,6 +12,7 @@ public class EditMode : MonoBehaviour
     private void Start()
     {
         instance = this;
+        SaveGame.instance.Load();
     }
 
     private void Update()
@@ -64,6 +65,7 @@ public class EditMode : MonoBehaviour
             else
             {
                 GodCamera.instance.SetDestinyPos(gridList[i]);
+                gridList[i].SetActive(true);
             }
         }
     }

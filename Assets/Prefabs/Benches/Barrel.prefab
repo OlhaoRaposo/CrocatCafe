@@ -120,7 +120,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acceptedRecipes:
   - {fileID: 11400000, guid: ae364cfcd7753ae42bcdde27ab24df3a, type: 2}
+  selectedRecipe: 0
   managerName: BarrelManager
+  myObject: {fileID: 0}
+  myTimer: {fileID: 0}
 --- !u!1 &6451800681957958493
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,17 +10,18 @@ public class SaveFactory : MonoBehaviour
     private List<GameObject> furnitureList;
 
     private GameObject[] gridObject;
-   
-    private void Update()
+
+    private void Start()
     {
-        
+        Debug.Log(furnitureList);
     }
 
     public void CreateObject(ObjectsData data)
     {
         gridObject = GameObject.FindGameObjectsWithTag("Grid");
         GameObject a = Instantiate(ReturnListObject(data.objectId), data.position, Quaternion.Euler(data.rotation));
-        foreach (GameObject grid in gridObject) {
+        foreach (GameObject grid in gridObject)
+        {
             if (grid.name == data.gridCellName)
             {
                 Debug.Log("Achei");
@@ -33,8 +34,10 @@ public class SaveFactory : MonoBehaviour
     private GameObject ReturnListObject(string id)
     {
         GameObject reference = null;
-        foreach (GameObject listObjct in furnitureList) {
-            if (id == listObjct.GetComponent<ObjectScript>().objectId) {
+        foreach (GameObject listObjct in furnitureList)
+        {
+            if (id == listObjct.GetComponent<ObjectScript>().objectId)
+            {
                 reference = listObjct;
             }
         }

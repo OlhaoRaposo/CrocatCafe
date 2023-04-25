@@ -132,6 +132,7 @@ MonoBehaviour:
   selectedRecipe: 0
   managerName: JuicerManager
   myObject: {fileID: 0}
+  myTimer: {fileID: 0}
 --- !u!1 &6370117160470460456
 GameObject:
   m_ObjectHideFlags: 0

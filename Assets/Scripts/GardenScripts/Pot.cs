@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Pot : MonoBehaviour
 {
-    public GameObject seed, mySeed;
+    public GameObject seed, mySeed, myTimer;
     public bool isOccupied;
     public Plant myPlant;
     private GameObject armazen;
@@ -33,6 +33,9 @@ public class Pot : MonoBehaviour
             mySeed.transform.SetParent(gameObject.transform);
 
             myPlant = mySeed.GetComponent<Plant>();
+            
+            GameObject summonedTimer = Instantiate(myTimer, transform.position + Vector3.up, Quaternion.identity);
+            summonedTimer.GetComponent<ProgressBar>().StartLoading(myPlant.data.growthTime);
         }
         else
         {

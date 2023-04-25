@@ -135,7 +135,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 76dfbaa55c78cae4aa4055560e4204ff, type: 2}
   - {fileID: 11400000, guid: 320a3321bf821d94181d2654fe6c7c5e, type: 2}
   - {fileID: 11400000, guid: 65c09f4956557cc489b2501d5103e1da, type: 2}
+  selectedRecipe: 0
   managerName: KneaderManager
+  myObject: {fileID: 0}
+  myTimer: {fileID: 0}
 --- !u!1 &3401958326678261544
 GameObject:
   m_ObjectHideFlags: 0

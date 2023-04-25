@@ -129,6 +129,7 @@ public class TimeControler : MonoBehaviour
         }
         wheatherManager.MonthSelection(dateSave.month);
         endOfTheDayObject.SetActive(true);
+        EditMode.instance.isOnCanvas = true;
         dateSave.mieuros = armazen.money - dateSave.mieuros;
         StartCoroutine(EndOfTheDay($"Dia: {dateSave.day} \nMês: {dateSave.month + 1}\nAno: {dateSave.year}\nMieuros Recebido hoje: {dateSave.mieuros}",0));
     }
