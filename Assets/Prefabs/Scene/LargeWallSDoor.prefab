@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 1795501141675421041}
   - component: {fileID: 8928141847256024740}
   - component: {fileID: 4806668126201492825}
+  - component: {fileID: 6949347500465940744}
+  - component: {fileID: 7888795052604437414}
+  - component: {fileID: 1276639239373751139}
   m_Layer: 0
   m_Name: LargeWallSDoor
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6949347500465940744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952529484473053530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 3, z: 6}
+  m_Center: {x: 0, y: 1.5, z: -7}
+--- !u!65 &7888795052604437414
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952529484473053530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 3, z: 2}
+  m_Center: {x: 0, y: 1.5, z: -1}
+--- !u!65 &1276639239373751139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2952529484473053530}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3, y: 1, z: 2}
+  m_Center: {x: 0, y: 2.5, z: -3}

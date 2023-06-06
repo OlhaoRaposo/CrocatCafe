@@ -8,6 +8,7 @@ TagManager:
   - ShowCase
   - Exit
   - Grid
+  - Light
   layers:
   - Default
   - TransparentFX

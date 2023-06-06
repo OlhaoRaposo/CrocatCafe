@@ -17,10 +17,13 @@ public class SaveGame : MonoBehaviour
     [SerializeField]
     private TimeControler timeControler;
     public static SaveGame instance;
+    [SerializeField]
+    private ArmazenManager armazen;
     private void Awake()
     {
         instance = this;
         dirPath = Application.dataPath + "/save.txt";
+        Save();
     }
 
     public void Update()
@@ -59,7 +62,7 @@ public class SaveGame : MonoBehaviour
             data.furniterObjects[i] = new ObjectAdapter(furnitures[i]);
         }
         data.time = new TimeAdapter(timeControler);
-        data.armazenData = new ArmazenAdapter(ArmazenManager.instance.GetComponent<ArmazenManager>());
+        data.armazenData = new ArmazenAdapter(armazen);
 
         string s = JsonUtility.ToJson(data, true);
         Debug.Log(s);

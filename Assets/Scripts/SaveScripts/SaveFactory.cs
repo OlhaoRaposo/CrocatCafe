@@ -13,7 +13,6 @@ public class SaveFactory : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(furnitureList);
     }
 
     public void CreateObject(ObjectsData data)
