@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6206c9dc25cfa1419a780c46d7c1176, type: 3}
+  m_Name: RCroccat
+  m_EditorClassIdentifier: 
+  product: croccat
+  productionTime: 15
+  outputAmmount: 3
+  requiredIngredients:
+  - {fileID: 11400000, guid: 5684d8cadf485d4478689d677a58ad2b, type: 2}
+  requiredAmmount: 01000000
