@@ -12,7 +12,6 @@ public class EditMode : MonoBehaviour
     private void Start()
     {
         instance = this;
-        SaveGame.instance.Load();
     }
 
     private void Update()

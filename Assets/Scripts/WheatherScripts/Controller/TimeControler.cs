@@ -105,14 +105,12 @@ public class TimeControler : MonoBehaviour
 
     private void NightTime(bool light)
     {
-        foreach (GameObject post in sunLight.post)
+        GameObject[] lights;
+        lights = GameObject.FindGameObjectsWithTag("Light");
+        foreach (GameObject gmbj in lights)
         {
-            GameObject lightObj;
-            lightObj = post.transform.GetChild(0).gameObject;
-            lightObj.SetActive(light);
-            isNight = light;
+            gmbj.SetActive(light);
         }
-        
     }
     private void EndOftheDay()
     {
@@ -186,7 +184,6 @@ public class SunLight
     [Header("Animation")]
     public LightAnimation lightAnimation;
     public GameObject clock;
-    public GameObject[] post;
 }
 [Serializable] 
 public class LightAnimation

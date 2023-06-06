@@ -1,0 +1,15 @@
+{
+    "furniterObjects": [],
+    "time": {
+        "day": 0,
+        "month": 0,
+        "year": 2002,
+        "hour": 0.0,
+        "min": 0.0
+    },
+    "armazenData": {
+        "moneydata": 200,
+        "ingredientAmmount": [],
+        "foodAmmount": []
+    }
+}
