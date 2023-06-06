@@ -10,7 +10,7 @@ public class ArmazenManager : MonoBehaviour
     [SerializeField] private FoodData[] allFoods;
 
     [SerializeField] public int[] ingredientAmmount, foodAmmount;
-    [SerializeField]private Text[] ingredientText, foodText;
+    [SerializeField] private Text[] ingredientText, foodText;
 
     private void Start()
     {
@@ -142,22 +142,28 @@ public class ArmazenManager : MonoBehaviour
         return -1;
     }
 
-    public void UpdateMoneyText()
+    public FoodData[] GetAllFoods()
     {
-        moneyText.text = $"x{money}";
+        return allFoods;
     }
+
     public void SetMoney(int money)
     {
         this.money = money;
         UpdateMoneyText();
     }
 
-    private void UpdateIngredientText(int index)
+    public void UpdateMoneyText()
+    {
+        moneyText.text = $"x{money}";
+    }
+
+    public void UpdateIngredientText(int index)
     {
         ingredientText[index].text = $"x{ingredientAmmount[index]}";
     }
 
-    private void UpdateFoodText(int index)
+    public void UpdateFoodText(int index)
     {
         foodText[index].text = $"x{foodAmmount[index]}";
     }

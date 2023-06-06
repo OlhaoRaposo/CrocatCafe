@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Croccat
   m_EditorClassIdentifier: 
   foodName: croccat
+  foodPrice: 5
   icon: {fileID: 21300000, guid: d3836be03cafb524fb5cfec4367b6328, type: 3}

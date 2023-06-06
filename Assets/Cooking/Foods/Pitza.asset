@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Pitza
   m_EditorClassIdentifier: 
   foodName: pitza
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 565028e8c23e1cd4dbd01885a80d8de0, type: 3}

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Empatinha
   m_EditorClassIdentifier: 
   foodName: empatinha
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 85321f0a4f1b3ff4ea8e864d82ea94e8, type: 3}

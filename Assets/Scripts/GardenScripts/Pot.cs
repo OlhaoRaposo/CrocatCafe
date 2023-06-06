@@ -34,7 +34,7 @@ public class Pot : MonoBehaviour
 
             myPlant = mySeed.GetComponent<Plant>();
             
-            GameObject summonedTimer = Instantiate(myTimer, transform.position + Vector3.up, Quaternion.identity);
+            GameObject summonedTimer = Instantiate(myTimer, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
             summonedTimer.GetComponent<ProgressBar>().StartLoading(myPlant.data.growthTime);
         }
         else

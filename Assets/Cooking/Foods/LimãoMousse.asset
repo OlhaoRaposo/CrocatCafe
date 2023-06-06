@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: "Lim\xE3oMousse"
   m_EditorClassIdentifier: 
   foodName: "mousse de lim\xE3o"
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 8c2ee63f9d10cca4ea6b60145885bf36, type: 3}

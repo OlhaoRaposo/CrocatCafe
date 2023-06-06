@@ -25,17 +25,6 @@ public class SaveGame : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            for (int i = 0; i < ArmazenManager.instance.ingredientAmmount.Length; i++)
-            {
-                ArmazenManager.instance.ingredientAmmount[i] = Random.Range(0, 10);
-            }
-            for (int i = 0; i < ArmazenManager.instance.foodAmmount.Length; i++)
-            {
-                ArmazenManager.instance.foodAmmount[i] = Random.Range(0, 10);
-            }
-        }
         if (Input.GetKey(KeyCode.LeftControl))
         {
             if (Input.GetKeyDown(KeyCode.S))
@@ -45,6 +34,19 @@ public class SaveGame : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.L))
             {
                 Load();
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                for (int i = 0; i < ArmazenManager.instance.ingredientAmmount.Length; i++)
+                {
+                    ArmazenManager.instance.ingredientAmmount[i] = Random.Range(0, 10);
+                    ArmazenManager.instance.UpdateIngredientText(i);
+                }
+                for (int i = 0; i < ArmazenManager.instance.foodAmmount.Length; i++)
+                {
+                    ArmazenManager.instance.foodAmmount[i] = Random.Range(0, 10);
+                    ArmazenManager.instance.UpdateFoodText(i);
+                }
             }
         }
     }

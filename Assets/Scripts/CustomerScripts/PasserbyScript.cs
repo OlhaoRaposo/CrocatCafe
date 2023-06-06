@@ -11,7 +11,7 @@ public class PasserbyScript : MonoBehaviour
     private GameObject endPoint;
     public GameObject pointA;
     public GameObject pointB;
-    
+
     private void Awake()
     {
         navmesh = this.GetComponent<NavMeshAgent>();
@@ -26,13 +26,15 @@ public class PasserbyScript : MonoBehaviour
 
     public void Walk()
     {
-        Vector3 add = new Vector3(0, 0, Random.Range(-3,3));
+        Vector3 add = new Vector3(0, 0, Random.Range(-3, 3));
         int index = Random.Range(0, 2);
         if (index == 0)
         {
             transform.position = pointA.transform.position + add;
             navmesh.SetDestination(pointB.transform.position);
-        }else {
+        }
+        else
+        {
             transform.position = pointB.transform.position + add;
             navmesh.SetDestination(pointA.transform.position);
         }

@@ -80,6 +80,7 @@ public class DayManager : MonoBehaviour
     }
     private void SetNight()
     {
+        NCustomerManager.instance.CloseBakery();
     }
     public void SetDay()
     {

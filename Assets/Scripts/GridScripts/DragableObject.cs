@@ -9,7 +9,7 @@ public class DragableObject : MonoBehaviour
     private void Start()
     {
         EditMode.instance.selectedObject = gameObject;
-        if(EditMode.instance.isEditing)
+        if (EditMode.instance.isEditing)
         {
             EditMode.instance.UpdateLayers();
         }
@@ -82,25 +82,50 @@ public class DragableObject : MonoBehaviour
         offsetX = (objectSize.x / 2) - 0.5f;
         offsetZ = (objectSize.y / 2) - 0.5f;
 
-        if(offsetX != 0 || offsetZ !=0)
+        if (offsetX != 0 || offsetZ != 0)
         {
             GridSystem myGrid = CheckForCell().gameObject.transform.parent.gameObject.transform.parent.GetComponent<GridSystem>();
-            if((float)CheckForCell().tilePos.x + offsetX < myGrid.sizeX)
+            if (myRotation == 0 || myRotation == 2)
             {
-                snapPos.x += offsetX;
+                if (currentCell.tilePos.x + offsetX < myGrid.sizeX)
+                {
+                    snapPos.x += offsetX;
+                }
+                else
+                {
+                    snapPos.x -= offsetX;
+                }
+
+                if (currentCell.tilePos.y + offsetZ < myGrid.sizeZ)
+                {
+                    snapPos.z -= offsetZ;
+                }
+                else
+                {
+                    snapPos.z += offsetZ;
+                }
             }
-            else
+            if (myRotation == 1 || myRotation == 3)
             {
-                snapPos = transform.position;
+                if (currentCell.tilePos.x + offsetZ < myGrid.sizeZ)
+                {
+                    snapPos.z += offsetZ;
+                }
+                else
+                {
+                    snapPos.z -= offsetZ;
+                }
+                Debug.Log($"{currentCell.tilePos.x + offsetZ} e o limite é {myGrid.sizeZ}");
+
+                if (currentCell.tilePos.y + offsetX < myGrid.sizeX)
+                {
+                    snapPos.x += offsetX;
+                }
+                else
+                {
+                    snapPos.x -= offsetX;
+                }
             }
-            if((float)CheckForCell().tilePos.y + offsetZ < myGrid.sizeZ)
-            {
-                snapPos.z += offsetZ;
-            }
-            else
-            {
-                snapPos = transform.position;
-            }  
         }
         return snapPos;
     }

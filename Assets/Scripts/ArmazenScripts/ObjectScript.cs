@@ -3,10 +3,14 @@ using UnityEngine;
 public class ObjectScript : IObjectID
 {
     [Header("OBJECT IDENTIFTY")]
-    public bool isOven, isPot, isFurnace, isBarrel, isKneader, isJuicer, isRefrigerator,isShowcase;
+    public bool isOven, isPot, isFurnace, isBarrel, isKneader, isJuicer, isRefrigerator, isShowcase;
     private void Start()
     {
         objectId = objectType + objectNum.ToString() + objectRotation;
+        if (isShowcase == true)
+        {
+            NCustomerManager.instance.allShowCases.Add(gameObject);
+        }
     }
 
     public void ObjectInteract()

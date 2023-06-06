@@ -49,7 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e5d2017614fff040b3290aae85268cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  capacity: 2
+  capacity: 0
+  maxCapacity: 2
+  customersAllocated: []
 --- !u!114 &1261590755611395744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +90,7 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 0
+  isRefrigerator: 0
   isShowcase: 0
 --- !u!208 &4890138897830012993
 NavMeshObstacle:

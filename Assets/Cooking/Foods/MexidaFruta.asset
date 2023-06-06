@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MexidaFruta
   m_EditorClassIdentifier: 
   foodName: mexida de frutas
+  foodPrice: 5
   icon: {fileID: 21300000, guid: caa27aac9c47d3648b5e65878e6748dc, type: 3}

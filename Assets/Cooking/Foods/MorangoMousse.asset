@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MorangoMousse
   m_EditorClassIdentifier: 
   foodName: mousse de morango
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 24c3df0947f83924e9837205d90e8b39, type: 3}

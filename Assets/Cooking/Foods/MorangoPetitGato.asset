@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MorangoPetitGato
   m_EditorClassIdentifier: 
   foodName: petit gato de morango
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 8923913774917f44095db934e63ca1af, type: 3}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Bench : MonoBehaviour
@@ -7,6 +8,7 @@ public class Bench : MonoBehaviour
     public int selectedRecipe;
     public string managerName;
     public GameObject myObject, myTimer;
+    public Image readyIcon;
     private UiLoaderScript uiLoader;
 
     public void Start()
@@ -20,6 +22,15 @@ public class Bench : MonoBehaviour
     public void SetRecipe(int selectedRecipe)
     {
         this.selectedRecipe = selectedRecipe;
+        for (int i = 0; i < acceptedRecipes[selectedRecipe].requiredIngredients.Length; i++)
+        {
+            if (ArmazenManager.instance.IngredientAmmount(acceptedRecipes[selectedRecipe].requiredIngredients[i].ingredientName) < acceptedRecipes[selectedRecipe].requiredAmmount[i])
+            {
+                readyIcon.color = Color.red;
+                return;
+            }
+        }
+        readyIcon.color = Color.green;
     }
 
     public void CookRecipe()
@@ -63,7 +74,7 @@ public class Bench : MonoBehaviour
         }
 
         //Aguardar o tempo de cozimento
-        GameObject summonedTimer = Instantiate(myTimer, myObject.transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+        GameObject summonedTimer = Instantiate(myTimer, myObject.transform.position + new Vector3(0, 2, 0), Quaternion.identity, myObject.transform);
         summonedTimer.GetComponent<ProgressBar>().StartLoading(time);
         yield return new WaitForSeconds(time);
 

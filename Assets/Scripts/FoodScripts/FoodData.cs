@@ -5,5 +5,6 @@ using UnityEngine.UI;
 public class FoodData : ScriptableObject
 {
     public string foodName;
+    public int foodPrice;
     public Sprite icon;
 }

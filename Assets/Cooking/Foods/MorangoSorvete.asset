@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: MorangoSorvete
   m_EditorClassIdentifier: 
   foodName: sorvete de morango
+  foodPrice: 5
   icon: {fileID: 21300000, guid: 28735d95f5895b944b235825757d2bc2, type: 3}

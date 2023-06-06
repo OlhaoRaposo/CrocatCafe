@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: CatPuccino
   m_EditorClassIdentifier: 
   foodName: catpuccino
+  foodPrice: 5
   icon: {fileID: 21300000, guid: d2fca0aaf525edc42a70488e412c9105, type: 3}
