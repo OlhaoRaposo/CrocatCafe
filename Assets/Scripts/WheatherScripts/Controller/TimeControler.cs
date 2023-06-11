@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class TimeControler : MonoBehaviour
 {
@@ -105,12 +106,20 @@ public class TimeControler : MonoBehaviour
 
     private void NightTime(bool light)
     {
+        Debug.Log("night");
         GameObject[] lights;
         lights = GameObject.FindGameObjectsWithTag("Light");
         foreach (GameObject gmbj in lights)
         {
-            gmbj.SetActive(light);
+            StartCoroutine(TurnOnLight(gmbj.transform.GetChild(0).gameObject,light));
+            //gmbj.transform.GetChild(0).gameObject.SetActive(light);
         }
+    }
+
+    IEnumerator TurnOnLight(GameObject light,bool onOff)
+    {
+        yield return new WaitForSeconds(Random.Range(.1f, 1));
+        light.gameObject.SetActive(onOff);
     }
     private void EndOftheDay()
     {

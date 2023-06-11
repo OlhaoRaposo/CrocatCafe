@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 public class WheatherManagerFSM : MonoBehaviour
@@ -25,6 +26,7 @@ public class WheatherManagerFSM : MonoBehaviour
     private void Start()
     {
         DayTriggerRnd();
+        GetSetWheather();
     }
 
     void Update()
@@ -164,4 +166,6 @@ public class Events
     public int maxTrigger;
     [Header("Particle")]
     public GameObject dayParticles;
+    [Header("Clime Image")] 
+    public Image eventImage;
 }

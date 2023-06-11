@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7785573718411786184}
   - component: {fileID: 4000461912951165616}
   - component: {fileID: 6738851707034698790}
+  - component: {fileID: 3798556386434780396}
   m_Layer: 0
   m_Name: LittleWindowWall
   m_TagString: Untagged
@@ -97,3 +98,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 3, z: 8}
   m_Center: {x: 0, y: 1.5, z: -4}
+--- !u!208 &3798556386434780396
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5596706516331099956}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15300001, y: 1.5020001, z: 4}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5020001, z: -4}
+  m_TimeToStationary: 0.5

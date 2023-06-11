@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1349580232210628273}
   - component: {fileID: 7014337126032426154}
   - component: {fileID: 132993375713482500}
+  - component: {fileID: 3619790495408832977}
   m_Layer: 0
   m_Name: LargeWallMDoorInside
   m_TagString: Untagged
@@ -123,5 +124,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 1, z: 2}
-  m_Center: {x: 0, y: 2.5, z: -5}
+  m_Size: {x: 0.3, y: 0.8435209, z: 2}
+  m_Center: {x: 0, y: 2.5782394, z: -5}
+--- !u!208 &3619790495408832977
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195285136702084447}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.15300001, y: 1.5020001, z: 5}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1.5020001, z: -5}
+  m_TimeToStationary: 0.5
