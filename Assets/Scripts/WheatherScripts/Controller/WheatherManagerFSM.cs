@@ -59,7 +59,6 @@ public class WheatherManagerFSM : MonoBehaviour
                  atualMonthState = months.isColdMonth;
                  break;
          }
-         GetSetWheather();
      }
      
      //Le a lista de meses pra pegar o mes atual
@@ -102,7 +101,6 @@ public class WheatherManagerFSM : MonoBehaviour
              if (Enumerable.Range(getEvent.minTrigger, getEvent.maxTrigger).Contains(eventPercent))
              {
                      atualEvent = getEvent;
-                     Debug.Log(atualEvent.EventName);
                      TurnOnEvent(getEvent.EventName);
              }
          }
@@ -112,11 +110,13 @@ public class WheatherManagerFSM : MonoBehaviour
          int newDaytrigger;
          for (int j = 0; j < dayTrigger.Length; j++)
          {
-             if (dayTrigger[j] > 100)
+             if (dayTrigger[j] > 103)
              {
                  dayTrigger[j] = Random.Range(0, 101);
+                 Debug.Log("RandomizeTrigger");
              }
          }
+         Debug.Log("Trigger");
          newDaytrigger = Random.Range(0, 101);
          dayTrigger[0] = dayTrigger[1];
          dayTrigger[1] = newDaytrigger;
@@ -150,6 +150,8 @@ public class MonthStats
 {
     [Header("Name")]
     public string monthName;
+    
+    public Sprite monthImage;
 
     [Header("Events")] 
     public Events[] events;
@@ -167,5 +169,5 @@ public class Events
     [Header("Particle")]
     public GameObject dayParticles;
     [Header("Clime Image")] 
-    public Image eventImage;
+    public Sprite eventImage;
 }

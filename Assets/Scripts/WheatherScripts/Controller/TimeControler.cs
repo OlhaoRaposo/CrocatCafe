@@ -17,6 +17,8 @@ public class TimeControler : MonoBehaviour
     [SerializeField]
     private Text timeText;
     [SerializeField]
+    private Text dayText;
+    [SerializeField]
     private SunLight sunLight;
     [Header("EndOfTheDayText")] 
     [SerializeField]
@@ -106,7 +108,6 @@ public class TimeControler : MonoBehaviour
 
     private void NightTime(bool light)
     {
-        Debug.Log("night");
         GameObject[] lights;
         lights = GameObject.FindGameObjectsWithTag("Light");
         foreach (GameObject gmbj in lights)
@@ -123,7 +124,7 @@ public class TimeControler : MonoBehaviour
     }
     private void EndOftheDay()
     {
-        if (dateSave.day >=2) {
+        if (dateSave.day >=21) {
             dateSave.day = 1;
             dateSave.month += 1;
             
@@ -134,6 +135,8 @@ public class TimeControler : MonoBehaviour
             dateSave.day += 1;
             wheatherManager.GetSetWheather();
         }
+
+        dayText.text = dateSave.day.ToString();
         wheatherManager.MonthSelection(dateSave.month);
         endOfTheDayObject.SetActive(true);
         EditMode.instance.isOnCanvas = true;
