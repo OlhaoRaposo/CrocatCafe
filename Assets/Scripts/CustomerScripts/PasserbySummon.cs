@@ -17,14 +17,14 @@ public class PasserbySummon : MonoBehaviour
         int randomizer = Random.Range(1, 11);
         if(randomizer > 1)
         {
-            int rng = Random.Range(1, passerby.Length);
+            int rng = Random.Range(0, passerby.Length);
             Instantiate(passerby[rng], transform.position, Quaternion.identity);
         }
         else
         {
             if(NCustomerManager.instance.allShowCases.Count != 0 && NCustomerManager.instance.allTables.Count != 0 && NCustomerManager.instance.allCustomers.Count < NCustomerManager.instance.allTables.Count * 2)
             {
-                int rng = Random.Range(1, customer.Length);
+                int rng = Random.Range(0, customer.Length);
                 Instantiate(customer[rng], transform.position, Quaternion.identity);
             }
         }

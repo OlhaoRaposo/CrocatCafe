@@ -23,9 +23,12 @@ public class SaveGame : MonoBehaviour
     {
         instance = this;
         dirPath = Application.dataPath + "/save.txt";
-        Save();
     }
 
+    private void Start()
+    {
+        Load();
+    }
     public void Update()
     {
         if (Input.GetKey(KeyCode.LeftControl))
