@@ -162,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCell: {fileID: 0}
   previousCell: {fileID: 0}
+  objectSize: {x: 2, y: 1}
 --- !u!114 &2070579193691850407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +186,5 @@ MonoBehaviour:
   isBarrel: 0
   isKneader: 0
   isJuicer: 0
+  isRefrigerator: 0
+  isShowcase: 0

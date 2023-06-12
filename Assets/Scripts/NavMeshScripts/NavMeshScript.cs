@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class NavMeshScript : MonoBehaviour
 {
+    public static NavMeshScript instance;
     public DestinationList destinationList = new DestinationList();
     public GameObject chillPlace;
     public NavMeshAgent navMesh;
@@ -12,6 +13,7 @@ public class NavMeshScript : MonoBehaviour
     public void Start()
     {
         destinationList.InitList();
+        instance = this;
     }
 
     public void AddDestination(GameObject destinationObject, int waitTime)

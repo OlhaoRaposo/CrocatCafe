@@ -6,7 +6,7 @@ public class GodCamera : MonoBehaviour
     public float speed, rotation, brakeTime, zoomStrength, cameraSnapDistance;
 
     [Header("Limits")]
-    [SerializeField] private float posLimit_X, maxPosLimit_Y, minPosLimit_Y, posLimit_Z;
+    [SerializeField] private float posLimit_X, maxPosLimit_Y, minPosLimit_Y, maxPosLimit_Z, minPosLimit_Z;
     private Vector3 pos, lastMousePos = Vector3.zero, zoomCordinates, zoomAmmount;
     private Quaternion newRotation;
     public static GodCamera instance;
@@ -81,11 +81,11 @@ public class GodCamera : MonoBehaviour
         {
             pos += new Vector3(1, 0, 0);
         }
-        if (transform.position.z > posLimit_Z)
+        if (transform.position.z > maxPosLimit_Z)
         {
             pos += new Vector3(0, 0, -1);
         }
-        if (transform.position.z < -posLimit_Z)
+        if (transform.position.z < minPosLimit_Z)
         {
             pos += new Vector3(0, 0, 1);
         }
