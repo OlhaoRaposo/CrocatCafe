@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PasserbySummon : MonoBehaviour
 {
-    public GameObject passerby, customer;
+    public GameObject[] passerby, customer;
     GameObject manager;
 
     void Start()
@@ -17,13 +17,15 @@ public class PasserbySummon : MonoBehaviour
         int randomizer = Random.Range(1, 11);
         if(randomizer > 1)
         {
-            Instantiate(passerby, transform.position, Quaternion.identity);
+            int rng = Random.Range(1, passerby.Length);
+            Instantiate(passerby[rng], transform.position, Quaternion.identity);
         }
         else
         {
             if(NCustomerManager.instance.allShowCases.Count != 0 && NCustomerManager.instance.allTables.Count != 0 && NCustomerManager.instance.allCustomers.Count < NCustomerManager.instance.allTables.Count * 2)
             {
-                Instantiate(customer, transform.position, Quaternion.identity);
+                int rng = Random.Range(1, customer.Length);
+                Instantiate(customer[rng], transform.position, Quaternion.identity);
             }
         }
         StartCoroutine(SummonPaserby());
