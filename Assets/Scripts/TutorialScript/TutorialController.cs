@@ -1,11 +1,11 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class TutorialController : MonoBehaviour
 {
-    [SerializeField] private string[] currentText;
+    [SerializeField] private Text[] currentText;
     [SerializeField] private Text activeText;
     [SerializeField] private GameObject tutorialWindow;
     public Button progressButton;
@@ -84,7 +84,7 @@ public class TutorialController : MonoBehaviour
     }
     private void UpdateText()
     {
-        activeText.text = currentText[tutorialProgress];
+        activeText = currentText[tutorialProgress];
     }
 
     public void OpenTutorialWindow()
@@ -96,4 +96,4 @@ public class TutorialController : MonoBehaviour
     {
         progressButton.gameObject.SetActive(true);
     }
-}*/
+}
