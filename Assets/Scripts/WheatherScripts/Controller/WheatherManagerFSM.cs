@@ -113,10 +113,8 @@ public class WheatherManagerFSM : MonoBehaviour
              if (dayTrigger[j] > 103)
              {
                  dayTrigger[j] = Random.Range(0, 101);
-                 Debug.Log("RandomizeTrigger");
              }
          }
-         Debug.Log("Trigger");
          newDaytrigger = Random.Range(0, 101);
          dayTrigger[0] = dayTrigger[1];
          dayTrigger[1] = newDaytrigger;

@@ -2,9 +2,26 @@
     "furniterObjects": [
         {
             "position": {
-                "x": -14.0,
+                "x": -3.0,
                 "y": 0.25,
-                "z": 30.5
+                "z": 23.0
+            },
+            "rotation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "objectId": "B20",
+            "growTimer": 0.0,
+            "seedName": "",
+            "plantProgress": 0.0,
+            "gridCellName": "Grid12Kitchen"
+        },
+        {
+            "position": {
+                "x": -13.0,
+                "y": 0.25,
+                "z": 19.5
             },
             "rotation": {
                 "x": 0.0,
@@ -12,18 +29,21 @@
                 "z": 0.0
             },
             "objectId": "G10",
-            "gridCellName": "Grid22"
+            "growTimer": 0.0,
+            "seedName": "",
+            "plantProgress": 0.0,
+            "gridCellName": "Grid313Garden"
         }
     ],
     "time": {
         "day": 0,
         "month": 0,
         "year": 2002,
-        "hour": 23.0,
-        "min": 15.0
+        "hour": 7.0,
+        "min": 53.0
     },
     "armazenData": {
-        "moneydata": 199,
+        "moneydata": 198,
         "ingredientAmmount": [
             0,
             0,

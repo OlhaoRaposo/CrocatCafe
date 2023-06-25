@@ -10,9 +10,10 @@ public class Plant : MonoBehaviour
     public bool isReady;
 
     private int stage = 0;
-    private float progress, stageChangeTreshHold = 0.33f;
+    public float progress;
+    private float stageChangeTreshHold = 0.33f;
 
-    private void Start()
+    public void Start()
     {
         int aux = 0;
         stages = new GameObject[data.stages.Length];
@@ -47,8 +48,7 @@ public class Plant : MonoBehaviour
             }
             Invoke("Grow", 1.0f);
         }
-        else
-        {
+        else {
             isReady = true;
             return;
         }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4932438863353819916}
   - component: {fileID: 8323021202356549746}
   - component: {fileID: 8268502460936966907}
+  - component: {fileID: 7720440872300091561}
   m_Layer: 0
   m_Name: ScenePineTree
   m_TagString: Untagged
@@ -115,3 +116,30 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0.012, y: 1.6750001, z: 0.023000002}
   m_TimeToStationary: 0.5
+--- !u!205 &7720440872300091561
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4312207446248934414}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6294834
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4932438863353819916}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4932438863353819916}
+  - screenRelativeHeight: 0.024983514
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4932438863353819916}
+  m_Enabled: 1

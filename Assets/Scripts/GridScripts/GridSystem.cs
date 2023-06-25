@@ -28,7 +28,7 @@ public class GridSystem : MonoBehaviour
                 currentCell.layer = LayerMask.NameToLayer(myLayer);
                 cellData.tilePos.x = j+1; //atribuí na célula a sua posição em x
                 cellData.tilePos.y = i+1; //atribuí na célula a sua posição em z
-                cellData.name = "Grid" + j + i;
+                cellData.name = "Grid" + j + i + this.name;
                 cellData.tag = "Grid";
                 //carregar dados do save na célula
             }

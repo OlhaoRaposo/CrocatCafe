@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   progressBar: {fileID: 1204867274488803503}
-  loadTime: 0
+  loadTime: 1.38
 --- !u!1 &1204867276336186730
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class Pot : MonoBehaviour
     public bool isOccupied;
     public Plant myPlant;
     private GameObject armazen;
-    private void Start()
+    public void Start()
     {
         armazen = GameObject.Find("ArmazenManager");
     }
@@ -34,7 +34,7 @@ public class Pot : MonoBehaviour
 
             myPlant = mySeed.GetComponent<Plant>();
             
-            GameObject summonedTimer = Instantiate(myTimer, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
+            GameObject summonedTimer = Instantiate(GameObject.Find("SaveFactory").GetComponent<SaveFactory>().progressBar, transform.position + Vector3.up, Quaternion.identity, gameObject.transform);
             summonedTimer.GetComponent<ProgressBar>().StartLoading(myPlant.data.growthTime);
         }
         else

@@ -33,7 +33,7 @@ public class SaveGame : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.M))
             {
                 Save();
             }
@@ -72,27 +72,25 @@ public class SaveGame : MonoBehaviour
         string s = JsonUtility.ToJson(data, true);
         Debug.Log(s);
         File.WriteAllText(dirPath, s);
+        
     }
 
     public void Load()
     {
         if (File.Exists(dirPath))
         {
-            GridSystem[] gridManagers = FindObjectsOfType<GridSystem>();
-            ToggleGrid(gridManagers, true);
             CleanScene();
-
             string s = File.ReadAllText(dirPath);
             SceneData data = JsonUtility.FromJson<SceneData>(s);
 
             AttachArmazenVar(data.armazenData);
+            
             timeControler.currentTime = DateTime.Now.Date + TimeSpan.FromHours(data.time.hour) + TimeSpan.FromMinutes(data.time.min);
-
+            
             for (int i = 0; i < data.furniterObjects.Length; i++)
             {
                 SaveFactory.CreateObject(data.furniterObjects[i]);
             }
-            ToggleGrid(gridManagers, false);
         }
     }
 

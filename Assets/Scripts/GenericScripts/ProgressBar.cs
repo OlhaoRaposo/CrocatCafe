@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ProgressBar : MonoBehaviour
 {
     public Slider progressBar;
-    [SerializeField] private float loadTime;
+    [SerializeField] public float loadTime;
 
     public void FixedUpdate()
     {

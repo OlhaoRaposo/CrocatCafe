@@ -4,7 +4,11 @@ using System.Collections;
 public class PasserbySummon : MonoBehaviour
 {
     public GameObject[] passerby, customer;
-    GameObject manager;
+    //GameObject manager;
+    public GameObject pointA;
+    public GameObject pointB;
+    public GameObject pointC;
+    public GameObject pointD;
 
     void Start()
     {
@@ -18,7 +22,8 @@ public class PasserbySummon : MonoBehaviour
         if(randomizer > 1)
         {
             int rng = Random.Range(0, passerby.Length);
-            Instantiate(passerby[rng], transform.position, Quaternion.identity);
+            GameObject passerbyIn =  Instantiate(passerby[rng], transform.position, Quaternion.identity);
+            Walk(passerbyIn);
         }
         else
         {
@@ -29,5 +34,47 @@ public class PasserbySummon : MonoBehaviour
             }
         }
         StartCoroutine(SummonPaserby());
+    }
+    public void Walk(GameObject passerby)
+    {
+        Vector3 add = new Vector3(Random.Range(-4, 4), 0,0 );
+        int index = Random.Range(0, 7);
+
+        switch (index)
+        {
+            case 0:
+                passerby.transform.position = pointA.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointB.transform);
+                break;
+            case 1:
+                passerby.transform.position = pointB.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointA.transform);
+                break;
+            case 2:
+                passerby.transform.position = pointC.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointA.transform);
+                break;
+            case 3:
+                passerby.transform.position = pointD.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointA.transform);
+                break;
+            case 4:
+                passerby.transform.position = pointA.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointD.transform);
+                break;
+            case 5:
+                passerby.transform.position = pointA.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointC.transform);
+                break;
+            case 6:
+                passerby.transform.position = pointC.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointD.transform);
+                break;
+            case 7:
+                passerby.transform.position = pointD.transform.position + add;
+                passerby.GetComponent<PasserbyScript>().Walk(pointC.transform);
+                break;
+        }
+       
     }
 }

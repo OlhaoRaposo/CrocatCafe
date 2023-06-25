@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1975926270392830818}
   - component: {fileID: 1004427070482951607}
   - component: {fileID: 1794829391645207715}
+  - component: {fileID: 3898014376362231476}
   m_Layer: 0
   m_Name: Bush
   m_TagString: Untagged
@@ -114,3 +115,30 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.42200002, z: 0}
   m_TimeToStationary: 0.5
+--- !u!205 &3898014376362231476
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476308060067103531}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 1
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.7744511
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1975926270392830818}
+  - screenRelativeHeight: 0.58754086
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1975926270392830818}
+  - screenRelativeHeight: 0.03781488
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 1975926270392830818}
+  m_Enabled: 1

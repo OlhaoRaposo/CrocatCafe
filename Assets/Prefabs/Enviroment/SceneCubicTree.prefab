@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2823987516007759021}
   - component: {fileID: 9211053721494327886}
   - component: {fileID: 7640443613873677184}
+  - component: {fileID: 7251886103983009814}
   m_Layer: 0
   m_Name: SceneCubicTree
   m_TagString: Untagged
@@ -129,3 +130,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.61777735, y: 1.4067011, z: 0.49215382}
   m_Center: {x: -0.036513925, y: 0.69805765, z: -0.020616502}
+--- !u!205 &7251886103983009814
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2524138074501408951}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 1
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3147900042188119352}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3147900042188119352}
+  - screenRelativeHeight: 0.018683668
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 3147900042188119352}
+  m_Enabled: 1
