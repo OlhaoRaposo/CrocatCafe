@@ -29,6 +29,14 @@ public class EditMode : MonoBehaviour
     public void ToggleCanvas(bool toggle)
     {
         isOnCanvas = toggle;
+        if(isOnCanvas == true)
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void RotateInput()
