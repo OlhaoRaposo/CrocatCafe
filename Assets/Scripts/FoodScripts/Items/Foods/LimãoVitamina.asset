@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: "vitamina de lim\xE3o"
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 560672ad5a58c094c819e66e38bbd125, type: 3}
+  icon: {fileID: 21300000, guid: a4b04159609c993438ad6bf3370621f5, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: torrata
   foodPrice: 5
-  icon: {fileID: 21300000, guid: cf1702d0b93a20e4e89fb27df9eb5f1b, type: 3}
+  icon: {fileID: 21300000, guid: 112fcd7b10057764f85e137218433715, type: 3}

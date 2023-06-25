@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: mousse de laranja
   foodPrice: 5
-  icon: {fileID: 21300000, guid: ef2e035d60cf8674db90a8accb546299, type: 3}
+  icon: {fileID: 21300000, guid: 4addea3ea8606e8418cd1c9db401fd19, type: 3}

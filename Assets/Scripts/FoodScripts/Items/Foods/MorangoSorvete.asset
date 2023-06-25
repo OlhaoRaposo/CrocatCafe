@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: sorvete de morango
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 28735d95f5895b944b235825757d2bc2, type: 3}
+  icon: {fileID: 21300000, guid: 86379fd5a25f1e244a2c98e27d2484bf, type: 3}

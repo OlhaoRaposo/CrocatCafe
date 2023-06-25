@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: gatoxinha
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 2f2fc0098e5f4fb48ac6ae34b5a2d7c6, type: 3}
+  icon: {fileID: 21300000, guid: 07af6664357eefd4ab2b7f7bfbfb1263, type: 3}

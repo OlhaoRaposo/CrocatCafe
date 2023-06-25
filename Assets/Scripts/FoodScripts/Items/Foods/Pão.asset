@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: "p\xE3o"
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 3c0272acd57764e4592cd689a73982cf, type: 3}
+  icon: {fileID: 21300000, guid: 7f9b9dbc07ab3a94bb8c45a22549ef48, type: 3}

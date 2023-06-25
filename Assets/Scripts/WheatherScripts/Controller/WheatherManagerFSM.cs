@@ -132,11 +132,14 @@ public class WheatherManagerFSM : MonoBehaviour
              case "WindEvent":
                  SetState(new HotDayState(this));
                  break;
-             case "FlowerEvent":
+             case "LeavesEvent":
                  SetState(new FlowerDayState(this));
                  break;
              case "ColdEvent":
                  SetState(new ColdDayState(this));
+                 break;
+             case "PolenEvent":
+                 SetState(new PolenDayState(this));
                  break;
          }
      }

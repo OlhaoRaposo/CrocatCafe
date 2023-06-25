@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: "ch\xE1 de erva de gato"
   foodPrice: 5
-  icon: {fileID: 21300000, guid: e8ec3035034d84048847f4700bf96c4a, type: 3}
+  icon: {fileID: 21300000, guid: 34821f2c27e2f4748acfedee07ae5a33, type: 3}

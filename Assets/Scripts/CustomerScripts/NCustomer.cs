@@ -65,6 +65,7 @@ public class NCustomer : MonoBehaviour
         yield return new WaitForSeconds(randomTimeWait);
 
         NOrderManager.instance.AddOrder(myOrder);
+        AudioBoard.instance.PlayAudio("Correio");
         Debug.Log("Pediu");
 
         SetDestinationToTable();

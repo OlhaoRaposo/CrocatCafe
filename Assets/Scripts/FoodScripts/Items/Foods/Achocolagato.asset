@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: achocolagato
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 57ad6ab03c61ea843b27367cafbc6605, type: 3}
+  icon: {fileID: 21300000, guid: f7e0e971e275583498d4f4585a5313b1, type: 3}

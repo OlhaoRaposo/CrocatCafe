@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: "caf\xE9"
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 5e0056f4927543d4eae9c10346b2fe53, type: 3}
+  icon: {fileID: 21300000, guid: 0c4b3e3748e244f4cbd3ff842f7c5a8b, type: 3}

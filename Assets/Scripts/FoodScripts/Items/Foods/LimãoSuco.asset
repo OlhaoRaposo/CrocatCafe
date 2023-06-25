@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: "suco de lim\xE3o"
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 9f788a86a35a28249a8a34bd4722bb2a, type: 3}
+  icon: {fileID: 21300000, guid: 6bff17d63ceff7c4792f87a51db21f43, type: 3}

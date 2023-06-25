@@ -84,13 +84,13 @@ public class SaveGame : MonoBehaviour
             SceneData data = JsonUtility.FromJson<SceneData>(s);
 
             AttachArmazenVar(data.armazenData);
-            
             timeControler.currentTime = DateTime.Now.Date + TimeSpan.FromHours(data.time.hour) + TimeSpan.FromMinutes(data.time.min);
             
             for (int i = 0; i < data.furniterObjects.Length; i++)
             {
                 SaveFactory.CreateObject(data.furniterObjects[i]);
             }
+            SaveFactory.Tggle();
         }
     }
 

@@ -9,7 +9,7 @@ public class GridSystem : MonoBehaviour
     public static GridCell currentSelectedCell;
     private bool isGridEnabled;
     
-    private void Start()
+    private void Awake()
     {
         InitGrid(); //Carrega todos as células de grid
     }

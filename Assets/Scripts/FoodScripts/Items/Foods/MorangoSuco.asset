@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: suco de morango
   foodPrice: 5
-  icon: {fileID: 21300000, guid: d3bb083a771b89749b9e84af75950a30, type: 3}
+  icon: {fileID: 21300000, guid: 69bcc65b3e6695944b0d95ed54ac95cb, type: 3}

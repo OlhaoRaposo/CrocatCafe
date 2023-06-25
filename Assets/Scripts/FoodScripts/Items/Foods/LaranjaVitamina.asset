@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: vitamina de laranja
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 77749d1b342188a40ae6b2e760f73d37, type: 3}
+  icon: {fileID: 21300000, guid: b6465f4e733887a4b98cbee08979ff58, type: 3}

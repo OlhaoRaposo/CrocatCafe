@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: tortita
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 16eeb52c2e220424ab99ef2a564177e2, type: 3}
+  icon: {fileID: 21300000, guid: 90ee0a3295a70b749a7750666005b166, type: 3}

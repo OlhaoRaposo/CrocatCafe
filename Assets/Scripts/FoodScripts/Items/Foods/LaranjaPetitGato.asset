@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: petit gato de laranja
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 8923913774917f44095db934e63ca1af, type: 3}
+  icon: {fileID: 21300000, guid: ee406c97bcd80ed49b73c0ab121c3829, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: patinha de queijo
   foodPrice: 5
-  icon: {fileID: 21300000, guid: 71aed1cd17b383a48a03abd75b96bb5d, type: 3}
+  icon: {fileID: 21300000, guid: b00c9fa6c00b07943b44f85b5d22c018, type: 3}

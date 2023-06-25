@@ -19,10 +19,7 @@ public class SaveFactory : MonoBehaviour
     GridSystem[] gridManagers;
 
 
-    private void Start()
-    {
-    }
-
+    
     public void CreateObject(ObjectsData data)
     {
         GameObject a = Instantiate(ReturnListObject(data.objectId), data.position, Quaternion.Euler(data.rotation));
@@ -34,13 +31,9 @@ public class SaveFactory : MonoBehaviour
         foreach (GameObject grid in gridObject)
         {
             if (grid.name == data.gridCellName) {
-                Debug.Log("Achei");
-                Debug.Log(a.name);
                 AssignGrid(grid,a);
-                return;
             }
         }
-        /*
         if (data.growTimer != 0) {
             if (a.GetComponent<Pot>() != null)
             {
@@ -60,13 +53,26 @@ public class SaveFactory : MonoBehaviour
                 sumonedTimer.GetComponent<ProgressBar>().progressBar.value = data.growTimer/pot.seed.GetComponent<Plant>().data.growthTime;
                 pot.mySeed = pot.seed;
             }
-        }*/
-        
+        }
+        foreach (GridSystem grid in gridManagers)
+        {
+            grid.GridToggle(false);
+        }
     }
 
     void AssignGrid(GameObject grid,GameObject furnitureobject)
     {
         furnitureobject.GetComponent<DragableObject>().currentCell = grid.gameObject.GetComponent<GridCell>();
+        grid.GetComponent<GridCell>().isOccupied = true;
+        grid.GetComponent<GridCell>().currentObject = furnitureobject;
+    }
+
+   public void Tggle()
+    {
+        foreach (GridSystem grid in gridManagers)
+        {
+            grid.GridToggle(false);
+        }
     }
     
     private GameObject ReturnListObject(string id)

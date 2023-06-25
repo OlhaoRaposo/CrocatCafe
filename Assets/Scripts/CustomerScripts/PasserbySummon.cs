@@ -16,7 +16,7 @@ public class PasserbySummon : MonoBehaviour
     }
     IEnumerator SummonPaserby()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(Random.Range(1,4));
 
         int randomizer = Random.Range(1, 11);
         if(randomizer > 1)

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodName: bolo de laranja
   foodPrice: 5
-  icon: {fileID: 21300000, guid: ea0ce4425ec17f345b815c7e65986b4f, type: 3}
+  icon: {fileID: 21300000, guid: f164be6a74822234780dc0b39b7d4f13, type: 3}
