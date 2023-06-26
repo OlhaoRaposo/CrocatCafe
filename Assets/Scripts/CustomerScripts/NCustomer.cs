@@ -6,6 +6,7 @@ public class NCustomer : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent myAgent;
     [SerializeField] private GameObject myTimer;
+    [SerializeField] private int npcNumber;
     [HideInInspector] public FoodData myOrder;
     private Table myTable;
     private bool isGoingToRestaurant = true;
@@ -61,6 +62,8 @@ public class NCustomer : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
 
+        gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Idle", true);
+
         randomTimeWait = Random.Range(5, 11);
         yield return new WaitForSeconds(randomTimeWait);
 
@@ -68,12 +71,15 @@ public class NCustomer : MonoBehaviour
         Debug.Log("Pediu");
 
         SetDestinationToTable();
+        gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Walking", true);
+        gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
         while (Vector3.Distance(transform.position, myAgent.destination) > 1.25f)
         {
             yield return new WaitForSeconds(1);
         }
 
-        Debug.Log("Chegou na mesa");
+        gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Idle", true);
+        gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
         if (ArmazenManager.instance.FoodAmmount(myOrder.foodName) > 0)
         {
             NOrderManager.instance.RemoveOrder(myOrder);
@@ -84,6 +90,8 @@ public class NCustomer : MonoBehaviour
             yield return new WaitForSeconds(randomTimeWait);
 
             SetDestinationToShowCase();
+            gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Walking", true);
+            gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
             while (Vector3.Distance(transform.position, myAgent.destination) > 1.25f)
             {
                 yield return new WaitForSeconds(1);
@@ -124,6 +132,8 @@ public class NCustomer : MonoBehaviour
 
                     Debug.Log("Buscando comida");
                     SetDestinationToShowCase();
+                    gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Walking", true);
+                    gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
                     while (Vector3.Distance(transform.position, myAgent.destination) > 1.25f)
                     {
                         yield return new WaitForSeconds(1);
@@ -138,9 +148,13 @@ public class NCustomer : MonoBehaviour
                     Debug.Log("Comendo");
 
                     randomTimeWait = Random.Range(10, 21);
+                    gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Idle", true);
+                    gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
                     yield return new WaitForSeconds(randomTimeWait);
 
                     SetDestinationToShowCase();
+                    gameObject.GetComponent<AnimationPlayer>().AddAnimation($"Npc{npcNumber}|Walking", true);
+                    gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
                     while (Vector3.Distance(transform.position, myAgent.destination) > 1.25f)
                     {
                         yield return new WaitForSeconds(1);

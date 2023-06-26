@@ -1005,6 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myAgent: {fileID: 6864866376263654869}
   myTimer: {fileID: 5265342102012611479}
+  npcNumber: 1
   myOrder: {fileID: 0}
 --- !u!1 &3777017208069632879
 GameObject:
