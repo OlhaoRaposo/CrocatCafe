@@ -58,7 +58,7 @@ public class Bench : MonoBehaviour
         StartCoroutine(CookProcess(recipe, recipe.productionTime));
         AudioBoard.instance.PlayAudio("SFX_UI_Shop");
         uiLoader.CloseTab(uiLoader.firstUiGmbj);
-        EditMode.instance.isOnCanvas = false;
+        EditMode.instance.ToggleCanvas(false);
     }
 
 
@@ -68,6 +68,8 @@ public class Bench : MonoBehaviour
         //Esperar o gato chegar na bancada
         GameObject cat = GameObject.Find("Cat");
         cat.GetComponent<NavMeshScript>().AddDestination(myObject, (int)time);
+        cat.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Walking", true);
+        //cat.GetComponent<AnimationPlayer>().SkipAnimation();
         while (Vector3.Distance(myObject.transform.position, cat.transform.position) >= 1)
         {
             yield return new WaitForSeconds(1);
@@ -76,11 +78,15 @@ public class Bench : MonoBehaviour
         //Aguardar o tempo de cozimento
         GameObject summonedTimer = Instantiate(myTimer, myObject.transform.position + new Vector3(0, 2, 0), Quaternion.identity, myObject.transform);
         summonedTimer.GetComponent<ProgressBar>().StartLoading(time);
+        cat.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Cooking", true);
+        cat.GetComponent<AnimationPlayer>().SkipAnimation();
         yield return new WaitForSeconds(time);
 
         //Adicionar o produto no final
         Debug.Log($"Adicionou {recipe.outputAmmount} {recipe.product}(s)");
         ArmazenManager.instance.AddFood(recipe.product, recipe.outputAmmount);
+        cat.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Walking", true);
+        cat.GetComponent<AnimationPlayer>().SkipAnimation();
     }
 
     //Seta os dados da bench escolhida na UI

@@ -17,8 +17,19 @@ public class AnimationPlayer : MonoBehaviour
 
     private void PlayAnimation(string animationName, bool isLoop)
     {
+        Debug.Log(animationName);
+        AnimationClip[] animations = myAnimator.runtimeAnimatorController.animationClips;
+        AnimationClip currentAnimation = null;
+        foreach (AnimationClip clip in animations)
+        {
+            if(clip.name == animationName)
+            {
+                currentAnimation = clip;
+                break;
+            }
+        }
         myAnimator.Play(animationName, 0, 0);
-        StartCoroutine(WaitTime(myAnimator.GetCurrentAnimatorStateInfo(0).length));
+        StartCoroutine(WaitTime(currentAnimation.length));
     }
 
     public void AddAnimation(string animationName, bool isLoop)
@@ -33,6 +44,7 @@ public class AnimationPlayer : MonoBehaviour
 
     public void SkipAnimation()
     {
+        StopAllCoroutines();
         animationQueue.Remove(animationQueue[0]);
         animationLoopStatus.Remove(animationLoopStatus[0]);
         if(animationQueue.Count > 0)

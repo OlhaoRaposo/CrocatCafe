@@ -35,7 +35,24 @@ public class NavMeshScript : MonoBehaviour
         }
         else
         {
+            gameObject.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Walking", true);
+            gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
             navMesh.destination = chillPlace.transform.position;
+            StartCoroutine(IsResting());
+        }
+    }
+
+    IEnumerator IsResting()
+    {
+        yield return new WaitForSeconds(1);
+        if(Vector3.Distance(transform.position, navMesh.destination) <= 1)
+        {
+            gameObject.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Idle", true);
+            gameObject.GetComponent<AnimationPlayer>().SkipAnimation();
+        }
+        else
+        {
+            StartCoroutine(IsResting());
         }
     }
 
