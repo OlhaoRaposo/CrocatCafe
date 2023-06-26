@@ -2,20 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class IntroScript : MonoBehaviour
 {
-    /*public string movie = "Logo_Intro.mov";
-
+    public VideoPlayer player;
     void Start () 
     {
-        StartCoroutine(streamVideo(movie));
+        StartCoroutine(streamVideo());
+        StartCoroutine(StartVideo());
+    }
+    private IEnumerator StartVideo()
+    {
+        yield return new WaitForSeconds(.2f);
+        player.Play();
+
     }
 
-    private IEnumerator streamVideo(string video)
+    private IEnumerator streamVideo()
     {
-        Handheld.PlayFullScreenMovie(video, Color.black, FullScreenMovieControlMode.Hidden, FullScreenMovieScalingMode.Fill);
-        yield return new WaitForEndOfFrame ();
+        Cursor.visible = false;
+        yield return new WaitForSeconds(9.4f);
+        Cursor.visible = true;
         SceneManager.LoadScene ("MainMenu");
-    }*/
+    }
 }

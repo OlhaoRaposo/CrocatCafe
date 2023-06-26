@@ -41,7 +41,7 @@ public class SaveFactory : MonoBehaviour
                 pot = a.GetComponent<Pot>();
                 foreach (GameObject seed in seeds) {
                     if (seed.name == data.seedName) {
-                        a.GetComponent<Pot>().seed = Instantiate(seed,a.transform.position+new Vector3(0,.25f,0),Quaternion.identity,a.transform);
+                        a.GetComponent<Pot>().seed = Instantiate(seed,a.transform.position+new Vector3(0,.05f,0),Quaternion.identity,a.transform);
                     }
                 }
                 pot.seed.GetComponent<Plant>().progress = data.plantProgress;

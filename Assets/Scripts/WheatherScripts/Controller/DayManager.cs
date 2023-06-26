@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DayManager : MonoBehaviour
 {
     public WheatherManagerFSM wheatherManager;
+    public GameObject passerbyManager1, passerbyManager2;
     [Header("Tempo da metade do dia em minutos")]
     public float halfdaytime;
     private float daytime;
@@ -81,6 +82,8 @@ public class DayManager : MonoBehaviour
     private void SetNight()
     {
         NCustomerManager.instance.CloseBakery();
+        passerbyManager1.SetActive(false);
+        passerbyManager2.SetActive(false);
     }
     public void SetDay()
     {
@@ -91,6 +94,8 @@ public class DayManager : MonoBehaviour
         colorIndex = 0;
         dayLight.sunlight.color = Color.Lerp(dayLight.sunlight.color, dayLight.colors[colorIndex], dayLight.dayLerpTime * Time.deltaTime);
         dayCircle.transform.rotation = Quaternion.Euler(0f, 0f, -90f);
+        passerbyManager1.SetActive(true);
+        passerbyManager2.SetActive(true);
     }
     public void NextDay()
     {

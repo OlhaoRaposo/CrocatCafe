@@ -33,7 +33,7 @@ public class Pot : MonoBehaviour
             cat.GetComponent<AnimationPlayer>().AddAnimation("MiaArmature|Planting", true);
             cat.GetComponent<AnimationPlayer>().SkipAnimation();
 
-            mySeed = Instantiate(seed, transform.position + new Vector3(0, 0.25f, 0), transform.rotation);
+            mySeed = Instantiate(seed, transform.position + new Vector3(0, 0.05f, 0), transform.rotation);
             mySeed.transform.SetParent(gameObject.transform);
 
             myPlant = mySeed.GetComponent<Plant>();
