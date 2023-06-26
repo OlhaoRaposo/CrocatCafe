@@ -3,9 +3,11 @@ using UnityEngine;
 public class EditMode : MonoBehaviour
 {
     public GameObject selectedObject;
+    public GameObject configUI;
     public GameObject[] gridList;
     public bool isEditing = false;
     public bool isOnCanvas = false;
+    private bool configUIisOpen = false;
 
     public static EditMode instance;
 
@@ -18,6 +20,7 @@ public class EditMode : MonoBehaviour
     {
         RotateInput();
         DeleteInput();
+        TogglePause();
     }
 
     public void ToggleEdit(bool toggle)
@@ -36,6 +39,25 @@ public class EditMode : MonoBehaviour
         else
         {
             Time.timeScale = 1;
+        }
+    }
+
+    private void TogglePause()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(configUIisOpen == false)
+            {
+                ToggleCanvas(true);
+                configUI.SetActive(true);
+                configUIisOpen = true;
+            }
+            else
+            {
+                ToggleCanvas(false);
+                configUI.SetActive(false);
+                configUIisOpen = false;
+            }
         }
     }
 

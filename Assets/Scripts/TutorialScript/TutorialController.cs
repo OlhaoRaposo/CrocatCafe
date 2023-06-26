@@ -22,7 +22,7 @@ public class TutorialController : MonoBehaviour
 
     public void NextText()
     {
-        Invoke("RessumonButton", 2.0f);
+        Invoke("RessumonButton", 1.0f);
         if (hasCompletedTutorial == false)
         {
             AdvanceTutorial();
@@ -34,11 +34,12 @@ public class TutorialController : MonoBehaviour
         tutorialProgress++;
         switch (tutorialProgress)
         {
-            case 12:
+            case 26:
             {
-                
+                tutorialWindow.SetActive(false);
+                EditMode.instance.ToggleCanvas(false);
             }
-            break;
+            return;
         }
         UpdateText();
     }
@@ -50,6 +51,8 @@ public class TutorialController : MonoBehaviour
     public void OpenTutorialWindow()
     {
         tutorialWindow.SetActive(true);
+        EditMode.instance.ToggleCanvas(true);
+        Debug.Log("A");
     }
 
     private void RessumonButton()
