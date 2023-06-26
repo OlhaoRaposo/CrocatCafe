@@ -721,7 +721,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.25
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -927,7 +927,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7597560444520419082, guid: c6773445c643ce34fb46021f4524ebb9, type: 3}
+  - {fileID: 2100000, guid: d066f7a702df20241a73c8633865e08d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1122,7 +1122,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5892819712713035397, guid: c6773445c643ce34fb46021f4524ebb9, type: 3}
+  - {fileID: 2100000, guid: d27a1f662f71a294692dabc52f067ff7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1598,7 +1598,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -7075969032520803482, guid: c6773445c643ce34fb46021f4524ebb9, type: 3}
+  - {fileID: 2100000, guid: 24b6f8dde1aedc74c945d23463fc8d47, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
