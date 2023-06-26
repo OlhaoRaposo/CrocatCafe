@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class IntroScript : MonoBehaviour
 {
-    public string movie = "Logo_Intro.mov";
+    /*public string movie = "Logo_Intro.mov";
 
     void Start () 
     {
@@ -17,5 +17,5 @@ public class IntroScript : MonoBehaviour
         Handheld.PlayFullScreenMovie(video, Color.black, FullScreenMovieControlMode.Hidden, FullScreenMovieScalingMode.Fill);
         yield return new WaitForEndOfFrame ();
         SceneManager.LoadScene ("MainMenu");
-    }
+    }*/
 }

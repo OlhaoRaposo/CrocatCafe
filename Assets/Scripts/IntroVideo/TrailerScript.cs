@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TrailerScript : MonoBehaviour
 {
@@ -68,6 +69,10 @@ public class TrailerScript : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.L))
             {
                 canvas.enabled = !canvas.isActiveAndEnabled;
+            }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                SceneManager.LoadScene("NewTrailer");
             }
         }
     }

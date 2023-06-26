@@ -12,7 +12,7 @@ public class ArmazenManager : MonoBehaviour
     [SerializeField] public int[] ingredientAmmount, foodAmmount;
     [SerializeField] private Text[] ingredientText, foodText;
 
-    private void Start()
+    private void Awake()
     {
         instance = this;
         ingredientAmmount = new int[allIngredients.Length];
